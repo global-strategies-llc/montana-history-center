@@ -10,6 +10,7 @@ const useSiteMetadata = () => {
 						description
 						menuLinks {
 							name
+							placement
 							url
 						}
 					}

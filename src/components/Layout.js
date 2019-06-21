@@ -1,8 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+
+import './all.scss'
+
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.scss'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -44,9 +46,9 @@ const TemplateWrapper = ({ children }) => {
 				<meta property="og:url" content="/" />
 				<meta property="og:image" content="/img/og-image.jpg" />
 			</Helmet>
-			<Navbar menuLinks={menuLinks} />
+			<Navbar menuLinks={menuLinks.filter( link => link.placement.includes('navbar') )} />
 			<main>{children}</main>
-			<Footer />
+			<Footer menuLinks={menuLinks.filter( link => link.placement.includes('footer') )} />
 		</div>
 	)
 }

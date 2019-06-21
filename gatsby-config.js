@@ -8,18 +8,22 @@ module.exports = {
 		menuLinks:[
 			{
 				name:'Why the Mall Site Wins',
+				placement: ['navbar'],
 				url:'/why-the-mall-site-wins'
 			},
 			{
 				name: 'Montana Heritage Center FAQ',
+				placement: ['navbar'],
 				url: '/montana-heritage-center-faq'
 			},
 			{
 				name: 'Stories of Support',
+				placement: ['navbar'],
 				url: '/stories-of-support'
 			},
 			{
 				name: 'News and Opinion',
+				placement: ['navbar'],
 				url: '/news-and-opinion'
 			}
 		]

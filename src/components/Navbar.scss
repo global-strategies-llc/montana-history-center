@@ -1,0 +1,29 @@
+@import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import './variables';
+@import './breakpoints';
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-menu {
+	text-align: right;
+
+	@include mobile {
+		text-align: center;
+	}
+}
+
+.navbar-item .icon {
+  color: $primary;
+}
+
+.navbar-brand .navbar-item.logo {
+  padding: 0 1rem;
+}

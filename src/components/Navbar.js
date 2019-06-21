@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+
+import './Navbar.scss'
+
 import logo from '../img/logo.svg'
 
 class Navbar extends React.Component {
@@ -72,7 +75,12 @@ class Navbar extends React.Component {
 						id="navMenu"
 						className={`navbar-menu ${this.state.navBarActiveClass}`}
 					>
-						<div className="navbar-start has-text-centered">
+						<div className="navbar-start navbar-item">
+							<Link className="button" to="/donate">
+								<span>Donate</span>
+							</Link>
+						</div>
+						<div className="navbar-start">
 							{
 								menuLinks.map(link => (
 									<Link key={link.name} className="navbar-item" to={link.url}>
@@ -81,11 +89,7 @@ class Navbar extends React.Component {
 								))
 							}
 						</div>
-						<div className="navbar-end navbar-item has-text-centered">
-							<Link className="button is-success is-rounded" to="/donate">
-								<span>Donate</span>
-							</Link>
-						</div>
+
 					</div>
 				</div>
 			</nav>
