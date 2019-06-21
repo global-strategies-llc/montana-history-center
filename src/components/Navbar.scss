@@ -4,20 +4,28 @@
 
 .navbar {
 	position: fixed;
+	width: 100%;
 	top: 0;
 	left: 0;
 	right: 0;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-menu {
-	text-align: right;
+
+	@include tablet-only {
+		position: absolute;
+		min-width: 50%;
+		top: 100%;
+		right: 0;
+		padding-right: 2em;
+	}
 
 	@include mobile {
 		text-align: center;
 	}
+
+	text-align: right;
 }
 
 .navbar-item .icon {

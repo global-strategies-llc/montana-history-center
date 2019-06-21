@@ -13,16 +13,17 @@ const Footer = ({ menuLinks }) => {
 	return (
 		<footer className="footer has-background-black has-text-white-ter">
 			<div className="content has-text-centered">
-				<Link to="/" className="navbar-item">
-					<img
-						src={logo}
-						alt="Kaldi"
-						style={{ width: '14em', height: '10em' }}
-					/>
-				</Link>
+				<div className="container">
+					<Link to="/" className="footer-logo">
+						<img
+							src={logo}
+							alt="Kaldi"
+						/>
+					</Link>
+				</div>
 			</div>
 			<div className="content has-text-centered has-background-black has-text-white-ter">
-				<div className="container has-background-black has-text-white-ter">
+				<div className="container">
 					<div className="columns">
 						<div className="column is-4">
 							<section className="menu">
@@ -30,7 +31,7 @@ const Footer = ({ menuLinks }) => {
 									{
 										menuLinks.map(link => (
 											<li key={link.name}>
-												<Link className="navbar-item" to={link.url}>
+												<Link className="menu-item" to={link.url}>
 													{link.name}
 												</Link>
 											</li>
