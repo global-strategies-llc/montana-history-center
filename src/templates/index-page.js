@@ -32,18 +32,40 @@ export const IndexPageTemplate = ({
 									</div>
 								</div>
 								<div className="columns">
-									<div className="column is-12">
-										<h3 className="has-text-weight-semibold is-size-2">
-											{heading}
-										</h3>
-										<p>{description}</p>
+									<div className="column is-12 has-text-centered">
+										<Link className="btn" to="/petition">
+											{mainpitch.cta}
+										</Link>
 									</div>
 								</div>
 								<div className="columns">
-									<div className="column is-12 has-text-centered">
-										<Link className="btn" to="/products">
-											See all products
-										</Link>
+									<div className="column is-12">
+										<h2 className="has-text-weight-semibold is-size-2">
+											{heading}
+										</h2>
+										{
+											description.split(/\n/).map( (p, i) =>
+												p.length ?
+													<p key={i}>{p}</p>
+													: null)
+										}
+									</div>
+								</div>
+								<div className="columns">
+									<div className="column is-12">
+										{
+											intro.blurbs.map( (content, i) =>
+												<blockquote key={i}>
+													{content.text}
+													<cite>
+														{content.cite.split(/\n/)[0]}
+														{content.cite.split(/\n/)[1] &&
+															<span>{content.cite.split(/\n/)[1]}</span>
+														}
+													</cite>
+												</blockquote>
+											)
+										}
 									</div>
 								</div>
 								<div className="column is-12">
@@ -123,10 +145,13 @@ export const pageQuery = graphql`
 				mainpitch {
 					title
 					description
+					cta
 				}
 				description
 				intro {
 					blurbs {
+						text
+						cite
 						image {
 							childImageSharp {
 								fluid(maxWidth: 240, quality: 64) {
@@ -134,7 +159,6 @@ export const pageQuery = graphql`
 								}
 							}
 						}
-						text
 					}
 					heading
 					description

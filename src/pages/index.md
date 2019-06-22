@@ -1,50 +1,32 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title:
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Why We Need Your Help Today
+subheading: Sign the statewide petition to build the Montana Heritage Center at the mall site
 mainpitch:
-  title: Why Kaldi
+  title: Sign the petition
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+    The legislature has approved 7.5 million bonding for the purchase of the mall site.
+    Please sign our petition right now and help ensure we reach our goal.
+  cta: Sign the petition
+description: >
+  The Department of Administration planned to build the new Montana Heritage Center at the
+  alternative site of Roberts and 6th it is not suitable.
+
+  It will fail in its mission to become a world-class museum since it is right in the middle
+  of all the government buildings where there is not enough room to build a large museum.
+  We won't be able to share our history and culture with Montana’s school children and the
+  thousands of visitors who come to Montana.
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        We currently support locating the Montana Heritage Center at the former Capitol Hill Mall site.
+        It is centrally located, close to the Capitol, and has plenty of room for future expansions, parking, and outdoor exhibits
+      cite: |
+        Jim McCormick, Susan Geise, Any Hunthausen
+        Lewis and Clark County, Board of Commissioners
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
