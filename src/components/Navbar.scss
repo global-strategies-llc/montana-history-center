@@ -9,16 +9,45 @@
 	left: 0;
 	right: 0;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+	> .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include small {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.navbar-brand {
+	margin-right: auto;
+
+	@include xsmall {
+		flex-basis: 100%;
+	}
+}
+
+.navbar-burger {
+	flex: 0 0 auto;
+
+	@include from($mobile) {
+		margin-left: 0;
+	}
+}
+
+.navbar-button {
+	margin: 0 0.5em;
 }
 
 .navbar-menu {
 
-	@include tablet-only {
+	@include until($desktop) {
 		position: absolute;
 		min-width: 50%;
 		top: 100%;
 		right: 0;
-		padding-right: 2em;
 	}
 
 	@include mobile {

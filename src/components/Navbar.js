@@ -56,30 +56,40 @@ class Navbar extends React.Component {
 				aria-label="main-navigation"
 			>
 				<div className="container">
+
 					<div className="navbar-brand">
 						<Link to="/" className="navbar-item" title="Logo">
 							<img src={logo} alt="Montana History Center" style={{ width: '88px' }} />
 						</Link>
-						{/* Hamburger menu */}
-						<div
-							className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-							data-target="navMenu"
-							onClick={() => this.toggleHamburger()}
-						>
-							<span />
-							<span />
-							<span />
-						</div>
 					</div>
+
+					<div className="navbar-button">
+						<Link className="button" to="/donate">
+							<span>Contribute</span>
+						</Link>
+					</div>
+
+					<div className="navbar-button">
+						<Link className="button" to="/petition">
+							<span>Sign the Petition</span>
+						</Link>
+					</div>
+
+					{/* Hamburger menu */}
+					<div
+						className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+						data-target="navMenu"
+						onClick={() => this.toggleHamburger()}
+					>
+						<span />
+						<span />
+						<span />
+					</div>
+
 					<div
 						id="navMenu"
 						className={`navbar-menu ${this.state.navBarActiveClass}`}
 					>
-						<div className="navbar-start navbar-item">
-							<Link className="button" to="/donate">
-								<span>Donate</span>
-							</Link>
-						</div>
 						<div className="navbar-start">
 							{
 								menuLinks.map(link => (
@@ -89,8 +99,8 @@ class Navbar extends React.Component {
 								))
 							}
 						</div>
-
 					</div>
+
 				</div>
 			</nav>
 		)
