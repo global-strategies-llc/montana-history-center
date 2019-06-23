@@ -22,7 +22,9 @@ testimonials:
       To me it’s as simple as "location, location, location" the three words most important to business success.
       Do not expand in the current Capitol area.
 mainpitch:
-  title: Central location, improved parking, more space, more exhibits, more history
+  title: |
+    Central location, improved parking, more space, more exhibits.
+    More history.
   image: /img/flavor_wheel.jpg
   why:
     heading: Capital Hill Mall Site

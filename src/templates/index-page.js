@@ -7,8 +7,9 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Testimonials from '../components/Testimonials'
 import Features from '../components/Features'
-import SignupForm from '../components/SignupForm'
-import BlogRoll from '../components/BlogRoll'
+import Signup from '../components/Signup'
+
+import '../components/index.scss'
 
 export const IndexPageTemplate = ({
 	image,
@@ -38,7 +39,12 @@ export const IndexPageTemplate = ({
 				<div className="section mainpitch">
 					<div className="content">
 						<div className="tile has-text-centered">
-							<h1 className="title">{mainpitch.title}</h1>
+							<h2 className="title is-size-2">
+								{mainpitch.title.split(/\n/)[0]}
+								{mainpitch.title.split(/\n/)[1] &&
+									<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
+								}
+							</h2>
 						</div>
 					</div>
 					<div className="columns">
@@ -84,9 +90,7 @@ export const IndexPageTemplate = ({
 				</div>
 			</div>
 		</section>
-		<section className="section full-width-image">
-			<SignupForm action="#" />
-		</section>
+		<Signup action="#" />
 	</div>
 )
 
@@ -181,7 +185,7 @@ export const pageQuery = graphql`
 						image {
 							childImageSharp {
 								fluid(maxWidth: 240, quality: 64) {
-									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid_tracedSVG
 								}
 							}
 						}
@@ -194,7 +198,7 @@ export const pageQuery = graphql`
 						image {
 							childImageSharp {
 								fluid(maxWidth: 240, quality: 64) {
-									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid_tracedSVG
 								}
 							}
 						}
