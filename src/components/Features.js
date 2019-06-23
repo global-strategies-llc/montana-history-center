@@ -3,28 +3,39 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+const WithLinkWrap = ({ link, children }) => (
+	<React.Fragment>
+		{ link ?
+			<Link to={link.url}>
+				{children}
+				{link.text &&
+					<span>{link.text}</span>
+				}
+			</Link>
+			: <React.Fragment>{children}</React.Fragment>
+		}
+	</React.Fragment>
+)
+
 const FeatureGrid = ({ cols, gridItems }) => (
 	<div className="columns is-multiline">
 		{gridItems.map( (item, i) => (
 			<div key={i} className={`column is-${12 / (cols || 2)}`}>
 				<section className="section">
-					<div className="has-text-centered">
-						{item.image &&
-							<div className="feature-image">
-								<PreviewCompatibleImage imageInfo={item.image} />
-							</div>
-						}
-						<div className="feature-description">
-							{item.text &&
-								<p>{item.text}</p>
-							}
-							{item.link &&
-								<Link to={item.link.url}>
-									{item.link.text}
-								</Link>
+					<WithLinkWrap link={item.link}>
+						<div className="has-text-centered">
+							{item.image &&
+								<div className="feature-image">
+									<PreviewCompatibleImage imageInfo={item.image} />
+								</div>
 							}
 						</div>
-					</div>
+					</WithLinkWrap>
+					{item.text &&
+						<div className="feature-description">
+							<p>{item.text}</p>
+						</div>
+					}
 				</section>
 			</div>
 		))}
@@ -39,6 +50,14 @@ FeatureGrid.propTypes = {
 			text: PropTypes.string,
 		})
 	),
+}
+
+WithLinkWrap.propTypes = {
+	link: PropTypes.shape({
+		url: PropTypes.string,
+		text: PropTypes.string
+	}),
+	children: PropTypes.object
 }
 
 export default FeatureGrid
