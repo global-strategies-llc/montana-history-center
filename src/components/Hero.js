@@ -54,6 +54,7 @@ const Hero = ({
 Hero.propTypes = {
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	title: PropTypes.string,
+	eyebrow: PropTypes.string,
 	heading: PropTypes.string,
 	subheading: PropTypes.string,
 	cta: PropTypes.object
