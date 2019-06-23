@@ -1,15 +1,18 @@
 ---
 templateKey: index-page
-title:
+title: Build the Montana Heritage Center at the Mall Site.
+eyebrow: Sign the petition.
+heading: What is Montana Heritage Center?
+subheading: The proposed name and location for the new Montana Historical Society museum.
 image: /img/home-jumbotron.jpg
-heading: Why We Need Your Help Today
-subheading: Sign the statewide petition to build the Montana Heritage Center at the mall site
 mainpitch:
   title: Sign the petition
   description: >
     The legislature has approved 7.5 million bonding for the purchase of the mall site.
     Please sign our petition right now and help ensure we reach our goal.
-  cta: Sign the petition
+  cta:
+    text: Sign the petition
+    url: petition
 description: >
   The Department of Administration planned to build the new Montana Heritage Center at the
   alternative site of Roberts and 6th it is not suitable.
@@ -18,6 +21,8 @@ description: >
   of all the government buildings where there is not enough room to build a large museum.
   We won't be able to share our history and culture with Montana’s school children and the
   thousands of visitors who come to Montana.
+
+  The mall site was the original proposed site and is the prime location.
 intro:
   blurbs:
     - image: /img/coffee.png

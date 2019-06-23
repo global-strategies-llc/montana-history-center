@@ -9,6 +9,7 @@ import BlogRoll from '../components/BlogRoll'
 export const IndexPageTemplate = ({
 	image,
 	title,
+	eyebrow,
 	heading,
 	subheading,
 	mainpitch,
@@ -16,7 +17,7 @@ export const IndexPageTemplate = ({
 	intro,
 }) => (
 	<div>
-		<Hero image={image} title={title} heading={heading} subheading={subheading} />
+		<Hero image={image} title={title} eyebrow={eyebrow} heading={heading} subheading={subheading} cta={mainpitch.cta}/>
 		<section className="section section--gradient">
 			<div className="container">
 				<div className="section">
@@ -33,8 +34,8 @@ export const IndexPageTemplate = ({
 								</div>
 								<div className="columns">
 									<div className="column is-12 has-text-centered">
-										<Link className="btn" to="/petition">
-											{mainpitch.cta}
+										<Link className="btn" to={mainpitch.cta.url}>
+											{mainpitch.cta.text}
 										</Link>
 									</div>
 								</div>
@@ -91,6 +92,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	title: PropTypes.string,
+	eyebrow: PropTypes.string,
 	heading: PropTypes.string,
 	subheading: PropTypes.string,
 	mainpitch: PropTypes.object,
@@ -102,12 +104,12 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
 	const { frontmatter } = data.markdownRemark
-
 	return (
 		<Layout>
 			<IndexPageTemplate
-				image={frontmatter.image}
+				image={frontmatter.image || {}}
 				title={frontmatter.title}
+				eyebrow={frontmatter.eyebrow}
 				heading={frontmatter.heading}
 				subheading={frontmatter.subheading}
 				mainpitch={frontmatter.mainpitch}
@@ -133,6 +135,9 @@ export const pageQuery = graphql`
 		markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
 			frontmatter {
 				title
+				eyebrow
+				heading
+				subheading
 				image {
 					childImageSharp {
 						fluid(maxWidth: 2048, quality: 100) {
@@ -140,12 +145,13 @@ export const pageQuery = graphql`
 						}
 					}
 				}
-				heading
-				subheading
 				mainpitch {
 					title
 					description
-					cta
+					cta {
+						text
+						url
+					}
 				}
 				description
 				intro {

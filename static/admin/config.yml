@@ -31,12 +31,17 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
+          - {label: Eyebrow, name: eyebrow, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
               {label: Title, name: title, widget: string},
               {label: Description, name: description, widget: text},
-              {label: "Call to Action", name: cta, widget: string}
+              {label: "Call to Action", name: cta, widget: object,
+                fields: [
+                  {label: Text, name: text, widget: string}
+                  {label: Link, name: url, widget: string}
+                ]}
             ]}
           - {label: Description, name: description, widget: text}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Cite, name: cite, widget: text}]}]}

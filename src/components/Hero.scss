@@ -4,24 +4,41 @@
 
 .page-hero h1,
 .page-hero h3 {
-	box-shadow: rgb(255, 68, 0) 0.5rem 0 0, rgb(255, 68, 0) -0.5rem 0 0;
-	background-color: rgb(255, 68, 0);
-	color: #fff;
-	line-height: 1;
 	padding: 0.25em;
+	font-weight: normal;
+	color: #000;
+}
+
+.page-hero h1,
+.page-hero h3 {
+	width: 16em;
+	max-width: 100%;
+}
+
+.eyebrow,
+.page-hero h3 small {
+	display: block;
+}
+
+.hero-cta {
+	padding: 2em;
+	align-self: center;
 }
 
 .full-width-image {
+	width: 100%;
+  min-height: 400px;
+  height: auto;
 	background-position: top left;
 	background-attachment: fixed;
 }
 
 .heading-wrap {
 	display: flex;
-	height: 150px;
-	line-height: 1;
-	justify-content: space-around;
-	align-items: left;
 	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	min-height: 150px;
+	line-height: 1;
 }
 
