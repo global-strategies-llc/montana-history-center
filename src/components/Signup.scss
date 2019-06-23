@@ -1,0 +1,15 @@
+.signup {
+	.column {
+		background: rgba(#fff, 0.7);
+	}
+}
+
+.signup-form {
+	padding: 2em 1em;
+
+	button[type='submit'] {
+		width: 100%;
+		height: auto;
+		text-transform: uppercase;
+	}
+}
