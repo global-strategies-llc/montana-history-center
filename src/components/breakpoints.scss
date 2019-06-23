@@ -1,10 +1,21 @@
 // Responsiveness
+$xsmobile: 451px !default;
+$mobile: 601px !default;
+
 @mixin from($device) {
   @media screen and (min-width: $device) { @content }
 }
 
 @mixin until($device) {
   @media screen and (max-width: $device - 1px) { @content }
+}
+
+@mixin xsmall {
+  @media screen and (max-width: $xsmobile - 1px) { @content }
+}
+
+@mixin small {
+  @media screen and (max-width: $mobile - 1px) { @content }
 }
 
 @mixin mobile {
