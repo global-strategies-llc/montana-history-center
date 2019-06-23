@@ -90,15 +90,13 @@ class Navbar extends React.Component {
 						id="navMenu"
 						className={`navbar-menu ${this.state.navBarActiveClass}`}
 					>
-						<div className="navbar-start">
-							{
-								menuLinks.map(link => (
-									<Link key={link.name} className="navbar-item" to={link.url}>
-										{link.name}
-									</Link>
-								))
-							}
-						</div>
+						{
+							menuLinks.map(link => (
+								<Link key={link.name} className="navbar-item" to={link.url}>
+									{link.name}
+								</Link>
+							))
+						}
 					</div>
 
 				</div>

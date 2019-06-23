@@ -7,12 +7,12 @@ module.exports = {
 			'To provide awareness to the general public in Montana that there is money available to build a new MT historical society building, and that the best location is the former capital hill mall site. This location is better than the alternative/current location because we will be able to showcase all the historical artifacts and the location will drive more tourists because its more accessible.',
 		menuLinks:[
 			{
-				name:'Why the Mall Site Wins',
+				name:'Mall Site',
 				placement: ['navbar'],
 				url:'/why-the-mall-site-wins'
 			},
 			{
-				name: 'Montana Heritage Center FAQ',
+				name: 'FAQ',
 				placement: ['navbar'],
 				url: '/montana-heritage-center-faq'
 			},

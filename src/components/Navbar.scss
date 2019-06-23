@@ -11,34 +11,37 @@
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
 	> .container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 
 		@include small {
 			flex-wrap: wrap;
 		}
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
 
 .navbar-brand {
-	margin-right: auto;
 
 	@include xsmall {
 		flex-basis: 100%;
 	}
+	margin-right: auto;
+	order: 0;
 }
 
 .navbar-burger {
-	flex: 0 0 auto;
 
 	@include from($mobile) {
 		margin-left: 0;
 	}
+	flex: 0 0 auto;
+	order: 3;
 }
 
 .navbar-button {
 	margin: 0 0.5em;
+	order: 2;
 }
 
 .navbar-menu {
@@ -51,10 +54,15 @@
 	}
 
 	@include mobile {
+		width: 100%;
 		text-align: center;
 	}
 
+	max-width: 48em;
+	justify-content: space-around;
+	padding: 0 3em;
 	text-align: right;
+	order: 1;
 }
 
 .navbar-item .icon {
