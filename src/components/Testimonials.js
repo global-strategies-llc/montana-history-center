@@ -14,7 +14,7 @@ const Testimonials = ({ testimonials }) => (
 					<cite>
 						{testimonial.author.split(/\n/)[0]}
 						{testimonial.author.split(/\n/)[1] &&
-							<span className="author-role">{testimonial.author.split(/\n/)[1]}</span>
+							<span className="author-role">{testimonial.author.split(/\n/).slice(1).join(' ')}</span>
 						}
 					</cite>
 				</blockquote>
