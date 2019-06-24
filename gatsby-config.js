@@ -9,7 +9,7 @@ module.exports = {
 			{
 				name:'Mall Site',
 				placement: ['navbar'],
-				url:'/why-the-mall-site-wins'
+				url:'/why-the-mall-site'
 			},
 			{
 				name: 'FAQ',
