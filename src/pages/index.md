@@ -2,8 +2,10 @@
 templateKey: index-page
 title: Build the Montana Heritage Center at the Mall Site.
 eyebrow: Sign the petition.
-heading: What is Montana Heritage Center?
-subheading: The proposed name and location for the new Montana Historical Society museum.
+heading: Build the Montana Heritage Center at the Mall Site.
+subheading: |
+  What is Montana Heritage Center?
+  The proposed name and location for the new Montana Historical Society museum.
 image: /img/home-jumbotron.jpg
 cta:
   text: Sign the petition

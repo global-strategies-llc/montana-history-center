@@ -23,19 +23,19 @@ const Hero = ({
 			}
 		>
 			<div className="heading-wrap">
-				{ title &&
+				{ heading &&
 					<h1 className="is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
 						{ eyebrow &&
 							<strong className="eyebrow">{eyebrow}</strong>
 						}
-						{title}
+						{heading}
 					</h1>
 				}
-				{ heading &&
+				{ subheading &&
 					<h3 className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-						{heading}
-						{ subheading &&
-							<small>{subheading}</small>
+						{ subheading.split(/\n/)[0] }
+						{ subheading.split(/\n/)[1] &&
+							<span className="sub2">{subheading.split(/\n/).slice(1).join(' ')}</span>
 						}
 					</h3>
 				}
