@@ -59,7 +59,11 @@ export const IndexPageTemplate = ({
 							</ul>
 						</div>
 						<div className="pitch-image column is-6">
-							<Img fluid={mainpitch.image.childImageSharp.fluid} />
+							<Img fluid={
+								mainpitch.image.childImageSharp ?
+									mainpitch.image.childImageSharp.fluid
+									: mainpitch.image
+							} />
 						</div>
 						<div className="pitch pitch-why column is-3">
 							<h4 className="subtitle">{mainpitch.why.heading}</h4>
