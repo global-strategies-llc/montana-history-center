@@ -25,7 +25,32 @@ module.exports = {
 				name: 'News and Opinion',
 				placement: ['navbar'],
 				url: '/news-and-opinion'
-			}
+			},
+			{
+				name: 'About Us',
+				placement: ['footer'],
+				url: '/about'
+			},
+			{
+				name: 'Contact Us',
+				placement: ['footer'],
+				url: '/contact'
+			},
+			{
+				name: 'Terms of Use',
+				placement: ['footer'],
+				url: '/terms'
+			},
+			{
+				name: 'Privacy',
+				placement: ['footer'],
+				url: '/privacy'
+			},
+			{
+				name: 'Your Privacy Rights',
+				placement: ['footer'],
+				url: '/privacy#your-rights'
+			},
 		]
 	},
 	plugins: [
