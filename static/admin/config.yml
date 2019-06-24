@@ -1,30 +1,127 @@
-backend:
-    name: git-gateway
-    branch: master
+---
+backend: {branch: master, name: git-gateway}
+collections:
+- format: yaml-frontmatter
+- create: true
+  fields:
+  - {default: blog-post, label: Template Key, name: templateKey, widget: hidden}
+  - {label: Title, name: title, widget: string}
+  - {label: Publish Date, name: date, widget: datetime}
+  - {label: Description, name: description, widget: text}
+  - {label: Featured Post, name: featuredpost, widget: boolean}
+  - {label: Featured Image, name: featuredimage, widget: image}
+  - {label: Body, name: body, widget: markdown}
+  - {label: Tags, name: tags, widget: list}
+  folder: src/pages/blog
+  label: Blog
+  name: blog
+  slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+- files:
+  - fields:
+    - {default: index-page, label: Template Key, name: templateKey, widget: hidden}
+    - {label: Title, name: title, widget: string}
+    - {label: Image, name: image, widget: image}
+    - {label: Eyebrow, name: eyebrow, widget: string}
+    - {label: Heading, name: heading, widget: string}
+    - {label: Subheading, name: subheading, widget: string}
+    - fields:
+      - {label: Text, name: text, widget: string}
+      - {label: Link, name: url, widget: string}
+      label: Call to Action
+      name: cta
+      widget: object
+    - fields:
+      - {label: Quote, name: quote, widget: string}
+      - {label: Author, name: author, widget: string}
+      label: Testimonials
+      name: testimonials
+      widget: list
+    - fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - fields:
+        - {label: Heading, name: heading, widget: string}
+        - {label: Points, name: points, widget: list}
+        label: Why
+        name: why
+        widget: object
+      - fields:
+        - {label: Heading, name: heading, widget: string}
+        - {label: Points, name: points, widget: list}
+        label: Why Not
+        name: whynot
+        widget: object
+      label: Mainpitch
+      name: mainpitch
+      widget: object
+    - {label: Description, name: description, widget: text}
+    - fields:
+      - {label: Heading, name: heading, widget: string}
+      - {label: Description, name: description, widget: text}
+      - fields:
+        - {label: Image, name: image, widget: image}
+        - {label: Text, name: text, widget: text}
+        - fields:
+          - {label: Text, name: text, widget: string}
+          - {label: Link, name: url, widget: string}
+          label: Link
+          name: link
+          widget: object
+        label: Clients
+        name: clients
+        widget: list
+      label: Supporters
+      name: supporters
+      widget: object
+    - fields:
+      - {label: Heading, name: heading, widget: string}
+      - {label: Description, name: description, widget: text}
+      - fields:
+        - {label: Image, name: image, widget: image}
+        - fields:
+          - {label: Text, name: text, widget: string}
+          - {label: Link, name: url, widget: string}
+          label: Link
+          name: link
+          widget: object
+        label: Links
+        name: links
+        widget: list
+      label: Featured Links
+      name: featuredLinks
+      widget: object
+    file: src/pages/index.md
+    label: Home Page
+    name: index
+  - fields:
+    - {default: about-page, label: Template Key, name: templateKey, widget: hidden}
+    - {label: Title, name: title, widget: string}
+    - {label: Body, name: body, widget: markdown}
+    file: src/pages/about/index.md
+    label: About
+    name: about
+  - fields:
+    - {default: contact-page, label: Template Key, name: templateKey, widget: hidden}
+    - {label: Title, name: title, widget: string}
+    - {label: Body, name: body, widget: markdown}
+    file: src/pages/contact/index.md
+    label: Contact
+    name: contact
+  - fields:
+    - {default: terms-page, label: Template Key, name: templateKey, widget: hidden}
+    - {label: Title, name: title, widget: string}
+    - {label: Body, name: body, widget: markdown}
+    file: src/pages/terms/index.md
+    label: Terms
+    name: terms
+  - fields:
+    - {default: privacy-page, label: Template Key, name: templateKey, widget: hidden}
+    - {label: Title, name: title, widget: string}
+    - {label: Body, name: body, widget: markdown}
+    file: src/pages/privacy/index.md
+    label: Privacy
+    name: privacy
+  label: Pages
+  name: pages
 media_folder: static/img
 public_folder: /img
-collections:
-    -
-        name: blog
-        label: Blog
-        folder: src/pages/blog
-        create: true
-        slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-        fields:
-            - {label: 'Template Key', name: templateKey, widget: hidden, default: blog-post}
-            - {label: Title, name: title, widget: string}
-            - {label: 'Publish Date', name: date, widget: datetime}
-            - {label: Description, name: description, widget: text}
-            - {label: 'Featured Post', name: featuredpost, widget: boolean}
-            - {label: 'Featured Image', name: featuredimage, widget: image}
-            - {label: Body, name: body, widget: markdown}
-            - {label: Tags, name: tags, widget: list}
-    -
-        name: pages
-        label: Pages
-        files:
-            - {file: src/pages/index.md, label: 'Home Page', name: index, fields: [{label: 'Template Key', name: templateKey, widget: hidden, default: index-page}, {label: Title, name: title, widget: string}, {label: Image, name: image, widget: image}, {label: Eyebrow, name: eyebrow, widget: string}, {label: Heading, name: heading, widget: string}, {label: Subheading, name: subheading, widget: string}, {label: 'Call to Action', name: cta, widget: object, fields: [{label: Text, name: text, widget: string}, {label: Link, name: url, widget: string}]}, {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}, {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Image, name: image, widget: image}, {label: Why, name: why, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Points, name: points, widget: list}]}, {label: 'Why Not', name: whynot, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Points, name: points, widget: list}]}]}, {label: Description, name: description, widget: text}, {label: Supporters, name: supporters, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Clients, name: clients, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}, {label: Link, name: link, widget: object, fields: [{label: Text, name: text, widget: string}, {label: Link, name: url, widget: string}]}]}]}, {label: 'Featured Links', name: featuredLinks, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Links, name: links, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Link, name: link, widget: object, fields: [{label: Text, name: text, widget: string}, {label: Link, name: url, widget: string}]}]}]}]}
-            - {file: src/pages/about/index.md, label: About, name: about, fields: [{label: 'Template Key', name: templateKey, widget: hidden, default: about-page}, {label: Title, name: title, widget: string}, {label: Body, name: body, widget: markdown}]}
-            - {file: src/pages/contact/index.md, label: Contact, name: contact, fields: [{label: 'Template Key', name: templateKey, widget: hidden, default: contact-page}, {label: Title, name: title, widget: string}, {label: Body, name: body, widget: markdown}]}
-            - {file: src/pages/terms/index.md, label: Terms, name: terms, fields: [{label: 'Template Key', name: templateKey, widget: hidden, default: terms-page}, {label: Title, name: title, widget: string}, {label: Body, name: body, widget: markdown}]}
-            - {file: src/pages/privacy/index.md, label: Privacy, name: privacy, fields: [{label: 'Template Key', name: templateKey, widget: hidden, default: privacy-page}, {label: Title, name: title, widget: string}, {label: Body, name: body, widget: markdown}]}

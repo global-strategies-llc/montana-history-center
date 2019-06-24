@@ -22,11 +22,11 @@ mainpitch:
   image:
   timeline:
     - year: '1987'
-      description: >
+      description: >-
         Governor Tom Judge worked with MHS and they determined that more space
         was needed; they recommended the Capital Hill Mall site
     - year: '1981 - 1989'
-      description: >
+      description: >-
         Governor Ted Schwinden supported a new history center
 midway: |
   Most of Montana's Historical Society collection remains in storage because the
