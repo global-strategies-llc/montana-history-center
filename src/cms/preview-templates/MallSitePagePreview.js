@@ -1,23 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { IndexPageTemplate } from '../../templates/index-page'
+import { MallSiteTemplate } from '../../templates/mallsite-page'
 
-const IndexPagePreview = ({ entry, getAsset }) => {
+const MallSitePreview = ({ entry, getAsset }) => {
 	const data = entry.getIn(['data']).toJS()
 
 	if (data) {
 		return (
-			<IndexPageTemplate
+			<MallSiteTemplate
 				image={data.image}
 				title={data.title}
 				eyebrow={data.eyebrow}
 				heading={data.heading}
-				subheading={data.subheading}
+				midway={data.midway}
+				closer={data.closer}
 				cta={data.cta}
 				testimonials={data.testimonials || []}
 				mainpitch={data.mainpitch || {}}
-				supporters={data.supporters || []}
-				featuredLinks={data.featuredLinks || []}
 			/>
 		)
 	} else {
@@ -25,11 +24,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
 	}
 }
 
-IndexPagePreview.propTypes = {
+MallSitePreview.propTypes = {
 	entry: PropTypes.shape({
 		getIn: PropTypes.func,
 	}),
 	getAsset: PropTypes.func,
 }
 
-export default IndexPagePreview
+export default MallSitePreview
