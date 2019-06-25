@@ -3,11 +3,13 @@
 @import './breakpoints';
 
 .navbar {
+	@include sans;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	right: 0;
+	background: $mhc-white;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
 	> .container {
@@ -28,6 +30,16 @@
 	}
 	margin-right: auto;
 	order: 0;
+
+	h4 {
+		font-size: 1.125em;
+		color: $mhc-blue;
+		letter-spacing: 0.05em;
+	}
+
+	.navbar-item.logo {
+  	padding: 0 1rem;
+  }
 }
 
 .navbar-burger {
@@ -35,6 +47,8 @@
 	@include from($mobile) {
 		margin-left: 0;
 	}
+
+	color: $mhc-blue;
 	flex: 0 0 auto;
 	order: 3;
 }
@@ -58,17 +72,28 @@
 		text-align: center;
 	}
 
+	flex: 1 0 0%;
+	justify-content: space-between;
 	max-width: 48em;
-	justify-content: space-around;
-	padding: 0 3em;
+	padding: 0 1em 0 3em;
 	text-align: right;
 	order: 1;
+
+	&.is-active {
+		padding-top: 2em;
+		padding-bottom: 2em;
+
+		.navbar-button {
+			margin-top: 2em;
+		}
+	}
+}
+
+.navbar-item {
+	font-size: 0.875em;
+	color: $mhc-blue;
 }
 
 .navbar-item .icon {
   color: $primary;
-}
-
-.navbar-brand .navbar-item.logo {
-  padding: 0 1rem;
 }

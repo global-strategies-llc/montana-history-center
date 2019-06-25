@@ -59,18 +59,13 @@ class Navbar extends React.Component {
 
 					<div className="navbar-brand">
 						<Link to="/" className="navbar-item" title="Logo">
-							<img src={logo} alt="Montana History Center" style={{ width: '88px' }} />
+							<h4><strong>Montana</strong> History Center</h4>
+							{/*<img src={logo} alt="Montana History Center" style={{ width: '88px' }} />*/}
 						</Link>
 					</div>
 
 					<div className="navbar-button">
-						<Link className="button" to="/donate">
-							<span>Contribute</span>
-						</Link>
-					</div>
-
-					<div className="navbar-button">
-						<Link className="button" to="/petition">
+						<Link className="button button-invert" to="/petition">
 							<span>Sign the Petition</span>
 						</Link>
 					</div>
@@ -97,6 +92,12 @@ class Navbar extends React.Component {
 								</Link>
 							))
 						}
+						<div className="navbar-button">
+							<Link className="button" to="/donate">
+								<span>Contribute</span>
+							</Link>
+						</div>
+
 					</div>
 
 				</div>
