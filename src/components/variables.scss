@@ -1,9 +1,19 @@
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000;
-$kaldi-red-invert: #fff;
+$mhc-blue: #2E648D;
+$mhc-blue-lt: #B4D9F5;
+$mhc-blue-invert: #FFF9F0;
 
-$primary: $kaldi-red;
-$primary-invert: $kaldi-red-invert;
+$mhc-white: #FFF9F0;
+
+$primary: $mhc-blue;
+$primary-invert: $mhc-blue-invert;
 $body-color: #333;
 $black: #2b2523;
+
+@mixin sans {
+	font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, Arial, sans;
+}
+@mixin serif {
+	font-family: 'Noto Serif', Garamond, serif;
+}
