@@ -9,7 +9,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	background: $mhc-white;
+	background: $base;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
 	> .container {
@@ -33,7 +33,7 @@
 
 	h4 {
 		font-size: 1.125em;
-		color: $mhc-blue;
+		color: $primary;
 		letter-spacing: 0.05em;
 	}
 
@@ -48,7 +48,7 @@
 		margin-left: 0;
 	}
 
-	color: $mhc-blue;
+	color: $primary;
 	flex: 0 0 auto;
 	order: 3;
 }
@@ -91,7 +91,7 @@
 
 .navbar-item {
 	font-size: 0.875em;
-	color: $mhc-blue;
+	color: $primary;
 }
 
 .navbar-item .icon {

@@ -1,13 +1,14 @@
-// Config vars
-// Kaldi logo brand color: #FD461E
-$mhc-blue: #2E648D;
-$mhc-blue-lt: #B4D9F5;
-$mhc-blue-invert: #FFF9F0;
 
+// Config vars
+
+$mhc-blue: #2E648D;  // MHC logo brand color
+$mhc-blue-lt: #B4D9F5;
 $mhc-white: #FFF9F0;
 
 $primary: $mhc-blue;
-$primary-invert: $mhc-blue-invert;
+$secondary: $mhc-blue-lt;
+$base: $mhc-white;
+$primary-invert: $mhc-white;
 $body-color: #333;
 $black: #2b2523;
 

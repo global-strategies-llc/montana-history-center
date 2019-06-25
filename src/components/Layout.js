@@ -49,7 +49,10 @@ const TemplateWrapper = ({ children }) => {
 			</Helmet>
 			<Navbar menuLinks={menuLinks.filter( link => link.placement.includes('navbar') )} />
 			<main>{children}</main>
-			<Footer menuLinks={menuLinks.filter( link => link.placement.includes('footer') )} />
+			<Footer
+				siteCopy={title}
+				menuLinks={menuLinks.filter( link => link.placement.includes('footer') )}
+			/>
 		</div>
 	)
 }

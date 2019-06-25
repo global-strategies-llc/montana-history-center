@@ -3,6 +3,10 @@
 @import './breakpoints';
 @import './variables';
 
+body {
+  @include sans;
+}
+
 .content .taglist {
   display: flex;
   flex-wrap: wrap;
@@ -53,36 +57,36 @@
   font-weight: 400;
   line-height: 0.5;
   text-align: center;
-  color: $mhc-blue;
+  color: $primary;
   border-radius: 0;
   transition: all 0.15s ease;
-  background-color: #fff;
+  background-color: $base;
   text-decoration: none;
-  // box-shadow: inset 0 0 0 2px $mhc-blue-lt;
+  // box-shadow: inset 0 0 0 2px $primary-lt;
 }
 
 .button {
-  color: $mhc-blue;
+  color: $primary;
   background: transparent;
-  border: 2px solid $mhc-blue;
+  border: 2px solid $primary;
   transition: 150ms color, 150ms background, 150ms border;
   border-radius: 0;
 
   &:hover {
-    color: $mhc-blue-invert;
-    background: $mhc-blue;
-    border-color: $mhc-blue;
+    color: $primary-invert;
+    background: $primary;
+    border-color: $primary;
   }
 }
 
 .button-invert {
-  color: $mhc-blue-invert;
-  background: $mhc-blue;
+  color: $primary-invert;
+  background: $primary;
 
   &:hover {
-    color: $mhc-blue;
+    color: $primary;
     background: transparent;
-    border-color: $mhc-blue;
+    border-color: $primary;
   }
 }
 
@@ -94,15 +98,6 @@
   width: 1.5rem;
   height: 1.5rem;
   fill: currentColor;
-}
-
-footer.footer {
-  padding: 3rem 0 0;
-  background-color: transparent;
-}
-
-.social {
-  padding: 2em;
 }
 
 .social a {
