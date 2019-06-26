@@ -1,0 +1,73 @@
+@import './breakpoints';
+@import './variables';
+
+.testimonials {
+	overflow: hidden;
+	background-color: $base;
+
+	.columns {
+		margin-left: -1em;
+		margin-right: -1em;
+	}
+
+	.message,
+  .message-body {
+  	margin: 0;
+		border: 0;
+		border-radius: 0;
+  }
+
+	.message {
+		flex: 1;
+		margin: 0 1em;
+		padding: 0 2em 1em 4em;
+		background-color: rgba(0, 0, 0, 0.015);
+		font-size: 1em;
+  }
+
+	.message-body {
+		@include serif;
+		position: relative;
+		padding: 1em 2em 1em 0;
+		color: $neutral;
+
+		&:before,
+		&:after {
+			display: inline-block;
+			margin: 0 0.1em;
+			line-height: 0.667;
+		}
+
+		&:before {
+			content: '\201C';
+			display: block;
+			position: absolute;
+			top: 0.3em;
+			left: -0.7em;
+			color: $secondary;
+			font-size: 5em;
+		}
+
+		&:after {
+			content: '\201D';
+			position: relative;
+			top: 0.1em;
+			font-size: 1.25em;
+		}
+	}
+
+	.message-author {
+		@include sans;
+		display: block;
+		color: $text-dark;
+		font-style: normal;
+		white-space: pre-line;
+	}
+
+	.author-role {
+		@include serif;
+		display: block;
+		color: $primary;
+		font-size: 0.75em;
+	}
+}
