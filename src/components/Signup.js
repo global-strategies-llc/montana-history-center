@@ -21,7 +21,7 @@ const Signup = (action) =>
 						backgroundAttachment: 'initial'
 					}}
 				>
-					<div>
+					<div className="column-wrap">
 						<div className="column is-5 is-marginless">
 							<SignupForm action={action} />
 						</div>
@@ -33,7 +33,7 @@ const Signup = (action) =>
 
 const query = graphql`
 	query {
-		image: file(relativePath: { eq: "jumbotron.jpg" }) {
+		image: file(relativePath: { eq: "mhc-petition-signup.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 2048, quality: 100) {
 					...GatsbyImageSharpFluid
