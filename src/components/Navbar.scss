@@ -39,9 +39,11 @@
 }
 
 .navbar-burger {
+	margin: 0.333em;
+	margin-left: auto;
 
 	@include from($mobile) {
-		margin-left: 0;
+		margin-left: 1em;
 	}
 
 	color: $primary;
@@ -50,7 +52,8 @@
 }
 
 .navbar-button {
-	margin: 0 0.5em;
+	margin: 0.5em;
+	font-size: 0.667em;
 	order: 2;
 }
 
@@ -86,7 +89,7 @@
 }
 
 .navbar-item {
-	font-size: 0.875em;
+	font-size: 0.667em;
 	color: $primary;
 }
 
