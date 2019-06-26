@@ -3,8 +3,33 @@
 @import './breakpoints';
 @import './variables';
 
+
+// full desktop, for base 10px = 1rem
 html {
-  font-size: 67.5%;
+  font-size: 62.5%;
+  height: 100%;
+
+  @include widescreen {
+      $map: (1360px: 8.5px, 1600px: 10px);
+      font-size: linear-interpolation($map);
+  }
+
+  @include desktop {
+    $map: ($tablet: 8px, $desktop: 8.7px);
+    font-size: linear-interpolation($map);
+  }
+
+  @include tablet {
+    $map: ($mobile: 7px, $tablet: 8.7px);
+    font-size: linear-interpolation($map);
+  }
+
+  @include mobile {
+    font-size: 46%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
 }
 
 body {
