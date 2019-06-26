@@ -51,7 +51,7 @@ const Hero = ({
 					<div className="columns is-desktop">
 						<div className="heading-wrap column is-three-fifths-desktop">
 							{ heading &&
-								<h1 className="is-size-3-mobile is-size-2-tablet is-size-1-widescreen">
+								<h1 className="is-size-1">
 									{ eyebrow &&
 										<strong className="eyebrow">{eyebrow}</strong>
 									}

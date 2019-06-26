@@ -25,7 +25,7 @@
 	margin-top: 1em;
 
 	.button {
-		font-size: 1.625em;
+		font-size: 1.15em;
 	}
 }
 
@@ -47,9 +47,14 @@
 }
 
 .subheading-inner {
-	margin-left: 3em;
-	padding: 1em 1.5em;
+	margin-top: 2em;
+	padding: 0 1em;
 	border-left: 3px solid $secondary;
+
+	@include desktop {
+		margin-left: 3em;
+		padding: 0.5em 1em;
+	}
 
 	small {
 		font-weight: bold;
@@ -67,7 +72,6 @@
 	}
 
 	h4 {
-		font-size: 1.2em !important;
 		color: $text;
 	}
 }
