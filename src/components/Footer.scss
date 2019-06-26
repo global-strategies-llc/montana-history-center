@@ -19,8 +19,17 @@ footer.footer {
 
 .footer .container {
 	display: flex;
+	height: auto;
 	justify-content: space-between;
 	align-items: center;
+
+	@include until($tablet) {
+		flex-direction: column;
+
+		> * {
+			margin: 1em 0;
+		}
+	}
 }
 
 .footer-logo {
@@ -37,7 +46,9 @@ footer.footer {
 	@include serif;
 	color: $primary;
 	font-size: 0.75em;
+	padding: 0 2em;
 	margin-left: auto;
+	text-align: center;
 
 	strong {
 		color: $primary;
@@ -52,6 +63,10 @@ footer.footer {
 	align-items: center;
 	list-style: none !important;
 	text-align: left;
+
+	@include mobile {
+		flex-flow: column;
+	}
 }
 
 .footer .social {
