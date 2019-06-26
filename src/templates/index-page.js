@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import Testimonials from '../components/Testimonials'
+import Testimonial from '../components/Testimonial'
 import Features from '../components/Features'
 import Signup from '../components/Signup'
 
@@ -25,17 +25,21 @@ export const IndexPageTemplate = ({
 }) => (
 	<div>
 		<Hero image={image} title={title} eyebrow={eyebrow} heading={heading} subheading={subheading} cta={cta}/>
+		<div className="testimonials section">
+			<div className="container">
+				<div className="columns">
+					{testimonials.map( (item, i) =>
+						<Testimonial
+							key={i}
+							className="column is-6"
+							quote={item.quote}
+							author={item.author} />
+					)}
+				</div>
+			</div>
+		</div>
 		<section className="section section--gradient">
 			<div className="container">
-				<div className="section">
-					<div className="columns">
-						<div className="column is-12">
-							<div className="content">
-								<Testimonials testimonials={testimonials} />
-							</div>
-						</div>
-					</div>
-				</div>
 				<div className="section mainpitch">
 					<div className="content">
 						<div className="tile has-text-centered">

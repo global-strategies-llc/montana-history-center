@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Testimonials from '../components/Testimonials'
+import Testimonial from '../components/Testimonial'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const PetitionPageTemplate = ({
@@ -76,7 +76,11 @@ export const PetitionPageTemplate = ({
 									</div>
 								</div>
 							</div>
-							<Testimonials testimonials={testimonials} />
+							<div className="testimonials container">
+								{testimonials.map( (item, i) =>
+									<Testimonial key={i} quote={item.quote} author={item.author} />
+								)}
+							</div>
 							<div
 								className="full-width-image-container"
 								style={{

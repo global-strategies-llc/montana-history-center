@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import Testimonials from '../components/Testimonials'
+import Testimonial from '../components/Testimonial'
 import Signup from '../components/Signup'
 
 import '../components/index.scss'
@@ -27,8 +27,10 @@ export const MallSiteTemplate = ({
 				<div className="section">
 					<div className="columns">
 						<div className="column is-12">
-							<div className="content">
-								<Testimonials testimonials={testimonials} />
+							<div className="testimonials container">
+								{testimonials.map( (item, i) =>
+									<Testimonial key={i} quote={item.quote} author={item.author} />
+								)}
 							</div>
 						</div>
 					</div>
