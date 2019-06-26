@@ -24,10 +24,6 @@
 }
 
 .navbar-brand {
-
-	@include xsmall {
-		flex-basis: 100%;
-	}
 	margin-right: auto;
 	order: 0;
 
