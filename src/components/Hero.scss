@@ -1,18 +1,19 @@
+@import './variables';
+@import './breakpoints';
+
 .page-hero {
-	padding-top: 3.25rem;
+	padding: 3.25rem 0 2em;
+
+	@include xsmall {
+		padding-top: 6.5rem;
+	}
 }
 
 .page-hero h1,
 .page-hero h3 {
-	padding: 0.25em;
 	font-weight: normal;
-	color: #000;
-}
-
-.page-hero h1,
-.page-hero h3 {
-	width: 16em;
-	max-width: 100%;
+	line-height: 1.2;
+	color: $neutral;
 }
 
 .eyebrow,
@@ -21,8 +22,11 @@
 }
 
 .hero-cta {
-	padding: 2em;
-	align-self: center;
+	margin-top: 1em;
+
+	.button {
+		font-size: 1.625em;
+	}
 }
 
 .full-width-image {
@@ -33,12 +37,38 @@
 	background-attachment: fixed;
 }
 
-.heading-wrap {
+.heading-wrap,
+.subheading-wrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: flex-start;
 	min-height: 150px;
-	line-height: 1;
+}
+
+.subheading-inner {
+	margin-left: 3em;
+	padding: 1em 1.5em;
+	border-left: 3px solid $secondary;
+
+	small {
+		font-weight: bold;
+		line-height: 2.5;
+	}
+
+	h3,
+	h4 {
+		line-height: 1.55;
+	}
+
+	h3 {
+		@include serif;
+		margin-bottom: 1em;
+	}
+
+	h4 {
+		font-size: 1.2em !important;
+		color: $text;
+	}
 }
 

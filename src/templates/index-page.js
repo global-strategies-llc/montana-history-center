@@ -103,7 +103,7 @@ IndexPageTemplate.propTypes = {
 	title: PropTypes.string,
 	eyebrow: PropTypes.string,
 	heading: PropTypes.string,
-	subheading: PropTypes.string,
+	subheading: PropTypes.object,
 	cta: PropTypes.object,
 	testimonials: PropTypes.array,
 	mainpitch: PropTypes.object,
@@ -148,7 +148,10 @@ export const pageQuery = graphql`
 				title
 				eyebrow
 				heading
-				subheading
+				subheading {
+					question
+					answer
+				}
 				description
 				image {
 					childImageSharp {
