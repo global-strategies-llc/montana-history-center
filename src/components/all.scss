@@ -3,176 +3,134 @@
 @import './breakpoints';
 @import './variables';
 
+@import './button';
+
 
 // full desktop, for base 10px = 1rem
 html {
-  font-size: 62.5%;
-  height: 100%;
+	font-size: 62.5%;
+	height: 100%;
 
-  @include widescreen {
-      $map: (1360px: 8.5px, 1600px: 10px);
-      font-size: linear-interpolation($map);
-  }
+	@include widescreen {
+		$map: (1360px: 10px, 1600px: 12px);
+		font-size: linear-interpolation($map);
+	}
 
-  @include desktop {
-    $map: ($tablet: 8px, $desktop: 8.7px);
-    font-size: linear-interpolation($map);
-  }
+	@include desktop {
+		$map: ($tablet: 9px, $desktop: 10px);
+		font-size: linear-interpolation($map);
+	}
 
-  @include tablet {
-    $map: ($mobile: 7px, $tablet: 8.7px);
-    font-size: linear-interpolation($map);
-  }
+	@include tablet {
+		$map: ($mobile: 8px, $tablet: 9px);
+		font-size: linear-interpolation($map);
+	}
 
-  @include mobile {
-    font-size: 46%;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
+	@include mobile {
+		-webkit-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
 }
 
 body {
-  @include sans;
-  line-height: 1.55;
+	@include sans;
+	font-size: 1.6rem;
+	line-height: 1.55;
 }
 
 .content .taglist {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-items: center;
-  margin-top: 1.5rem;
-  margin-right: 1.5rem;
-  margin-bottom: 0;
-  margin-left: 0;
-  list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: center;
+	margin-top: 1.5rem;
+	margin-right: 1.5rem;
+	margin-bottom: 0;
+	margin-left: 0;
+	list-style: none;
 }
 .content .taglist li {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  padding: 0 2rem 1rem 0;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
+	padding: 0 2rem 1rem 0;
 }
 
 .full-width-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100vw;
-  height: 400px;
-  left: 50%;
-  right: 50%;
-  margin: 2em -50vw;
-  background-size: cover;
-  background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100vw;
+	height: 400px;
+	left: 50%;
+	right: 50%;
+	margin: 2em -50vw;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .full-width-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 400px;
-  background-size: cover;
-  background-position: bottom;
-}
-
-.btn,
-.button {
-  @include serif;
-  display: inline-block;
-  height: auto;
-  padding: 0.875em 1em;
-  font-size: 0.875em;
-  font-weight: 400;
-  line-height: 0.875;
-  letter-spacing: 0.0625em;
-  text-transform: uppercase;
-  text-align: center;
-  color: $primary;
-  border-radius: 0;
-  transition: 150ms color, 150ms background, 150ms border;
-  background-color: $base;
-  text-decoration: none;
-  // box-shadow: inset 0 0 0 2px $primary-lt;
-}
-
-.button {
-  color: $primary;
-  background: transparent;
-  border: 2px solid $primary;
-  border-radius: 0;
-
-  &:hover {
-    color: $primary-invert;
-    background: $primary;
-    border-color: $primary;
-  }
-}
-
-.button-invert {
-  color: $primary-invert;
-  background: $primary;
-
-  &:hover {
-    color: $primary;
-    background: transparent;
-    border-color: $primary;
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 400px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .margin-top-0 {
-  margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 
 .icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: currentColor;
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: currentColor;
 }
 
 .social a {
-  display: inline;
-  width: 1em;
-  height: 1em;
-  margin: 0.5em;
-  padding: 0.5em 0.5em 0.3em 0.5em;
-  border-radius: 1em;
-  background-color: $white-ter;
-  vertical-align: middle;
+	display: inline;
+	width: 1em;
+	height: 1em;
+	margin: 0.5em;
+	padding: 0.5em 0.5em 0.3em 0.5em;
+	border-radius: 1em;
+	background-color: $white-ter;
+	vertical-align: middle;
 }
 
 .blog-list-item.is-featured {
-  background-color: #d6400033;
+	background-color: #d6400033;
 }
 
 .blog-list-item header {
-  display: flex;
-  margin-bottom: 1em;
+	display: flex;
+	margin-bottom: 1em;
 }
 
 .blog-list-item .featured-thumbnail {
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+	flex-basis: 35%;
+	margin: 0 1.5em 0 0;
 }
 
 // responsiveness
 @include tablet-only {
-  .blog-list-item .featured-thumbnail {
-    flex-basis: 50%;
-  }
+	.blog-list-item .featured-thumbnail {
+		flex-basis: 50%;
+	}
 }
 
 @include mobile {
-  .blog-list-item {
-    header {
-      display: block;
-    }
-    .featured-thumbnail {
-      max-width: 70%;
-      margin: 0 0 1em;
-      text-align: center;
-    }
-  }
+	.blog-list-item {
+		header {
+			display: block;
+		}
+		.featured-thumbnail {
+			max-width: 70%;
+			margin: 0 0 1em;
+			text-align: center;
+		}
+	}
 }
