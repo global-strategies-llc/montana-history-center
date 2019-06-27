@@ -7,8 +7,6 @@ import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
 import Signup from '../components/Signup'
 
-import '../components/index.scss'
-
 export const MallSiteTemplate = ({
 	image,
 	title,
@@ -19,7 +17,7 @@ export const MallSiteTemplate = ({
 	testimonials,
 	mainpitch
 }) => (
-	<div>
+	<div className="has-background">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
 		<div className="testimonials section">
 			<div className="container">

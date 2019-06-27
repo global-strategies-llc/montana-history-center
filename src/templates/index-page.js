@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
 	supporters,
 	featuredLinks
 }) => (
-	<div>
+	<div className="has-background">
 		<Hero image={image} title={title} eyebrow={eyebrow} heading={heading} subheading={subheading} cta={cta}/>
 		<div className="testimonials section">
 			<div className="container">
