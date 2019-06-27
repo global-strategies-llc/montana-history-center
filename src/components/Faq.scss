@@ -1,0 +1,65 @@
+@import './variables';
+@import './breakpoints';
+
+.faq {
+	position: relative;
+	padding: 1.5em 2em 1.5em 3em;
+	border-top: 1px solid rgba($text, 0.2);
+	list-style: none !important;
+	cursor: pointer;
+
+	&:last-child {
+		border-bottom: 1px solid rgba($text, 0.2);
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 15px;
+		height: 14px;
+		top: 0.4em;
+		left: 0.1em;
+		margin: 0 0.1em;
+		font-size: 5em;
+		line-height: 0.667;
+		border: 7px solid transparent;
+		transform: rotateZ(0);
+		transition: 300ms transform;
+		transform-origin: 25% 55%;
+		border-left-color: $secondary;
+		border-left-width: 15px;
+	}
+
+	&.open:before {
+		transform: rotateZ(90deg);
+	}
+
+	h6 {
+		font-size: 1.25em;
+	}
+}
+
+.faq-answer {
+	--fullHeight: auto;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: 300ms height ease-in-out, 200ms opacity;
+
+	.open > &,
+	&.show {
+		height: auto;
+	}
+
+	.open > & {
+		opacity: 1;
+		transition-delay: 0s, 250ms;
+		height: var(--fullHeight, auto);
+	}
+
+	p {
+		padding-top: 1em;
+	}
+}
+
