@@ -2,7 +2,7 @@
 templateKey: mallsite-page
 title: Mall Site - Still The Best Choice
 heading: Original Plan To Build Montana Heritage Center At The Mall - Still The Best Choice
-image: /img/home-jumbotron.jpg
+image: /img/site-sketch-hero.jpg
 cta:
   text: Sign the petition
   url: petition

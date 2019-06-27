@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
@@ -22,41 +21,41 @@ export const MallSiteTemplate = ({
 }) => (
 	<div>
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
-		<section className="section section--gradient">
+		<div className="testimonials section">
 			<div className="container">
-				<div className="section">
-					<div className="columns">
-						<div className="column is-12">
-							<div className="testimonials container">
-								{testimonials.map( (item, i) =>
-									<Testimonial key={i} quote={item.quote} author={item.author} />
-								)}
-							</div>
-						</div>
+				<div className="columns">
+					{testimonials.map( (item, i) =>
+						<Testimonial
+							key={i}
+							className="column is-6"
+							quote={item.quote}
+							author={item.author} />
+					)}
+				</div>
+			</div>
+		</div>
+		<section className="section section--gradient">
+			<div className="section mainpitch">
+				<div className="content">
+					<div className="tile has-text-centered">
+						<h2 className="title is-size-2">
+							{mainpitch.title.split(/\n/)[0]}
+							{mainpitch.title.split(/\n/)[1] &&
+								<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
+							}
+						</h2>
 					</div>
 				</div>
-				<div className="section mainpitch">
-					<div className="content">
-						<div className="tile has-text-centered">
-							<h2 className="title is-size-2">
-								{mainpitch.title.split(/\n/)[0]}
-								{mainpitch.title.split(/\n/)[1] &&
-									<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
-								}
-							</h2>
-						</div>
-					</div>
-				</div>
-				<div className="section">
-					<h3 className="has-text-centered is-size-4">
-						{midway}
-					</h3>
-				</div>
-				<div className="section">
-					<h3 className="has-text-centered is-size-3">
-						{closer}
-					</h3>
-				</div>
+			</div>
+			<div className="section">
+				<h3 className="has-text-centered is-size-4">
+					{midway}
+				</h3>
+			</div>
+			<div className="section">
+				<h3 className="has-text-centered is-size-3">
+					{closer}
+				</h3>
 			</div>
 		</section>
 		<Signup action="#" />
