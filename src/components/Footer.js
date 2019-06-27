@@ -42,8 +42,8 @@ const Footer = ({ menuLinks, siteCopy }) => {
 				</section>
 				<div className="footer-copy">
 					<p>Copyright &copy; {year}
-						<strong>{siteCopy}</strong>.
-						All rights reserved.
+						<strong>{siteCopy}</strong>
+						<br/>All rights reserved.
 					</p>
 				</div>
 			</div>

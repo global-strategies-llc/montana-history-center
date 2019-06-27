@@ -45,7 +45,7 @@ footer.footer {
 .footer-copy {
 	@include serif;
 	color: $primary;
-	font-size: 0.75em;
+	font-size: 0.625em;
 	padding: 0 2em;
 	margin-left: auto;
 	text-align: center;
@@ -59,6 +59,7 @@ footer.footer {
 
 .menu-list {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: center;
 	list-style: none !important;
@@ -70,16 +71,25 @@ footer.footer {
 }
 
 .footer .social {
-	padding: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2em;
 
 	a {
+		display: block;
+		position: relative;
 		background: initial;
 		border-radius: 0;
 	}
 
 	img {
-		width: 1.875em;
-		height: 1.875em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
 	}
 }
 
@@ -87,7 +97,8 @@ footer.footer {
 	margin: 0 0.875em;
 	color: $primary;
 	opacity: 0.9;
-	font-size: 0.875em;
+	font-size: 1.2em;
+	white-space: nowrap;
 
 	&:focus,
 	&:focus-within,
