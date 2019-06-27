@@ -14,7 +14,7 @@ module.exports = {
 			{
 				name: 'FAQ',
 				placement: ['navbar'],
-				url: '/montana-heritage-center-faq'
+				url: '/faq'
 			},
 			{
 				name: 'Stories of Support',
