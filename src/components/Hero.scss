@@ -1,11 +1,31 @@
 @import './variables';
 @import './breakpoints';
 
+$gradient: mix($base, $secondary, 60%);
+
 .page-hero {
+	position: relative;
 	padding: 3.25rem 0 2em;
 
 	@include xsmall {
 		padding-top: 6.5rem;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-image: linear-gradient(to right,
+			// rgba($secondary, 0.7) 5%,
+			rgba($gradient, 0.8) 10%,
+			rgba($base, 0.8) 30%,
+			rgba($base, 0.8) 70%,
+			rgba($base, 0.8) 90%);
+			// rgba($secondary, 0.7) 95%);
 	}
 }
 
@@ -30,11 +50,16 @@
 }
 
 .full-width-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
-  min-height: 400px;
+  min-height: 24em;
   height: auto;
-	background-position: top left;
-	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-attachment: initial;
+	background-repeat: no-repeat;
 }
 
 .heading-wrap,

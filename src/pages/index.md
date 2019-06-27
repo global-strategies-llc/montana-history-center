@@ -6,7 +6,7 @@ heading: Build the Montana Heritage Center at the Mall Site.
 subheading:
   question: What is Montana Heritage Center?
   answer: The proposed name and location for the new Montana Historical Society museum.
-image: /img/home-jumbotron.jpg
+image: /img/site-sketch-hero.jpg
 cta:
   text: Sign the petition
   url: petition
