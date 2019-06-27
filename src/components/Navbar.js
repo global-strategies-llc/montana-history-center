@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import './Navbar.scss'
 
-import logo from '../img/logo.svg'
+// import logo from '../img/logo.svg'
 
 class Navbar extends React.Component {
 
@@ -51,7 +51,7 @@ class Navbar extends React.Component {
 		} = this;
 		return (
 			<nav
-				className="navbar is-transparent"
+				className="navbar has-background"
 				role="navigation"
 				aria-label="main-navigation"
 			>

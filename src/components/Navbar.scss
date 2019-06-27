@@ -9,7 +9,6 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	background: $base;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
 	> .container {
@@ -28,7 +27,7 @@
 	order: 0;
 
 	h4 {
-		font-size: 1.125em;
+		font-size: 1em;
 		color: $primary;
 		letter-spacing: 0.05em;
 	}
@@ -89,7 +88,7 @@
 }
 
 .navbar-item {
-	font-size: 0.667em;
+	font-size: 0.75em;
 	color: $primary;
 }
 
