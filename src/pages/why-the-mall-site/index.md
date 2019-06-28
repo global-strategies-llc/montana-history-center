@@ -5,7 +5,7 @@ heading: Original Plan To Build Montana Heritage Center At The Mall - Still The 
 image: /img/site-sketch-hero.jpg
 cta:
   text: Sign the petition
-  url: petition
+  url: '#petition'
 testimonials:
   - author: |
             Rick Graetz

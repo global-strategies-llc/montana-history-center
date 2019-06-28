@@ -9,7 +9,7 @@ subheading:
 image: /img/site-sketch-hero.jpg
 cta:
   text: Sign the petition
-  url: petition
+  url: '#petition'
 testimonials:
   - author: |
             Jim McCormick, Susan Geise, Any Hunthausen
@@ -44,15 +44,13 @@ mainpitch:
       - Expensive restoration costs
       - Costly tunnel excavation
       - Retrofitting a 50 year old building
-description: >
+description: >-
   The Department of Administration planned to build the new Montana Heritage Center at the
   alternative site of Roberts and 6th it is not suitable.
-
   It will fail in its mission to become a world-class museum since it is right in the middle
   of all the government buildings where there is not enough room to build a large museum.
   We won't be able to share our history and culture with Montana’s school children and the
   thousands of visitors who come to Montana.
-
   The mall site was the original proposed site and is the prime location.
 supporters:
   heading: Groups in support of a New Montana Heritage Center at the mall site
@@ -69,17 +67,17 @@ featuredLinks:
     - image: /img/meeting-space.png
       link:
         text: Why the mall site is the best location
-        url: /why-the-mall-site-wins
+        url: why-the-mall-site
     - image: /img/tutorials.png
       link:
         text: Montana Heritage Center FAQ
-        url: /why-the-mall-site-wins
+        url: why-the-mall-site
     - image: /img/coffee.png
       link:
         text: Local and state support
-        url: /why-the-mall-site-wins
+        url: why-the-mall-site
     - image: /img/meeting-space.png
       link:
         text: Latest news and opinion
-        url: /why-the-mall-site-wins
+        url: why-the-mall-site
 ---
