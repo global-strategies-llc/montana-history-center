@@ -10,23 +10,6 @@ $gradient: mix($base, $secondary, 60%);
 	@include xsmall {
 		padding-top: 6.5rem;
 	}
-
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		background-image: linear-gradient(to right,
-			// rgba($secondary, 0.7) 5%,
-			rgba($gradient, 0.8) 10%,
-			rgba($base, 0.8) 30%,
-			rgba($base, 0.8) 70%,
-			rgba($base, 0.8) 90%);
-			// rgba($secondary, 0.7) 95%);
-	}
 }
 
 .page-hero h1,
@@ -60,6 +43,46 @@ $gradient: mix($base, $secondary, 60%);
 	background-position: center;
 	background-attachment: initial;
 	background-repeat: no-repeat;
+}
+
+.hero-image {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		background-image: linear-gradient(145deg,
+			// rgba($secondary, 0.7) 5%,
+			rgba($gradient, 0.8) 20%,
+			rgba($base, 0.8) 30%,
+			rgba($base, 0.8) 70%,
+			rgba($base, 0.8) 90%);
+			// rgba($secondary, 0.7) 95%);
+	}
+
+	.gatsby-image-wrapper {
+		position: absolute !important;
+    top: 0;
+    bottom: -5em;
+    left: 0;
+    right: 0;
+
+    @include desktop {
+    	bottom: 0;
+    }
+	}
 }
 
 .heading-wrap,
