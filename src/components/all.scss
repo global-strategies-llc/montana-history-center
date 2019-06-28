@@ -45,8 +45,20 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.has-background {
+.has-bg-base {
 	background-color: $base;
+}
+
+.has-bg-primary {
+	background-color: $primary;
+}
+
+.has-bg-secondary {
+	background-color: $secondary;
+}
+
+.has-bg-neutral {
+	background-color: $neutral;
 }
 
 .content .taglist {

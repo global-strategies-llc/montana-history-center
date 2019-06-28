@@ -54,3 +54,15 @@
 		background: transparent;
 	}
 }
+
+.button-outline {
+	color: $base;
+	background: transparent;
+	border-color: $base;
+
+	&:hover {
+		border-color: $base;
+		background: $base;
+		color: $primary;
+	}
+}

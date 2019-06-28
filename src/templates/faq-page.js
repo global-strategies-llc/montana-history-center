@@ -12,7 +12,7 @@ export const FaqPageTemplate = ({
 	heading,
 	questions
 }) => (
-	<div>
+	<div className="has-bg-base">
 		<Hero image={image} title={title} heading={heading}/>
 		<div className="questions section">
 			<div className="container">

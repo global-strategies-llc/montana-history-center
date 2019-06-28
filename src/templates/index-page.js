@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
 	supporters,
 	featuredLinks
 }) => (
-	<div className="has-background">
+	<div className="has-bg-base">
 		<Hero image={image} title={title} eyebrow={eyebrow} heading={heading} subheading={subheading} cta={cta}/>
 		<div className="testimonials section">
 			<div className="container">
@@ -160,7 +160,7 @@ export const pageQuery = graphql`
 				image {
 					childImageSharp {
 						fluid(maxWidth: 2048, quality: 100) {
-							...GatsbyImageSharpFluid
+							...GatsbyImageSharpFluid_tracedSVG
 						}
 					}
 				}

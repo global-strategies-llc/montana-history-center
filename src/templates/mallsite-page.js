@@ -17,7 +17,7 @@ export const MallSiteTemplate = ({
 	testimonials,
 	mainpitch
 }) => (
-	<div className="has-background">
+	<div className="has-bg-base">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
 		<div className="testimonials section">
 			<div className="container">
