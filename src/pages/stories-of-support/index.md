@@ -15,7 +15,7 @@ callout:
     text: Download the letter
     url: /support-letter-from-lewis-and-clark-county-commissioners.pdf
 groups:
-  - group: Montana Citizens
+  - name: Montana Citizens
     testimonials:
       - author: |
                 Nancy Nicholson
@@ -35,7 +35,7 @@ groups:
         quote: >-
           Our new Heritage Center would be much more accessible to those who travel in RVs
           if it was placed at the Capital Hill Mall.
-  - group: Montana Governors
+  - name: Montana Governors
     testimonials:
       - author: |
                 Tim Babcock
@@ -56,7 +56,7 @@ groups:
           Historical Society and museum. The current society, museum and it’s publications and
           outreach as well of the desire of the people of the Treasure State to our past - and our
           future.
-  - group: United States Senators and Congressmen
+  - name: United States Senators and Congressmen
     testimonials:
       - author: |
                 Max Baucus
@@ -81,7 +81,7 @@ groups:
           Understanding the past helps us feel connected to a generation of long ago and gives our
           lives deeper meaning. Education, especially education that teaches an appreciation of the
           past, is a key to the preservation of our freedom and civilization.
-  - group: Museum Association Of Montana
+  - name: Museum Association Of Montana
     testimonials:
       - author: |
                 Paul Shea
@@ -98,7 +98,7 @@ groups:
           states magnifcent collection of history, this project will insure the continuation of the
           MHS lead in helping making the state wide museums important to our citizens and visitors
           alike.
-  - group: Teachers and Historians
+  - name: Teachers and Historians
     testimonials:
       - author: |
                 Rick Graetz

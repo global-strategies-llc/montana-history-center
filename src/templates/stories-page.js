@@ -15,15 +15,25 @@ export const StoriesPageTemplate = ({
 	callout,
 	groups
 }) => (
-	<div className="has-bg-base">
+	<div className="stories has-bg-base">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
 		<Banner className="has-bg-neutral" text={callout.text} cta={callout.cta} />
-		<div className="supporters section">
-			<div className="container">
-				<div className="">
+		{
+			groups.map( (group, i) =>
+				<div key={i} className="testimonials section">
+					<div className="container">
+						<div className="testimonials-heading">
+							<h3 className="is-size-2 has-text-centered">{group.name}</h3>
+						</div>
+						<div className="columns">
+							{
+								group.testimonials.map( (testimonial, i) =>
+									<Testimonial key={i} author={testimonial.author} quote={testimonial.quote} />
+								)}
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
+			)}
 	</div>
 )
 
@@ -78,7 +88,7 @@ export const storiesPageQuery = graphql`
 					}
 				}
 				groups {
-					group
+					name
 					testimonials {
 						author
 						quote
@@ -87,7 +97,7 @@ export const storiesPageQuery = graphql`
 				image {
 					childImageSharp {
 						fluid(maxWidth: 2048, quality: 100) {
-							...GatsbyImageSharpFluid
+							...GatsbyImageSharpFluid_tracedSVG
 						}
 					}
 				}

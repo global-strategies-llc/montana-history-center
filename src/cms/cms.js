@@ -6,6 +6,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 import MallSitePagePreview from './preview-templates/MallSitePagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 import FaqPagePreview from './preview-templates/FaqPagePreview'
+import StoriesPagePreview from './preview-templates/StoriesPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 
 // CMS.registerMediaLibrary(uploadcare)
@@ -13,6 +14,7 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('faq', FaqPagePreview)
+CMS.registerPreviewTemplate('stories', StoriesPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('mall-site', MallSitePagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
