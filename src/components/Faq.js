@@ -14,9 +14,11 @@ const Faq = function({ question, answer, className }) {
 	}
 
 	function updateHeight() {
-		ref.current.classList.add('show');
-		setCurrHeight(ref.current.clientHeight);
-		ref.current.classList.remove('show');
+		if(ref && ref.current) {
+			ref.current.classList.add('show');
+			setCurrHeight(ref.current.clientHeight);
+			ref.current.classList.remove('show');
+		}
 	}
 
 	useEffect(() => {
