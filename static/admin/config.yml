@@ -108,7 +108,7 @@ collections:
                       - {label: Link, name: url, widget: string}
       - name: mallsite
         label: Mall Site Page
-        file: src/pages/why-the-mallsite/index.md
+        file: src/pages/why-the-mall-site/index.md
         fields:
           - {default: mallsite-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
