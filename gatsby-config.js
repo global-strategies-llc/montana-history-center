@@ -24,7 +24,7 @@ module.exports = {
 			{
 				name: 'News and Opinion',
 				placement: ['navbar'],
-				url: '/news-and-opinion'
+				url: '/news-and-opinions'
 			},
 			{
 				name: 'About Us',

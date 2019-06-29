@@ -1,6 +1,6 @@
 ---
 templateKey: 'news-page'
-path: /news-and-opinion
+path: /news-and-opinions
 title: Latest News And Opinions
 image: /img/site-sketch-hero.jpg
 heading: Latest News And Opinions
