@@ -5,6 +5,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
+import Banner from '../components/Banner'
+import Timeline from '../components/Timeline'
 import Signup from '../components/Signup'
 
 export const MallSiteTemplate = ({
@@ -32,18 +34,15 @@ export const MallSiteTemplate = ({
 				</div>
 			</div>
 		</div>
-		<section className="section section--gradient">
-			<div className="section mainpitch">
-				<div className="content">
-					<div className="tile has-text-centered">
-						<h2 className="title is-size-2">
-							{mainpitch.title.split(/\n/)[0]}
-							{mainpitch.title.split(/\n/)[1] &&
-								<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
-							}
-						</h2>
-					</div>
-				</div>
+		<section className="mainpitch section">
+			<div className="container">
+				<h2 className="title is-size-2 has-text-centered">
+					{mainpitch.title.split(/\n/)[0]}
+					{mainpitch.title.split(/\n/)[1] &&
+						<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
+					}
+				</h2>
+				<Timeline entries={mainpitch.timeline} />
 			</div>
 			<div className="section">
 				<h3 className="has-text-centered is-size-4">
@@ -125,7 +124,7 @@ export const pageQuery = graphql`
 				mainpitch {
 					title
 					timeline {
-						year
+						date
 						description
 					}
 				}

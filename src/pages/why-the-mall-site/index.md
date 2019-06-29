@@ -21,11 +21,11 @@ mainpitch:
   title: The Story And Timeline Of The Montana Heritage Center
   image:
   timeline:
-    - year: '1987'
+    - date: '1987'
       description: >-
         Governor Tom Judge worked with MHS and they determined that more space
         was needed; they recommended the Capital Hill Mall site
-    - year: '1981 - 1989'
+    - date: '1981 - 1989'
       description: >-
         Governor Ted Schwinden supported a new history center
 midway: |
