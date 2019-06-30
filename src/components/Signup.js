@@ -5,13 +5,13 @@ import SignupForm from './SignupForm'
 
 import './Signup.scss'
 
-const Signup = (action) =>
+const Signup = ({ action }) =>
 	<StaticQuery
 		query={query}
 		render={(data) => {
 			const image = data.image;
 			return (
-				<section className="signup full-width-image"
+				<section id="petition" className="signup full-width-image"
 					style={{
 						backgroundImage: `url(${
 							image.childImageSharp ?

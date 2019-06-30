@@ -115,8 +115,8 @@ class SignupForm extends React.Component {
 						</div>
 					</div>
 					<div className="field">
-						<button className="button button-filled is-block" type="submit">
-							Submit my Petition
+						<button className="button button-secondary is-block" type="submit">
+							Register my Petition
 						</button>
 					</div>
 				</form>
