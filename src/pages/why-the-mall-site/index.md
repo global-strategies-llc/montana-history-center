@@ -21,7 +21,7 @@ testimonials:
       many ways.
 mainpitch:
   title: The Story And Timeline Of The Montana Heritage Center
-  image: /img/coffee-gear.png
+  image: /img/favicon-32x32.png
   timeline:
     - description: >-
         Governor Tom Judge worked with MHS and they determined that more space
