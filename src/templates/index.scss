@@ -1,11 +1,11 @@
-.pitch-closer {
-	display: block;
-	margin-top: 1.5em;
-}
+@import '../components/breakpoints';
+@import '../components/variables';
 
-.supporters {
+.supporters,
+.featured-links {
 
-	.feature {
+	.feature,
+	.feature-link {
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
@@ -13,7 +13,66 @@
 	}
 
 	.feature-image {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
 		width: 12em;
 		min-height: 8em;
+	}
+
+	.feature-description {
+		text-align: center;
+	}
+}
+
+.featured-links {
+
+	.features {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.column {
+		max-width: 14em;
+		padding: 2em;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include desktop {
+			margin: 0;
+		}
+	}
+
+	.feature {
+		position: relative;
+		padding-bottom: 81.25%;
+		background: $primary;
+		border-radius: 50%;
+	}
+
+	.feature-link {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		padding: 1.5em 2em 2em;
+		transform: translate(-50%, -50%);
+	}
+
+	.feature-image {
+		width: 5em;
+		min-height: 0;
+
+		@include desktop {
+			width: 4em;
+		}
+	}
+
+	.feature-text {
+		display: block;
+		color: $primary-invert;
+		font-size: 0.75em;
+		line-height: 1.2;
+		text-align: center;
 	}
 }

@@ -6,10 +6,10 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 const WithLinkWrap = ({ link, children }) => (
 	<React.Fragment>
 		{ link ?
-			<Link to={link.url}>
+			<Link className="feature-link" to={link.url}>
 				{children}
 				{link.text &&
-					<span>{link.text}</span>
+					<span className="feature-text">{link.text}</span>
 				}
 			</Link>
 			: <React.Fragment>{children}</React.Fragment>

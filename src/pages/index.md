@@ -64,20 +64,20 @@ supporters:
 featuredLinks:
   heading: Learn why the mall site is the obvious choice
   links:
-    - image: /img/meeting-space.png
+    - image: /img/icons/site-marker.png
       link:
         text: Why the mall site is the best location
         url: why-the-mall-site
-    - image: /img/tutorials.png
+    - image: /img/icons/faq.png
       link:
         text: Montana Heritage Center FAQ
-        url: why-the-mall-site
-    - image: /img/coffee.png
+        url: faq
+    - image: /img/icons/gov-building.png
       link:
         text: Local and state support
-        url: why-the-mall-site
-    - image: /img/meeting-space.png
+        url: stories-of-support
+    - image: /img/icons/news-and-opinions.png
       link:
         text: Latest news and opinion
-        url: why-the-mall-site
+        url: news-and-opinions
 ---
