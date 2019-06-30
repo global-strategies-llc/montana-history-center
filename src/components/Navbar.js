@@ -65,7 +65,7 @@ class Navbar extends React.Component {
 					</div>
 
 					<div className="navbar-button">
-						<Link className="button button-invert" to="/petition">
+						<Link className="button button-invert" to="/#petition">
 							<span>Sign the Petition</span>
 						</Link>
 					</div>
@@ -87,13 +87,13 @@ class Navbar extends React.Component {
 					>
 						{
 							menuLinks.map(link => (
-								<Link key={link.name} className="navbar-item" to={link.url}>
+								<Link key={link.name} className="navbar-item" to={link.url} activeClassName="active">
 									{link.name}
 								</Link>
 							))
 						}
 						<div className="navbar-button">
-							<Link className="button" to="/donate">
+							<Link className="button" to="/#donate">
 								<span>Contribute</span>
 							</Link>
 						</div>
