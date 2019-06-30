@@ -49,39 +49,44 @@ export const IndexPageTemplate = ({
 				</div>
 			</div>
 		</section>
-		<section className="section">
-			<div className="container">
-				<div className="columns">
-					<div className="pitch pitch-whynot column is-3">
-						<h4 className="subtitle">{mainpitch.whynot.heading}</h4>
-						<ul>
-							{
-								mainpitch.whynot.points.map( (point, i) =>
-									<li key={i}>{point}</li>
-								)
-							}
-						</ul>
-					</div>
-					<div className="pitch-image column is-6">
-						<Img fluid={
-							mainpitch.image.childImageSharp ?
-								mainpitch.image.childImageSharp.fluid
-								: mainpitch.image
-						} />
-					</div>
-					<div className="pitch pitch-why column is-3">
-						<h4 className="subtitle">{mainpitch.why.heading}</h4>
-						<ul>
-							{
-								mainpitch.why.points.map( (point, i) =>
-									<li key={i}>{point}</li>
-								)
-							}
-						</ul>
-						<Link className="btn" to={cta.url}>
-							{cta.text}
-						</Link>
-					</div>
+		<section className="columns mainpitch">
+			<div className="pitch-image column is-three-fifths">
+				<Img fluid={
+					mainpitch.image.childImageSharp ?
+						mainpitch.image.childImageSharp.fluid
+						: mainpitch.image
+				} />
+			</div>
+			<div className="pitches column is-two-fifths">
+				<div className="pitch pitch-why">
+					<Img fluid={
+						mainpitch.why.image.childImageSharp ?
+							mainpitch.why.image.childImageSharp.fluid
+							: mainpitch.why.image
+					} />
+					<h4 className="subtitle">{mainpitch.why.heading}</h4>
+					<ul>
+						{
+							mainpitch.why.points.map( (point, i) =>
+								<li key={i}>{point}</li>
+							)
+						}
+					</ul>
+				</div>
+				<div className="pitch pitch-whynot">
+					<Img fluid={
+						mainpitch.whynot.image.childImageSharp ?
+							mainpitch.whynot.image.childImageSharp.fluid
+							: mainpitch.whynot.image
+					} />
+					<h4 className="subtitle">{mainpitch.whynot.heading}</h4>
+					<ul>
+						{
+							mainpitch.whynot.points.map( (point, i) =>
+								<li key={i}>{point}</li>
+							)
+						}
+					</ul>
 				</div>
 			</div>
 		</section>

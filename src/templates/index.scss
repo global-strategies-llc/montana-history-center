@@ -1,6 +1,23 @@
 @import '../components/breakpoints';
 @import '../components/variables';
 
+.mainpitch {
+	margin: 0;
+	overflow: hidden;
+
+	.column {
+		padding: 0;
+	}
+
+	.pitches {
+		background: #fff;
+	}
+
+	.pitch {
+		padding: 1.5em;
+	}
+}
+
 .supporters,
 .featured-links {
 

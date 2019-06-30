@@ -27,8 +27,9 @@ mainpitch:
   title: |
     Central location | Improved parking
     More space | More exhibits | More history
-  image: /img/flavor_wheel.jpg
+  image: /img/mall-site-map.png
   why:
+    image: /img/icons/checkmark.png
     heading: Capital Hill Mall Site
     points:
       - Improved access for tourists and visitors
@@ -37,6 +38,7 @@ mainpitch:
       - Display larger collection of historic artifacts
       - State of the art building with the latest green technologies
   whynot:
+    image: /img/icons/xmark.png
     heading: Historical Society Parking Lot
     points:
       - Inadequate parking
@@ -67,17 +69,17 @@ featuredLinks:
     - image: /img/icons/site-marker.png
       link:
         text: Why the mall site is the best location
-        url: why-the-mall-site
+        url: /why-the-mall-site
     - image: /img/icons/faq.png
       link:
         text: Montana Heritage Center FAQ
-        url: faq
+        url: /faq
     - image: /img/icons/gov-building.png
       link:
         text: Local and state support
-        url: stories-of-support
+        url: /stories-of-support
     - image: /img/icons/news-and-opinions.png
       link:
         text: Latest news and opinion
-        url: news-and-opinions
+        url: /news-and-opinions
 ---
