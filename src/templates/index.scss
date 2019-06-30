@@ -5,16 +5,61 @@
 	margin: 0;
 	overflow: hidden;
 
+	.pitch-image {
+		background-size: cover;
+		background-position: top right 33.333%;
+		background-repeat: no-repeat;
+		min-height: 26em;
+	}
+
 	.column {
 		padding: 0;
 	}
 
 	.pitches {
+		display: flex;
+		flex-flow: column nowrap;
 		background: #fff;
+
+		@include tablet-only {
+			flex-direction: row;
+		}
 	}
 
 	.pitch {
 		padding: 1.5em;
+
+		ul {
+			padding-left: calc(68px + 1.25em);
+
+			@include tablet-only {
+				padding-left: 0;
+			}
+		}
+
+		li {
+			padding: 0.5em 0;
+			color: $text;
+			font-size: 0.8em;
+		}
+	}
+
+	.pitch-heading {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		line-height: 1.1;
+
+		@include tablet-only {
+			flex-wrap: wrap;
+		}
+
+		.pitch-icon {
+			margin: 1em 1em 1em 0;
+			border: 2px solid rgba($text, 0.5);
+			line-height: 0;
+		}
 	}
 }
 

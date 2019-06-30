@@ -50,21 +50,28 @@ export const IndexPageTemplate = ({
 			</div>
 		</section>
 		<section className="columns mainpitch">
-			<div className="pitch-image column is-three-fifths">
-				<Img fluid={
-					mainpitch.image.childImageSharp ?
-						mainpitch.image.childImageSharp.fluid
-						: mainpitch.image
-				} />
+			<div className="pitch-image column is-three-fifths"
+				style={{
+					backgroundImage: `url(
+						${
+							mainpitch.image.childImageSharp ?
+								mainpitch.image.childImageSharp.fluid.src
+								: mainpitch.image
+						})`
+				}} >
 			</div>
 			<div className="pitches column is-two-fifths">
 				<div className="pitch pitch-why">
-					<Img fixed={
-						mainpitch.why.image.childImageSharp ?
-							mainpitch.why.image.childImageSharp.fixed
-							: mainpitch.why.image
-					} />
-					<h4 className="subtitle">{mainpitch.why.heading}</h4>
+					<div class="pitch-heading">
+						<div class="pitch-icon">
+							<Img fixed={
+								mainpitch.why.image.childImageSharp ?
+									mainpitch.why.image.childImageSharp.fixed
+									: mainpitch.why.image
+							} />
+						</div>
+						<h4 className="is-size-2">{mainpitch.why.heading}</h4>
+					</div>
 					<ul>
 						{
 							mainpitch.why.points.map( (point, i) =>
@@ -74,12 +81,16 @@ export const IndexPageTemplate = ({
 					</ul>
 				</div>
 				<div className="pitch pitch-whynot">
-					<Img fixed={
-						mainpitch.whynot.image.childImageSharp ?
-							mainpitch.whynot.image.childImageSharp.fixed
-							: mainpitch.whynot.image
-					} />
-					<h4 className="subtitle">{mainpitch.whynot.heading}</h4>
+					<div class="pitch-heading">
+						<div class="pitch-icon">
+							<Img fixed={
+								mainpitch.whynot.image.childImageSharp ?
+									mainpitch.whynot.image.childImageSharp.fixed
+									: mainpitch.whynot.image
+							} />
+						</div>
+						<h4 className="is-size-2">{mainpitch.whynot.heading}</h4>
+					</div>
 					<ul>
 						{
 							mainpitch.whynot.points.map( (point, i) =>
