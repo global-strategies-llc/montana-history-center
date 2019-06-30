@@ -2,12 +2,11 @@
 @import './variables';
 
 .button {
-	@include serif;
 	display: inline-block;
 	height: auto;
 	padding: 0.875em 1em;
 	font-size: 0.875em;
-	font-weight: 400;
+	font-weight: 700;
 	line-height: 0.875;
 	letter-spacing: 0.0625em;
 	text-transform: uppercase;
@@ -20,13 +19,26 @@
 	// box-shadow: inset 0 0 0 2px $primary-lt;
 }
 
+.button:focus,
+.button.is-focused,
+.button:focus:not(:active),
+.button.is-focused:not(:active) {
+	box-shadow: none;
+	outline: 1px dotted;
+	outline-offset: -4px;
+}
+
 .button {
 	color: $primary;
 	background: transparent;
 	border: 2px solid $primary;
 	border-radius: 2px;
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&.is-focused,
+	&:focus:not(:active),
+	&.is-focused:not(:active) {
 		color: $primary-invert;
 		background: $primary;
 		border-color: $primary;
@@ -38,7 +50,11 @@
 	background: $secondary;
 	border: 2px solid $secondary;
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&.is-focused,
+	&:focus:not(:active),
+	&.is-focused:not(:active) {
 		color: $secondary;
 		background: $primary;
 		border-color: $primary;
@@ -49,7 +65,11 @@
 	color: $primary-invert;
 	background: $primary;
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&.is-focused,
+	&:focus:not(:active),
+	&.is-focused:not(:active) {
 		color: $primary;
 		background: transparent;
 		border-color: $primary;
@@ -61,7 +81,11 @@
 	background: $base;
 	border-color: $base;
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&.is-focused,
+	&:focus:not(:active),
+	&.is-focused:not(:active) {
 		border-color: $base;
 		background: transparent;
 	}
@@ -72,7 +96,11 @@
 	background: transparent;
 	border-color: $base;
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&.is-focused,
+	&:focus:not(:active),
+	&.is-focused:not(:active) {
 		border-color: $base;
 		background: $base;
 		color: $primary;

@@ -45,6 +45,22 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+hr {
+	display: block;
+	position: relative;
+	height: 3px;
+	width: 33.333%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba($text, 0.2);
+}
+
+a:focus {
+	outline: 1px dotted;
+	outline-offset: -4px;
+}
+
+
 .has-bg-base {
 	background-color: $base;
 }

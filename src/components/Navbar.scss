@@ -29,10 +29,12 @@
 
 .navbar-brand {
 	margin-right: auto;
+	padding-left: 1em;
+	padding-right: 1em;
 	order: 0;
 
 	h4 {
-		font-size: 1em;
+		font-size: 0.9em;
 		color: $primary;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
