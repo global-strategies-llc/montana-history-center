@@ -100,7 +100,7 @@ export const storiesPageQuery = graphql`
 				}
 				groups {
 					name
-					icon {
+					image {
 						childImageSharp {
 							fluid(maxWidth: 100, quality: 100) {
 								...GatsbyImageSharpFluid
