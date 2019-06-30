@@ -59,9 +59,9 @@ export const IndexPageTemplate = ({
 			</div>
 			<div className="pitches column is-two-fifths">
 				<div className="pitch pitch-why">
-					<Img fluid={
+					<Img fixed={
 						mainpitch.why.image.childImageSharp ?
-							mainpitch.why.image.childImageSharp.fluid
+							mainpitch.why.image.childImageSharp.fixed
 							: mainpitch.why.image
 					} />
 					<h4 className="subtitle">{mainpitch.why.heading}</h4>
@@ -74,9 +74,9 @@ export const IndexPageTemplate = ({
 					</ul>
 				</div>
 				<div className="pitch pitch-whynot">
-					<Img fluid={
+					<Img fixed={
 						mainpitch.whynot.image.childImageSharp ?
-							mainpitch.whynot.image.childImageSharp.fluid
+							mainpitch.whynot.image.childImageSharp.fixed
 							: mainpitch.whynot.image
 					} />
 					<h4 className="subtitle">{mainpitch.whynot.heading}</h4>
@@ -190,10 +190,24 @@ export const pageQuery = graphql`
 						}
 					}
 					why {
+						image {
+							childImageSharp {
+								fixed(width: 64, height: 64) {
+									...GatsbyImageSharpFixed
+								}
+							}
+						}
 						heading
 						points
 					}
 					whynot {
+						image {
+							childImageSharp {
+								fixed(width: 64, height: 64) {
+									...GatsbyImageSharpFixed
+								}
+							}
+						}
 						heading
 						points
 					}
