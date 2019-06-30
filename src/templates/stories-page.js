@@ -27,9 +27,9 @@ export const StoriesPageTemplate = ({
 				<div key={v4()} className="testimonials section">
 					<div className="container">
 						<div className="testimonials-heading">
-							{ group.icon &&
+							{ group.image &&
 								<div className="testimonial-image">
-									<Img fluid={group.icon.childImageSharp.fluid} />
+									<Img fluid={group.image.childImageSharp.fluid} />
 								</div>
 							}
 							<h3 className="is-size-2 has-text-centered">{group.name}</h3>
