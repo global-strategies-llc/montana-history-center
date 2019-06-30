@@ -22,8 +22,22 @@
 	color: $base;
 
 	h2 {
-		@include serif;
 		color: $base;
+	}
+
+	.field {
+
+		.label {
+			color: $base;
+		}
+
+		.input {
+			font-size: 1.5em;
+
+			&:focus {
+				border-color: $primary;
+			}
+		}
 	}
 
 	.button[type='submit'] {
