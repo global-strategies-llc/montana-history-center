@@ -25,8 +25,8 @@ testimonials:
       Do not expand in the current Capitol area.
 mainpitch:
   title: |
-    Central location, improved parking, more space, more exhibits.
-    More history.
+    Central location | Improved parking
+    More space | More exhibits | More history
   image: /img/flavor_wheel.jpg
   why:
     heading: Capital Hill Mall Site
@@ -55,11 +55,11 @@ description: >-
 supporters:
   heading: Groups in support of a New Montana Heritage Center at the mall site
   clients:
-    - image: /img/coffee.png
+    - image: /img/icons/support-1-mcc.png
       text: Montana Chamber of Commerce
-    - image: /img/tutorials.png
+    - image: /img/icons/support-3-montana-contractors.png
       text: Montana Contractors Association
-    - image: /img/meeting-space.png
+    - image: /img/icons/support-2-city-of-helena-site.png
       text: City of Helena
 featuredLinks:
   heading: Learn why the mall site is the obvious choice

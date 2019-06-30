@@ -1,0 +1,19 @@
+.pitch-closer {
+	display: block;
+	margin-top: 1.5em;
+}
+
+.supporters {
+
+	.feature {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.feature-image {
+		width: 12em;
+		min-height: 8em;
+	}
+}

@@ -18,10 +18,10 @@ const WithLinkWrap = ({ link, children }) => (
 )
 
 const FeatureGrid = ({ cols, gridItems }) => (
-	<div className="columns is-multiline">
+	<div className="features columns is-multiline">
 		{gridItems.map( (item, i) => (
 			<div key={i} className={`column is-${12 / (cols || 2)}`}>
-				<section className="section">
+				<section className="feature section">
 					<WithLinkWrap link={item.link}>
 						<div className="has-text-centered">
 							{item.image &&

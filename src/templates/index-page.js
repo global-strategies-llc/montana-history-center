@@ -9,7 +9,7 @@ import Testimonial from '../components/Testimonial'
 import Features from '../components/Features'
 import Signup from '../components/Signup'
 
-import '../components/index.scss'
+import './index.scss'
 
 export const IndexPageTemplate = ({
 	image,
@@ -38,64 +38,67 @@ export const IndexPageTemplate = ({
 				</div>
 			</div>
 		</div>
-		<section className="section section--gradient">
+		<section className="mainpitch full-width-heading has-pre-line has-bg-neutral">
 			<div className="container">
-				<div className="section mainpitch">
-					<div className="content">
-						<div className="tile has-text-centered">
-							<h2 className="title is-size-2">
-								{mainpitch.title.split(/\n/)[0]}
-								{mainpitch.title.split(/\n/)[1] &&
-									<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
-								}
-							</h2>
-						</div>
-					</div>
-					<div className="columns">
-						<div className="pitch pitch-whynot column is-3">
-							<h4 className="subtitle">{mainpitch.whynot.heading}</h4>
-							<ul>
-								{
-									mainpitch.whynot.points.map( (point, i) =>
-										<li key={i}>{point}</li>
-									)
-								}
-							</ul>
-						</div>
-						<div className="pitch-image column is-6">
-							<Img fluid={
-								mainpitch.image.childImageSharp ?
-									mainpitch.image.childImageSharp.fluid
-									: mainpitch.image
-							} />
-						</div>
-						<div className="pitch pitch-why column is-3">
-							<h4 className="subtitle">{mainpitch.why.heading}</h4>
-							<ul>
-								{
-									mainpitch.why.points.map( (point, i) =>
-										<li key={i}>{point}</li>
-									)
-								}
-							</ul>
-							<Link className="btn" to={cta.url}>
-								{cta.text}
-							</Link>
-						</div>
+				<div className="content">
+					<div className="tile has-text-centered">
+						<h2 className="title is-size-1">
+							{mainpitch.title}
+						</h2>
 					</div>
 				</div>
-				<div className="section">
-					<h3 className="has-text-centered is-size-4">
-						{supporters.heading}
-					</h3>
-					<Features cols={3} gridItems={supporters.clients} />
+			</div>
+		</section>
+		<section className="section">
+			<div className="container">
+				<div className="columns">
+					<div className="pitch pitch-whynot column is-3">
+						<h4 className="subtitle">{mainpitch.whynot.heading}</h4>
+						<ul>
+							{
+								mainpitch.whynot.points.map( (point, i) =>
+									<li key={i}>{point}</li>
+								)
+							}
+						</ul>
+					</div>
+					<div className="pitch-image column is-6">
+						<Img fluid={
+							mainpitch.image.childImageSharp ?
+								mainpitch.image.childImageSharp.fluid
+								: mainpitch.image
+						} />
+					</div>
+					<div className="pitch pitch-why column is-3">
+						<h4 className="subtitle">{mainpitch.why.heading}</h4>
+						<ul>
+							{
+								mainpitch.why.points.map( (point, i) =>
+									<li key={i}>{point}</li>
+								)
+							}
+						</ul>
+						<Link className="btn" to={cta.url}>
+							{cta.text}
+						</Link>
+					</div>
 				</div>
-				<div className="section">
-					<h3 className="has-text-centered is-size-3">
-						{featuredLinks.heading}
-					</h3>
-					<Features cols={4} gridItems={featuredLinks.links} />
-				</div>
+			</div>
+		</section>
+		<section className="section supporters">
+			<div>
+				<h3 className="has-text-centered is-size-4">
+					{supporters.heading}
+				</h3>
+				<Features cols={3} gridItems={supporters.clients} />
+			</div>
+		</section>
+		<section className="section featured-links">
+			<div>
+				<h3 className="has-text-centered is-size-3">
+					{featuredLinks.heading}
+				</h3>
+				<Features cols={4} gridItems={featuredLinks.links} />
 			</div>
 		</section>
 		<Signup action="#" />
