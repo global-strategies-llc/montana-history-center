@@ -1,7 +1,9 @@
 ---
 templateKey: 'content-page'
 path: /about
-title: About our values
+title: About Us
+heading: About Us
+image: /img/site-sketch-hero.jpg
 ---
 
 ### Shade-grown coffee

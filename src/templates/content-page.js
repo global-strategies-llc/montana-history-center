@@ -3,30 +3,33 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Hero from '../components/Hero'
 
-export const ContentPageTemplate = ({ title, content, contentComponent }) => {
+export const ContentPageTemplate = ({ title, heading, image, cta, content, contentComponent }) => {
 	const PageContent = contentComponent || Content
 
 	return (
-		<section className="section section--gradient">
-			<div className="container">
-				<div className="columns">
-					<div className="column is-10 is-offset-1">
-						<div className="section">
-							<h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-								{title}
-							</h2>
-							<PageContent className="content" content={content} />
+		<div className="has-bg-base">
+			<Hero image={image} title={title} heading={heading} cta={cta}/>
+			<section className="section">
+				<div className="container">
+					<div className="columns">
+						<div className="column is-10 is-offset-1">
+							<div className="section">
+								<PageContent className="content" content={content} />
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	)
 }
 
 ContentPageTemplate.propTypes = {
 	title: PropTypes.string.isRequired,
+	heading: PropTypes.string.isRequired,
+	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	content: PropTypes.string,
 	contentComponent: PropTypes.func,
 }
@@ -39,6 +42,8 @@ const ContentPage = ({ data }) => {
 			<ContentPageTemplate
 				contentComponent={HTMLContent}
 				title={post.frontmatter.title}
+				heading={post.frontmatter.heading}
+				image={post.frontmatter.image}
 				content={post.html}
 			/>
 		</Layout>
@@ -57,6 +62,18 @@ export const contentPageQuery = graphql`
 			html
 			frontmatter {
 				title
+				heading
+				image {
+					childImageSharp {
+						fluid(maxWidth: 2048, quality: 100) {
+							...GatsbyImageSharpFluid_tracedSVG
+						}
+					}
+				}
+				cta {
+					text
+					url
+				}
 			}
 		}
 	}
