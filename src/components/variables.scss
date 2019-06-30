@@ -20,6 +20,19 @@ $primary-invert: $mhc-white;
 $body-color: $mhc-grey-dk;
 $black: #2b2523;
 
+:export {
+	primary: $primary;
+	secondary: $secondary;
+	neutral: $neutral;
+	neutralDark: $neutral-dark;
+	text: $text;
+	textDark: $text-dark;
+	base: $base;
+	primaryInvert: $primary-invert;
+	bodyColor: $body-color;
+	black: $black;
+}
+
 @mixin sans {
 	font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, Arial, sans;
 }
