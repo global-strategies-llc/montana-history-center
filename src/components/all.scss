@@ -61,6 +61,10 @@ body {
 	background-color: $neutral;
 }
 
+.container {
+	max-width: 100%;
+}
+
 .content .taglist {
 	display: flex;
 	flex-wrap: wrap;
