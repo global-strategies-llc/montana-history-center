@@ -44,16 +44,16 @@ export const MallSiteTemplate = ({
 				</h2>
 				<Timeline entries={mainpitch.timeline} />
 			</div>
-			<div className="section">
-				<h3 className="has-text-centered is-size-4">
-					{midway}
-				</h3>
-			</div>
-			<div className="section">
-				<h3 className="has-text-centered is-size-3">
-					{closer}
-				</h3>
-			</div>
+		</section>
+		<section className="full-width-heading has-bg-neutral">
+			<h3 className="has-text-centered is-size-3">
+				{midway}
+			</h3>
+		</section>
+		<section className="full-width-heading has-bg-neutral">
+			<h3 className="has-text-centered is-size-3">
+				{closer}
+			</h3>
 		</section>
 		<Signup action="#" />
 	</div>
