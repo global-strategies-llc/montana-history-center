@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Faq from '../components/Faq'
 
+import './faq.scss'
+
 export const FaqPageTemplate = ({
 	image,
 	title,

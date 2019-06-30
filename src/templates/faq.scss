@@ -1,0 +1,13 @@
+@import '../components/variables';
+@import '../components/breakpoints';
+
+.page-hero {
+
+	.is-subheading {
+		display: block;
+		margin-top: 1.5em;
+		color: $text;
+		font-size: 0.667em;
+		line-height: 1.2;
+	}
+}
