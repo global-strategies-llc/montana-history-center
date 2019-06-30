@@ -58,7 +58,7 @@ const Hero = ({
 							}
 							{ cta &&
 								<div className="hero-cta">
-									<Link className="button button-invert" to={cta.url}>
+									<Link className="button button-invert" to={`/${cta.url}`}>
 										{cta.text}
 									</Link>
 								</div>
