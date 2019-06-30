@@ -221,7 +221,7 @@ collections:
                   - {label: Image, name: image, widget: image}
                   - {label: Title, name: title, widget: string}
                   - {label: URL, name: url, widget: string}
-                  - {label: Date, name: url, widget: date}
+                  - {label: Date, name: date, widget: date}
                   - {label: Author, name: author, widget: string}
                   - {label: Quote, name: quote, widget: text}
       - name: about
