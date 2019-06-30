@@ -10,7 +10,7 @@ const year = new Date().getFullYear();
 
 const Footer = ({ menuLinks, siteCopy }) => {
 	return (
-		<footer className="footer">
+		<footer className="footer has-bg-neutral">
 			<div className="container">
 				<div className="social">
 					<a title="facebook" href="https://facebook.com">
@@ -21,7 +21,6 @@ const Footer = ({ menuLinks, siteCopy }) => {
 					</a>
 					<a title="twitter" href="https://twitter.com">
 						<img
-							className="fas fa-lg"
 							src={twitter}
 							alt="Twitter"
 						/>

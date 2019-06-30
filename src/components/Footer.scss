@@ -2,18 +2,17 @@
 @import './breakpoints';
 
 //Menu overrides
-$menu-item-color: $primary;
-$menu-item-hover-color: $primary !important;
-$menu-item-hover-background-color: $secondary;
-$menu-item-active-color: $primary;
-$menu-item-active-background-color: $secondary;
+$menu-item-color: $primary-invert;
+$menu-item-hover-color: $primary-invert !important;
+$menu-item-hover-background-color: $neutral;
+$menu-item-active-color: $primary-invert;
+$menu-item-active-background-color: $neutral;
 $menu-list-border-left: 1px solid $primary-invert;
-$menu-label-color: $primary;
+$menu-label-color: $primary-invert;
 
 @import '../../node_modules/bulma/sass/utilities/initial-variables';
 
 footer.footer {
-	background: $secondary;
 	padding: 1.667em 0 2.222em;
 }
 
@@ -43,15 +42,15 @@ footer.footer {
 }
 
 .footer-copy {
-	@include serif;
-	color: $primary;
+	color: $menu-item-color;
+	opacity: 0.6;
 	font-size: 0.625em;
 	padding: 0 2em;
 	margin-left: auto;
 	text-align: center;
 
 	strong {
-		color: $primary;
+		color: $menu-item-color;
 		display: inline-block;
 		margin-left: 0.5em;
 	}
@@ -90,12 +89,13 @@ footer.footer {
 		left: 0;
 		bottom: 0;
 		right: 0;
+		fill: $secondary;
 	}
 }
 
 .footer .menu-item {
 	margin: 0 0.875em;
-	color: $primary;
+	color: $menu-item-color;
 	opacity: 0.9;
 	font-size: 1.2em;
 	white-space: nowrap;
@@ -105,7 +105,8 @@ footer.footer {
 	&:hover,
 	&.is-active {
 		background-color: $menu-item-active-background-color;
-	  color: $primary;
+	  color: $menu-item-color;
 	  opacity: 1;
+	  text-decoration: underline;
 	}
 }
