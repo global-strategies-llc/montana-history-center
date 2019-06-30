@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { v4 } from 'uuid'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
 import Banner from '../components/Banner'
+
+import './stories.scss'
 
 export const StoriesPageTemplate = ({
 	image,
@@ -20,9 +24,14 @@ export const StoriesPageTemplate = ({
 		<Banner className="has-bg-neutral" text={callout.text} cta={callout.cta} />
 		{
 			groups.map( (group, i) =>
-				<div key={i} className="testimonials section">
+				<div key={v4()} className="testimonials section">
 					<div className="container">
 						<div className="testimonials-heading">
+							{ group.icon &&
+								<div className="testimonial-image">
+									<Img fluid={group.icon.childImageSharp.fluid} />
+								</div>
+							}
 							<h3 className="is-size-2 has-text-centered">{group.name}</h3>
 						</div>
 						<div className="columns">
@@ -47,32 +56,34 @@ StoriesPageTemplate.propTypes = {
 }
 
 const StoriesPage = ({ data }) => {
-	const { markdownRemark: post } = data
-
+	const { frontmatter } = data.markdownRemark
 	return (
 		<Layout>
 			<StoriesPageTemplate
-				title={post.frontmatter.title}
-				image={post.frontmatter.image}
-				heading={post.frontmatter.heading}
-				cta={post.frontmatter.cta}
-				callout={post.frontmatter.callout}
-				groups={post.frontmatter.groups}
+				title={frontmatter.title}
+				image={frontmatter.image}
+				heading={frontmatter.heading}
+				cta={frontmatter.cta}
+				callout={frontmatter.callout}
+				groups={frontmatter.groups}
 			/>
 		</Layout>
 	)
 }
 
 StoriesPage.propTypes = {
-	data: PropTypes.object.isRequired,
+	data: PropTypes.shape({
+		markdownRemark: PropTypes.shape({
+			frontmatter: PropTypes.object,
+		}),
+	}),
 }
 
 export default StoriesPage
 
 export const storiesPageQuery = graphql`
-	query StoriesPage {
+	query StoriesPageTemplate {
 		markdownRemark(frontmatter: { templateKey: { eq: "stories-page" } }) {
-			html
 			frontmatter {
 				title
 				heading
@@ -89,6 +100,13 @@ export const storiesPageQuery = graphql`
 				}
 				groups {
 					name
+					icon {
+						childImageSharp {
+							fluid(maxWidth: 100, quality: 100) {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
 					testimonials {
 						author
 						quote
