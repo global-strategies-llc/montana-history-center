@@ -109,6 +109,7 @@ export const IndexPageTemplate = ({
 				<Features cols={3} gridItems={supporters.clients} />
 			</div>
 		</section>
+		<hr />
 		<section className="section featured-links">
 			<div>
 				<h3 className="has-text-centered is-size-2">
