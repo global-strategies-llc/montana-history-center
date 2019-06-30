@@ -61,10 +61,6 @@ body {
 	background-color: $neutral;
 }
 
-.container {
-	max-width: 100%;
-}
-
 .content .taglist {
 	display: flex;
 	flex-wrap: wrap;
@@ -115,17 +111,20 @@ body {
 	padding: 3em 2em;
 
 	&.has-pre-line {
-		white-space: pre-line;
 
 		h1, h2, h3, h4, h5, h6 {
 			line-height: 1.2;
+			white-space: pre-line;
 		}
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		width: 40em;
 		max-width: 100%;
 		color: $primary-invert;
+
+		@media (min-width: 48em) {
+			width: 40em;
+		}
 	}
 }
 

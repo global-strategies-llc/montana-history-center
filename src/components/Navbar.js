@@ -12,8 +12,11 @@ class Navbar extends React.Component {
 		super(props)
 		this.state = {
 			active: false,
+			sticky: false,
 			navBarActiveClass: '',
+			navBarStickyClass: '',
 		}
+		this.handleScroll = this.handleScroll.bind(this);
 	}
 
 	static propTypes = {
@@ -25,6 +28,14 @@ class Navbar extends React.Component {
 		),
 	}
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
 	toggleHamburger = () => {
 		// toggle the active boolean in the state
 		this.setState(
@@ -34,12 +45,32 @@ class Navbar extends React.Component {
 			// after state has been updated,
 			() => {
 				// set the class in state for the navbar accordingly
-				this.state.active
-					? this.setState({
+				this.state.active ?
+					this.setState({
 						navBarActiveClass: 'is-active',
 					})
 					: this.setState({
 						navBarActiveClass: '',
+					})
+			}
+		)
+	}
+
+	handleScroll(e) {
+		// toggle the sticky boolean in the state
+		this.setState(
+			{
+				sticky: window.scrollY > 100,
+			},
+			// after state has been updated,
+			() => {
+				// set the class in state for the navbar accordingly
+				this.state.sticky ?
+					this.setState({
+						navBarStickyClass: 'is-sticky',
+					})
+					: this.setState({
+						navBarStickyClass: '',
 					})
 			}
 		)
@@ -51,7 +82,7 @@ class Navbar extends React.Component {
 		} = this;
 		return (
 			<nav
-				className="navbar has-background"
+				className={`navbar ${this.state.navBarStickyClass} `}
 				role="navigation"
 				aria-label="main-navigation"
 			>
@@ -87,7 +118,7 @@ class Navbar extends React.Component {
 					>
 						{
 							menuLinks.map(link => (
-								<Link key={link.name} className="navbar-item" to={link.url} activeClassName="active">
+								<Link key={link.name} className="navbar-item" to={link.url} activeClassName="is-active-item">
 									{link.name}
 								</Link>
 							))

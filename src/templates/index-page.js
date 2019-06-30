@@ -62,8 +62,8 @@ export const IndexPageTemplate = ({
 			</div>
 			<div className="pitches column is-two-fifths">
 				<div className="pitch pitch-why">
-					<div class="pitch-heading">
-						<div class="pitch-icon">
+					<div className="pitch-heading">
+						<div className="pitch-icon">
 							<Img fixed={
 								mainpitch.why.image.childImageSharp ?
 									mainpitch.why.image.childImageSharp.fixed
@@ -81,8 +81,8 @@ export const IndexPageTemplate = ({
 					</ul>
 				</div>
 				<div className="pitch pitch-whynot">
-					<div class="pitch-heading">
-						<div class="pitch-icon">
+					<div className="pitch-heading">
+						<div className="pitch-icon">
 							<Img fixed={
 								mainpitch.whynot.image.childImageSharp ?
 									mainpitch.whynot.image.childImageSharp.fixed
@@ -103,7 +103,7 @@ export const IndexPageTemplate = ({
 		</section>
 		<section className="section supporters">
 			<div>
-				<h3 className="has-text-centered is-size-4">
+				<h3 className="has-text-centered is-size-3">
 					{supporters.heading}
 				</h3>
 				<Features cols={3} gridItems={supporters.clients} />
@@ -111,7 +111,7 @@ export const IndexPageTemplate = ({
 		</section>
 		<section className="section featured-links">
 			<div>
-				<h3 className="has-text-centered is-size-3">
+				<h3 className="has-text-centered is-size-2">
 					{featuredLinks.heading}
 				</h3>
 				<Features cols={4} gridItems={featuredLinks.links} />
