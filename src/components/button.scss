@@ -24,10 +24,22 @@
 	color: $primary;
 	background: transparent;
 	border: 2px solid $primary;
-	border-radius: 0;
+	border-radius: 2px;
 
 	&:hover {
 		color: $primary-invert;
+		background: $primary;
+		border-color: $primary;
+	}
+}
+
+.button-secondary {
+	color: $primary;
+	background: $secondary;
+	border: 2px solid $secondary;
+
+	&:hover {
+		color: $secondary;
 		background: $primary;
 		border-color: $primary;
 	}
