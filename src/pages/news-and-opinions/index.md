@@ -17,7 +17,7 @@ main:
       quote: >-
         I write because for decades citizens have supported construction of a
         high-quality, welcoming destination facility for our state at the
-        Capital Hill Mall site.
+        Capital Hill Mall site
       url: >-
         https://helenair.com/opinion/columnists/mall-site-is-better-suited-for-montana-heritage-center/article_99977668-1ed1-5a70-b4f0-4c55dae872d9.html
     - author: Tom Kuglin
@@ -33,5 +33,39 @@ main:
         County. I think this is an opportunity we only get once
       url: >-
         https://helenair.com/news/state-and-regional/state-reevaluating-helena-mall-site-as-possible-location-of-montana/article_1a98bf6e-07e7-592a-886e-42a41eca7405.html
+    - author: Michael Woodel
+      date: 2019-04-25T22:31:35.524Z
+      title: >-
+        Legislature passes a bill to build new Montana Heritage Center in
+        Helena 
+      image: /img/independent-record-logo.png
+      name: Independent Record
+      quote: >-
+        This is something that’s going to be good for our kids, our grandkids
+        down the road
+      url: >-
+        https://helenair.com/news/state-and-regional/govt-and-politics/legislature-passes-bill-to-build-new-montana-heritage-center-in/article_5534a18e-bab5-5d8f-b175-4bbbdff5c478.html
+    - author: Holly K. Michaels
+      date: 2019-04-18T22:32:47.446Z
+      title: >-
+        Legislature passes $80 million bonding bill, state museum bill moves
+        forward 
+      image: /img/independent-record-logo.png
+      name: Independent Record
+      quote: >-
+        The heritage center plan has long been a part of the bonding debate,
+        dating back to 2005
+      url: >-
+        https://helenair.com/news/state-and-regional/govt-and-politics/legislature-passes-million-bonding-bill-state-museum-bill-moves-forward/article_3ddbcf68-4294-5606-92ea-ff26ed07c1b9.html
+    - author: Michael Woodel
+      date: 2019-03-28T22:33:52.684Z
+      title: 'Senate gives initial approval to Heritage Center tax hike '
+      image: /img/independent-record-logo.png
+      name: Independent Record
+      quote: >-
+        Visitors at the existing building can only see 5 to 8 percent of the
+        museum’s collection at one time because of space constraints
+      url: >-
+        https://helenair.com/news/state-and-regional/govt-and-politics/senate-gives-initial-approval-to-heritage-center-tax-hike/article_b4bdf4a0-4ced-5350-8bf5-b0a9e1f47c14.html
 ---
 
