@@ -7,6 +7,10 @@ $gradient: mix($base, $secondary, 60%);
 	position: relative;
 	padding: 3.25rem 0 2em;
 
+	> .section {
+		width: 100%;
+	}
+
 	@include xsmall {
 		padding-top: 6.5rem;
 	}

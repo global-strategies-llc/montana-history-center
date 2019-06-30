@@ -20,7 +20,7 @@ const Heading = ({ text, eyebrow, level }) => {
 			}
 			{ text.split(/\n/)[0] }
 			{ text.split(/\n/)[1] &&
-				<span className="sub2">{text.split(/\n/).slice(1).join(' ')}</span>
+				<span className="is-subheading">{text.split(/\n/).slice(1).join(' ')}</span>
 			}
 		</HeadingTag>
 	)
