@@ -14,7 +14,7 @@ heading: Contact Us
 
 ## Email
 
-info@montanahistorycenter.org
+[info@montanahistorycenter.org](mailto:info@montanahistorycenter.org)
 
 ## Mailing Address
 
@@ -24,7 +24,8 @@ Helena, MT 59624
 
 ## Social Media
 
-Twitter\
-Facebook
+[Twitter](https://twitter.com)
+
+[Facebook](https://facebook.com)
 
 ###
