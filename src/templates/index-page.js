@@ -102,7 +102,7 @@ export const IndexPageTemplate = ({
 			</div>
 		</section>
 		<section className="section supporters">
-			<div>
+			<div className="container">
 				<h3 className="has-text-centered is-size-3">
 					{supporters.heading}
 				</h3>
@@ -111,7 +111,7 @@ export const IndexPageTemplate = ({
 		</section>
 		<hr />
 		<section className="section featured-links">
-			<div>
+			<div className="container">
 				<h3 className="has-text-centered is-size-2">
 					{featuredLinks.heading}
 				</h3>
