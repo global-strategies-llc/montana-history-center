@@ -63,13 +63,15 @@ export const IndexPageTemplate = ({
 			<div className="pitches column is-two-fifths">
 				<div className="pitch pitch-why">
 					<div className="pitch-heading">
-						<div className="pitch-icon">
-							<Img fixed={
-								mainpitch.why.image.childImageSharp ?
-									mainpitch.why.image.childImageSharp.fixed
-									: mainpitch.why.image
-							} />
-						</div>
+						{ mainpitch.why.image &&
+							<div className="pitch-icon">
+								<Img fixed={
+									mainpitch.why.image.childImageSharp ?
+										mainpitch.why.image.childImageSharp.fixed
+										: mainpitch.why.image
+								} />
+							</div>
+						}
 						<h4 className="is-size-2">{mainpitch.why.heading}</h4>
 					</div>
 					<ul>
@@ -82,13 +84,15 @@ export const IndexPageTemplate = ({
 				</div>
 				<div className="pitch pitch-whynot">
 					<div className="pitch-heading">
-						<div className="pitch-icon">
-							<Img fixed={
-								mainpitch.whynot.image.childImageSharp ?
-									mainpitch.whynot.image.childImageSharp.fixed
-									: mainpitch.whynot.image
-							} />
-						</div>
+						{ mainpitch.whynot.image &&
+							<div className="pitch-icon">
+								<Img fixed={
+									mainpitch.whynot.image.childImageSharp ?
+										mainpitch.whynot.image.childImageSharp.fixed
+										: mainpitch.whynot.image
+								} />
+							</div>
+						}
 						<h4 className="is-size-2">{mainpitch.whynot.heading}</h4>
 					</div>
 					<ul>
