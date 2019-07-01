@@ -9,6 +9,9 @@ $mhc-grey: 			#585757;
 $mhc-grey-dk: 	#3F3F3F;
 $mhc-white: 		#FFF9F0;
 
+$warning: 			#ffa909;
+$error: 				#660909;
+
 $primary: $mhc-blue;
 $secondary: $mhc-blue-lt;
 $neutral: $mhc-brown;
@@ -31,6 +34,15 @@ $black: #2b2523;
 	primaryInvert: $primary-invert;
 	bodyColor: $body-color;
 	black: $black;
+}
+
+/* FUNCTION - TINT/SHADES */
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
 }
 
 @mixin sans {

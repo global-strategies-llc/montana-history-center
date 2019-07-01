@@ -2,7 +2,6 @@
 @import './breakpoints';
 
 .signup {
-	flex-direction: column;
 
 	.column-wrap,
 	.column {
@@ -11,9 +10,24 @@
 		flex: 1 0 0%;
 	}
 
+	.column-wrap {
+		width: 100%;
+		min-height: 34em;
+	}
+
 	.column {
 		justify-content: center;
 		background: rgba($primary, 0.7);
+	}
+
+	.form-sending,
+	.form-error,
+	.form-success {
+		text-align: center;
+
+		h2 {
+			margin-bottom: 1em;
+		}
 	}
 }
 
@@ -25,18 +39,77 @@
 		color: $base;
 	}
 
+	a {
+		color: $secondary;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	.field {
+		position: relative;
 
 		.label {
 			color: $base;
 		}
 
 		.input {
+			position: relative;
 			font-size: 1.5em;
 			border-radius: 2px;
+			z-index: 1;
 
 			&:focus {
 				border-color: $primary;
+			}
+		}
+
+		&.field-required {
+
+			&:before,
+			&:after {
+				display: block;
+				position: absolute;
+				line-height: 1;
+				top: 1.5em;
+				right: 0.25em;
+				color: $base;
+			}
+
+			&:before {
+				@include serif;
+				content: '*';
+				color: $text;
+				z-index: 2;
+			}
+
+			&:after {
+				content: 'This is a required field';
+				top: 2em;
+				font-size: 0.625em;
+				font-style: italic;
+				color: $base;
+				z-index: 0;
+				transform: translateY(0);
+				transition: 200ms transform;
+			}
+		}
+
+		&.required-error {
+
+			.input {
+				color: $error;
+				border-color: $error;
+				border-width: 2px;
+			}
+
+			&:before {
+				color: $error;
+			}
+
+			&:after {
+				transform: translateY(-175%);
 			}
 		}
 	}

@@ -131,18 +131,24 @@ module.exports = {
 			}
 		},
 		{
+			resolve: 'gatsby-plugin-mailchimp',
+			options: {
+				endpoint: 'https://montanahistorycenter.us20.list-manage.com/subscribe/post?u=47bba348504e94e9ee7ab82f2&amp;id=2edd2425ca',
+			},
+		},
+		{
 		resolve: `gatsby-plugin-google-tagmanager`,
 		options: {
 			id: 'GTM-NN3X76P',
 
 			// Include GTM in development.
 			// Defaults to false meaning GTM will only be loaded in production.
-			includeInDevelopment: false,
+			includeInDevelopment: true,
 
 			// Specify optional GTM environment details.
 			// gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING',
 			// gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME',
-			// dataLayerName: 'YOUR_DATA_LAYER_NAME',
+			dataLayerName: 'dataLayer',
 			},
 		},
 		{

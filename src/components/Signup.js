@@ -21,9 +21,11 @@ const Signup = ({ action }) =>
 						backgroundAttachment: 'initial'
 					}}
 				>
-					<div className="column-wrap">
-						<div className="column is-5 is-marginless">
-							<SignupForm action={action} />
+					<div class="container">
+						<div className="column-wrap">
+							<div className="column is-4 is-offset-1">
+								<SignupForm action={action} />
+							</div>
 						</div>
 					</div>
 				</section>
