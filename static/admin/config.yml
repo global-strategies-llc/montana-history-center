@@ -9,24 +9,6 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: posts
-    label: Posts
-    label_singluar: Post
-    folder: src/pages/blog
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    format: yaml-frontmatter
-    create: true
-    fields:
-      - {default: blog-post, label: Template Key, name: templateKey, widget: hidden}
-      - {label: Title, name: title, widget: string}
-      - {label: Publish Date, name: date, widget: datetime}
-      - {label: Description, name: description, widget: text}
-      - {label: Featured Post, name: featuredpost, widget: boolean}
-      - {label: Featured Image, name: featuredimage, widget: image}
-      - {label: Body, name: body, widget: markdown}
-      - {label: Tags, name: tags, widget: list}
-    meta:
-      - {label: 'SEO Description', name: 'description', widget: 'text'}
   - name: pages
     label: Pages
     files:
@@ -39,7 +21,7 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Eyebrow, name: eyebrow, widget: string}
           - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
+          - {label: Subheading, name: subheading, widget: text}
           - {label: Description, name: description, widget: text}
           - label: 'Call to Action'
             name: cta
@@ -131,7 +113,6 @@ collections:
             widget: object
             fields:
               - {label: Title, name: title, widget: string}
-              - {label: Image, name: image, widget: image}
               - label: Timeline
                 name: timeline
                 widget: list
@@ -154,6 +135,7 @@ collections:
           - {label: Heading, name: heading, widget: text}
           - label: Questions
             name: questions
+            label_singular: Question
             widget: list
             fields:
               - {label: Question, name: question, widget: string}
@@ -252,3 +234,22 @@ collections:
           - {default: privacy-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/pages/blog
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    format: yaml-frontmatter
+    create: true
+    fields:
+      - {default: blog-post, label: Template Key, name: templateKey, widget: hidden}
+      - {label: Title, name: title, widget: string}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Description, name: description, widget: text}
+      - {label: Featured Post, name: featuredpost, widget: boolean}
+      - {label: Featured Image, name: featuredimage, widget: image}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Tags, name: tags, widget: list}
+    meta:
+      - {label: 'SEO Description', name: 'description', widget: 'text'}
+
