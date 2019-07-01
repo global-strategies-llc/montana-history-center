@@ -28,12 +28,12 @@ mainpitch:
         was needed; they recommended the Capital Hill Mall site.
       date: '1978'
     - description: Governor Ted Schwinden supported a new history center.
-      date: 1981 - 1989
+      date: '1981 - 1989'
     - description: >-
         Governor Marc Racicot and Betty Babcock presented a proposal for a
         world-class Montana History Center to be built at the Capital Hill Mall
         site.
-      date: 1993 - 2001
+      date: '1993 - 2001'
     - description: >-
         Governor Judy Martz and Betty Babcock again supported the purchase of
         the mall site for a world-class Montana History Center.  Senator John
@@ -41,7 +41,7 @@ mainpitch:
         purchase the mall site and Senator Mike Cooney of Helena introduced a
         bill to name the new history center after a major donor.  Both bills
         were passed and signed by Governor Martz. The deal fell through.
-      date: 2001 - 2005
+      date: '2001 - 2005'
     - description: >-
         The Department of Administration conducts the study for their
         alternative site, at 6th and Roberts.

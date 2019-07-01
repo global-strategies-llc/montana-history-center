@@ -23,7 +23,7 @@ collections:
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: text}
           - {label: Description, name: description, widget: text}
-          - label: 'Call to Action'
+          - label: Call to Action
             name: cta
             widget: object
             fields:
@@ -96,7 +96,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
-          - label: 'Call to Action'
+          - label: Call to Action
             name: cta
             widget: object
             fields:
@@ -149,13 +149,13 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
-          - label: 'Call to Action'
+          - label: Call to Action
             name: cta
             widget: object
             fields:
               - {label: Text, name: text, widget: string}
               - {label: Link, name: url, widget: string}
-          - label: 'Callout Banner'
+          - label: Callout Banner
             name: callout
             widget: object
             fields:
@@ -168,15 +168,17 @@ collections:
                   - {label: Link, name: url, widget: string}
           - label: Groups
             name: groups
+            label_singular: Group
             widget: list
             fields:
               - {label: Group Name, name: name, widget: string}
               - label: Testimonials
                 name: testimonials
+                label_singular: Testimonial
                 widget: list
                 fields:
-                  - {label: Quote, name: quote, widget: string}
-                  - {label: Author, name: author, widget: string}
+                  - {label: Quote, name: quote, widget: text}
+                  - {label: Author, name: author, widget: text}
       - name: news
         label: News and Opinions Page
         file: src/pages/news-and-opinions/index.md
@@ -185,7 +187,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
-          - label: 'Call to Action'
+          - label: Call to Action
             name: cta
             widget: object
             fields:
