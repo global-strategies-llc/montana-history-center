@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PressQuote from '../components/PressQuote'
 import BlogRoll from '../components/BlogRoll'
+import Signup from '../components/Signup'
 
 let maxQuoteLength = null;
 const getMaxQuoteLength = (arr) => {
@@ -46,6 +47,7 @@ export const NewsPageTemplate = ({
       	<BlogRoll />
     	</div>
 		</section>
+		<Signup action="#" />
 	</div>
 )
 
