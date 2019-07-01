@@ -56,6 +56,10 @@ footer.footer {
 	}
 }
 
+.footer .menu {
+	font-size: initial;
+}
+
 .menu-list {
 	display: flex;
 	flex-flow: row wrap;
@@ -75,6 +79,7 @@ footer.footer {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 2em;
+	font-size: 1.5em;
 
 	a {
 		display: block;
@@ -97,8 +102,11 @@ footer.footer {
 	margin: 0 0.875em;
 	color: $menu-item-color;
 	opacity: 0.9;
-	font-size: 1.2em;
 	white-space: nowrap;
+
+	@include desktop {
+		font-size: 0.9em;
+	}
 
 	&:focus,
 	&:focus-within,
