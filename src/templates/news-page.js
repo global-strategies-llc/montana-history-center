@@ -6,6 +6,12 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PressQuote from '../components/PressQuote'
 
+let maxQuoteLength = null;
+const getMaxQuoteLength = (arr) => {
+	return maxQuoteLength ||
+		arr.reduce( (max, curr) => curr.quote.length > max ? curr.quote.length : max, 0 )
+}
+
 export const NewsPageTemplate = ({
 	image,
 	title,
@@ -15,14 +21,16 @@ export const NewsPageTemplate = ({
 }) => (
 	<div className="news has-bg-base">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
-		<h2 className="is-size-2 has-text-centered">{main.heading}</h2>
 		<div className="press section">
+			<h2 className="is-size-1 has-text-centered">{main.heading}</h2>
 			<div className="container">
-				<div className="columns">
+				<div className="columns is-multiline">
 					{
-						main.press.map( (press, i) =>
-							<PressQuote key={i} { ...press } className="column" />
-						)}
+						main.press.map( (press, i) => {
+							const cols = Math.ceil(press.quote.length / getMaxQuoteLength(main.press) * 12)
+							return <PressQuote key={i} { ...press } className={`column is-${cols}`} />
+						})
+					}
 				</div>
 			</div>
 		</div>
