@@ -5,18 +5,22 @@ import { MallSiteTemplate } from '../../templates/mallsite-page'
 const MallSitePreview = ({ entry, widgetFor }) => {
 	const data = entry.getIn(['data']).toJS()
 
-	return (
-		<MallSiteTemplate
-			title={data.title}
-			image={data.image}
-			heading={data.heading}
-			cta={data.cta}
-			midway={data.midway}
-			closer={data.closer}
-			testimonials={data.testimonials || []}
-			mainpitch={data.mainpitch || {}}
-		/>
-	)
+	if (data) {
+			return (
+				<MallSiteTemplate
+					title={data.title}
+					image={data.image}
+					heading={data.heading}
+					cta={data.cta}
+					midway={data.midway}
+					closer={data.closer}
+					testimonials={data.testimonials}
+					mainpitch={data.mainpitch}
+				/>
+			)
+	} else {
+		return <div>Loading...</div>
+	}
 }
 
 MallSitePreview.propTypes = {

@@ -114,10 +114,11 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - label: Timeline
+                label_singular: Event
                 name: timeline
                 widget: list
                 fields:
-                  - {label: Year, name: year, widget: string}
+                  - {label: 'Date(s)', name: date, widget: string}
                   - {label: Content, name: description, widget: text}
           - label: Midway Callout
             name: midway
