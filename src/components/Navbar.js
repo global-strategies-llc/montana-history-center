@@ -95,12 +95,6 @@ class Navbar extends React.Component {
 						</Link>
 					</div>
 
-					<div className="navbar-button">
-						<Link className="button button-invert" to="/#petition">
-							<span>Sign the Petition</span>
-						</Link>
-					</div>
-
 					{/* Hamburger menu */}
 					<div
 						className={`navbar-burger burger ${this.state.navBarActiveClass}`}
@@ -126,6 +120,12 @@ class Navbar extends React.Component {
 						<div className="navbar-button">
 							<Link className="button" to="/#donate">
 								<span>Contribute</span>
+							</Link>
+						</div>
+
+						<div className="navbar-button">
+							<Link className="button button-invert" to="/#petition">
+								<span>Sign the Petition</span>
 							</Link>
 						</div>
 
