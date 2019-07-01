@@ -2,33 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MallSiteTemplate } from '../../templates/mallsite-page'
 
-const MallSitePreview = ({ entry, getAsset }) => {
+const MallSitePreview = ({ entry, widgetFor }) => {
 	const data = entry.getIn(['data']).toJS()
 
-	if (data) {
-		return (
-			<MallSiteTemplate
-				image={data.image}
-				title={data.title}
-				eyebrow={data.eyebrow}
-				heading={data.heading}
-				midway={data.midway}
-				closer={data.closer}
-				cta={data.cta}
-				testimonials={data.testimonials || []}
-				mainpitch={data.mainpitch || {}}
-			/>
-		)
-	} else {
-		return <div>Loading...</div>
-	}
+	return (
+		<MallSiteTemplate
+			title={data.title}
+			image={data.image}
+			heading={data.heading}
+			cta={data.cta}
+			midway={data.midway}
+			closer={data.closer}
+			testimonials={data.testimonials || []}
+			mainpitch={data.mainpitch || {}}
+		/>
+	)
 }
 
 MallSitePreview.propTypes = {
 	entry: PropTypes.shape({
 		getIn: PropTypes.func,
 	}),
-	getAsset: PropTypes.func,
+	widgetFor: PropTypes.func
 }
 
 export default MallSitePreview

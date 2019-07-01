@@ -1,6 +1,8 @@
 ---
 templateKey: content-page
 title: Contact Us
+image: /img/site-sketch-hero.jpg
+heading: Contact Us
 ---
 ## Phone
 

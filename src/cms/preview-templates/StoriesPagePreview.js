@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StoriesPageTemplate from '../../templates/stories-page'
+import { StoriesPageTemplate } from '../../templates/stories-page'
 
 const StoriesPagePreview = ({ entry, widgetFor }) => {
 	const data = entry.getIn(['data']).toJS()

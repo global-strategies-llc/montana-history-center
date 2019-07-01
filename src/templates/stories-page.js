@@ -102,8 +102,8 @@ export const storiesPageQuery = graphql`
 					name
 					image {
 						childImageSharp {
-							fluid(maxWidth: 100, quality: 100) {
-								...GatsbyImageSharpFluid
+							fixed(width: 100, height: 100) {
+								...GatsbyImageSharpFixed
 							}
 						}
 					}

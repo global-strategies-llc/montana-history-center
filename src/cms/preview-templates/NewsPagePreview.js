@@ -1,14 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import NewsPageTemplate from '../../templates/news-page'
+import { NewsPageTemplate } from '../../templates/news-page'
 
-const NewsPagePreview = ({ entry, widgetFor }) => (
-	<NewsPageTemplate
-		title={entry.getIn(['data', 'title'])}
-		// heading={data.heading}
-		// questions={data.questions || []}
-	/>
-)
+const NewsPagePreview = ({ entry, widgetFor }) => {
+	const data = entry.getIn(['data']).toJS()
+
+	if (data) {
+			return (
+				<NewsPageTemplate
+					image={data.image}
+					title={data.title}
+					heading={data.heading}
+					cta={data.cta}
+					main={data.main}
+				/>
+		)
+	} else {
+		return <div>Loading...</div>
+	}
+}
 
 NewsPagePreview.propTypes = {
 	entry: PropTypes.shape({

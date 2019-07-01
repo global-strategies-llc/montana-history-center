@@ -197,13 +197,15 @@ collections:
               - {label: Heading, name: heading, widget: string}
               - label: Press
                 name: press
+                label_singular: Press Item
                 widget: list
+                identifier_field: title
                 fields:
+                  - {label: Title, name: title, widget: string}
                   - {label: Press Name, name: name, widget: string}
                   - {label: Image, name: image, widget: image}
-                  - {label: Title, name: title, widget: string}
                   - {label: URL, name: url, widget: string}
-                  - {label: Date, name: date, widget: date}
+                  - {label: Date, name: date, format: "MMMM D, YYYY", widget: date}
                   - {label: Author, name: author, widget: string}
                   - {label: Quote, name: quote, widget: text}
       - name: about
@@ -212,6 +214,8 @@ collections:
         fields:
           - {default: about-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: text}
           - {label: Body, name: body, widget: markdown}
       - name: contact
         label: Contact
@@ -219,6 +223,8 @@ collections:
         fields:
           - {default: contact-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: text}
           - {label: Body, name: body, widget: markdown}
       - name: terms
         label: Terms
@@ -226,6 +232,7 @@ collections:
         fields:
           - {default: terms-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: text}
           - {label: Body, name: body, widget: markdown}
       - name: privacy
         label: Privacy
@@ -233,6 +240,7 @@ collections:
         fields:
           - {default: privacy-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: text}
           - {label: Body, name: body, widget: markdown}
   - name: posts
     label: Posts

@@ -5,6 +5,7 @@ import CMS from 'netlify-cms-app'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import MallSitePagePreview from './preview-templates/MallSitePagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
+import ContactPagePreview from './preview-templates/ContactPagePreview'
 import FaqPagePreview from './preview-templates/FaqPagePreview'
 import StoriesPagePreview from './preview-templates/StoriesPagePreview'
 import NewsPagePreview from './preview-templates/NewsPagePreview'
@@ -18,6 +19,7 @@ CMS.registerPreviewTemplate('faq', FaqPagePreview)
 CMS.registerPreviewTemplate('stories', StoriesPagePreview)
 CMS.registerPreviewTemplate('news', NewsPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
+CMS.registerPreviewTemplate('contact', ContactPagePreview)
 CMS.registerPreviewTemplate('mall-site', MallSitePagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
 
