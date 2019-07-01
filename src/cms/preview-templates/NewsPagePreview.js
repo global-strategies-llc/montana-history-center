@@ -6,14 +6,14 @@ const NewsPagePreview = ({ entry, widgetFor }) => {
 	const data = entry.getIn(['data']).toJS()
 
 	if (data) {
-			return (
-				<NewsPageTemplate
-					image={data.image}
-					title={data.title}
-					heading={data.heading}
-					cta={data.cta}
-					main={data.main}
-				/>
+		return (
+			<NewsPageTemplate
+				title={data.title}
+				image={data.image}
+				heading={data.heading}
+				cta={data.cta}
+				main={data.main}
+			/>
 		)
 	} else {
 		return <div>Loading...</div>

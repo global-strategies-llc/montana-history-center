@@ -46,13 +46,13 @@ collections:
                 widget: object
                 fields:
                   - {label: Heading, name: heading, widget: string}
-                  - {label: Points, name: points, widget: list}
+                  - {label: Points, name: points, label_singular: Point, widget: list}
               - label: Why Not
                 name: whynot
                 widget: object
                 fields:
                   - {label: Heading, name: heading, widget: string}
-                  - {label: Points, name: points, widget: list}
+                  - {label: Points, name: points, label_singular: Point, widget: list}
           - label: Supporters
             name: supporters
             widget: object

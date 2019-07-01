@@ -8,8 +8,8 @@ const StoriesPagePreview = ({ entry, widgetFor }) => {
 	if (data) {
 			return (
 				<StoriesPageTemplate
-					image={data.image}
 					title={data.title}
+					image={data.image}
 					heading={data.heading}
 					cta={data.cta}
 					callout={data.callout || {}}
