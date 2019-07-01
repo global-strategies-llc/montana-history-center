@@ -1,14 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import FaqPageTemplate from '../../templates/faq-page'
+import { FaqPageTemplate } from '../../templates/faq-page'
 
-const FaqPagePreview = ({ entry, widgetFor }) => (
-	<FaqPageTemplate
-		title={entry.getIn(['data', 'title'])}
-		// heading={data.heading}
-		// questions={data.questions || []}
-	/>
-)
+const FaqPagePreview = ({ entry, widgetFor }) => {
+
+	const data = entry.getIn(['data']).toJS()
+
+	return (
+		<FaqPageTemplate
+			title={data.title}
+			image={data.image}
+			heading={data.heading}
+			questions={data.questions || []}
+		/>
+	)
+}
 
 FaqPagePreview.propTypes = {
 	entry: PropTypes.shape({

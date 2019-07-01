@@ -34,8 +34,8 @@ export const FaqPageTemplate = ({
 
 FaqPageTemplate.propTypes = {
 	title: PropTypes.string.isRequired,
-	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	heading: PropTypes.string,
+	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	questions: PropTypes.array,
 }
 
