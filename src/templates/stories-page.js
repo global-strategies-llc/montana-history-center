@@ -29,7 +29,7 @@ export const StoriesPageTemplate = ({
 						<div className="testimonials-heading">
 							{ group.image &&
 								<div className="testimonial-image">
-									<Img fluid={group.image.childImageSharp.fluid} />
+									<Img fixed={group.image.childImageSharp.fixed} />
 								</div>
 							}
 							<h3 className="is-size-2 has-text-centered">{group.name}</h3>
