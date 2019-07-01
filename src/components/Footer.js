@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 
 import './Footer.scss'
 
-import facebook from '../img/social/facebook.svg'
-import twitter from '../img/social/twitter.svg'
+import Facebook from '../img/social/facebook.svg'
+import Twitter from '../img/social/twitter.svg'
 
 const year = new Date().getFullYear();
 
@@ -14,16 +14,10 @@ const Footer = ({ menuLinks, siteCopy }) => {
 			<div className="container">
 				<div className="social">
 					<a title="facebook" href="https://facebook.com">
-						<img
-							src={facebook}
-							alt="Facebook"
-						/>
+						<Facebook />
 					</a>
 					<a title="twitter" href="https://twitter.com">
-						<img
-							src={twitter}
-							alt="Twitter"
-						/>
+						<Twitter />
 					</a>
 				</div>
 				<section className="menu">

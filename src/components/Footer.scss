@@ -81,19 +81,7 @@ footer.footer {
 	padding: 0 2em;
 	font-size: 1.5em;
 
-	a {
-		display: block;
-		position: relative;
-		background: initial;
-		border-radius: 0;
-	}
-
-	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+	svg {
 		fill: $secondary;
 	}
 }
