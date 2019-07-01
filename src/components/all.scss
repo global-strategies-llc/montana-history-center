@@ -64,6 +64,9 @@ a:focus {
 	outline-offset: -4px;
 }
 
+.has-bg-white {
+	background-color: #fff;
+}
 
 .has-bg-base {
 	background-color: $base;
@@ -158,15 +161,28 @@ a:focus {
 	fill: currentColor;
 }
 
-.social a {
-	display: inline;
-	width: 1em;
-	height: 1em;
-	margin: 0.5em;
-	padding: 0.5em 0.5em 0.3em 0.5em;
-	border-radius: 1em;
-	background-color: $white-ter;
-	vertical-align: middle;
+.social {
+
+	a {
+		display: block;
+		position: relative;
+		width: 1em;
+		height: 1em;
+		margin: 0.5em;
+		padding: 0.5em 0.5em 0.3em 0.5em;
+		background: initial;
+		border-radius: 0;
+		vertical-align: middle;
+	}
+
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		fill: $primary;
+	}
 }
 
 .blog-list-item.is-featured {
