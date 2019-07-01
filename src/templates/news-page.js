@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PressQuote from '../components/PressQuote'
+import BlogRoll from '../components/BlogRoll'
 
 let maxQuoteLength = null;
 const getMaxQuoteLength = (arr) => {
@@ -22,7 +23,7 @@ export const NewsPageTemplate = ({
 }) => (
 	<div className="news has-bg-base">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
-		<div className="press section">
+		<section className="press section">
 			{ main.image &&
 				<div className="news-image has-text-centered">
 					<Img fixed={main.image.childImageSharp.fixed} />
@@ -39,7 +40,12 @@ export const NewsPageTemplate = ({
 					}
 				</div>
 			</div>
-		</div>
+		</section>
+		<section className="blogs section has-bg-white">
+			<div className="container">
+      	<BlogRoll />
+    	</div>
+		</section>
 	</div>
 )
 
