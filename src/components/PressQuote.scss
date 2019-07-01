@@ -1,6 +1,8 @@
 @import './breakpoints';
 @import './variables';
 
+$linkarrow: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 19"><path fill="#fff" d="M16.3 17l5.8-6H4V8h18.1l-5.6-5.9L18.4.2 27 9.5l-8.6 9.4z"/></svg>';
+
 .press {
 	overflow: hidden;
 
@@ -53,12 +55,12 @@
 			font-size: 5em;
 		}
 
-		&:after {
-			content: '\201D';
-			position: relative;
-			top: 0.1em;
-			font-size: 1.25em;
-		}
+		// &:after {
+		// 	content: '\201D';
+		// 	position: relative;
+		// 	top: 0.1em;
+		// 	font-size: 1.25em;
+		// }
 	}
 
 	.press-cite {
@@ -69,10 +71,43 @@
 		white-space: pre-line;
 
 		h5 {
+			display: inline-block;
+			position: relative;
+			transition: 200ms color;
+			padding-right: 2em;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				position: relative;
+				width: 1.2em;
+				height: 0.8em;
+				margin-left: -1em;
+				top: 0.05em;
+				opacity: 0;
+				transform: translateX(1.2em);
+				background: svg-url($linkarrow, ('#fff': $primary));
+				background-repeat: no-repeat;
+				transition: 300ms transform, 150ms opacity;
+			}
+		}
+	}
+
+	.press-item a:focus {
+		outline-offset: 0.5em;
+	}
+
+	.press-item:hover .press-cite h5 {
+		color: $primary;
+
+		&:after {
+			opacity: 1;
+			transform: translateX(1.4em);
 		}
 	}
 
 	.press-author {
+		display: block;
 		color: $text;
 		font-size: 0.75em;
 	}

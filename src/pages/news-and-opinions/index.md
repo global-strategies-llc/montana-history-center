@@ -8,6 +8,7 @@ cta:
   url: '#petition'
 main:
   heading: In the News
+  image: /img/icons/in-the-news.png
   press:
     - author: Jane Hamman
       date: 'June 11, 2019'
@@ -30,7 +31,7 @@ main:
         County. I think this is an opportunity we only get once
       title: >-
         State reevaluating Helena mall site as a possible location of Montana
-        Heritage Center  
+        Heritage Center
       url: >-
         https://helenair.com/news/state-and-regional/state-reevaluating-helena-mall-site-as-possible-location-of-montana/article_1a98bf6e-07e7-592a-886e-42a41eca7405.html
     - author: Michael Woodel
@@ -42,7 +43,7 @@ main:
         down the road
       title: >-
         Legislature passes a bill to build new Montana Heritage Center in
-        Helena 
+        Helena
       url: >-
         https://helenair.com/news/state-and-regional/govt-and-politics/legislature-passes-bill-to-build-new-montana-heritage-center-in/article_5534a18e-bab5-5d8f-b175-4bbbdff5c478.html
     - author: Holly K. Michaels
@@ -54,7 +55,7 @@ main:
         dating back to 2005
       title: >-
         Legislature passes $80 million bonding bill, state museum bill moves
-        forward 
+        forward
       url: >-
         https://helenair.com/news/state-and-regional/govt-and-politics/legislature-passes-million-bonding-bill-state-museum-bill-moves-forward/article_3ddbcf68-4294-5606-92ea-ff26ed07c1b9.html
     - author: Michael Woodel

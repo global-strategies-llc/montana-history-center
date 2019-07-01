@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
@@ -22,6 +23,11 @@ export const NewsPageTemplate = ({
 	<div className="news has-bg-base">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
 		<div className="press section">
+			{ main.image &&
+				<div className="news-image has-text-centered">
+					<Img fixed={main.image.childImageSharp.fixed} />
+				</div>
+			}
 			<h2 className="is-size-1 has-text-centered">{main.heading}</h2>
 			<div className="container">
 				<div className="columns is-multiline">
@@ -80,6 +86,13 @@ export const newsPageQuery = graphql`
 				}
 				main {
 					heading
+					image {
+						childImageSharp {
+							fixed(width: 100, height: 100) {
+								...GatsbyImageSharpFixed
+							}
+						}
+					}
 					press {
 						name
 						image {
