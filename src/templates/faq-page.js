@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import Signup from '../components/Signup'
 import Faq from '../components/Faq'
 
 import './faq.scss'
@@ -30,7 +29,6 @@ export const FaqPageTemplate = ({
 				</div>
 			</div>
 		</div>
-		<Signup action="#" />
 	</div>
 )
 

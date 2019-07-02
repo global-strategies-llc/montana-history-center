@@ -7,7 +7,6 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
 import Features from '../components/Features'
-import Signup from '../components/Signup'
 
 import './index.scss'
 
@@ -124,7 +123,6 @@ export const IndexPageTemplate = ({
 				<Features cols={4} gridItems={featuredLinks.links} />
 			</div>
 		</section>
-		<Signup action="#" />
 	</div>
 )
 

@@ -8,7 +8,6 @@ import Testimonial from '../components/Testimonial'
 import Banner from '../components/Banner'
 import Timeline from '../components/Timeline'
 import BlogRoll from '../components/BlogRoll'
-import Signup from '../components/Signup'
 
 export const MallSiteTemplate = ({
 	image,
@@ -66,7 +65,6 @@ export const MallSiteTemplate = ({
       	<BlogRoll count={1}/>
     	</div>
 		</section>
-		<Signup action="#" />
 	</div>
 )
 

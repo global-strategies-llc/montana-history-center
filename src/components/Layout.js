@@ -5,6 +5,7 @@ import './all.scss'
 import vars from './variables.scss'
 
 import Navbar from '../components/Navbar'
+import Signup from '../components/Signup'
 import Footer from '../components/Footer'
 
 import useSiteMetadata from './SiteMetadata'
@@ -52,6 +53,7 @@ const TemplateWrapper = ({ title, description, keywords, children }) => {
 			</Helmet>
 			<Navbar menuLinks={menuLinks.filter( link => link.placement.includes('navbar') )} />
 			<main>{children}</main>
+			<Signup />
 			<Footer
 				siteCopy={title}
 				socialLinks={socialLinks}

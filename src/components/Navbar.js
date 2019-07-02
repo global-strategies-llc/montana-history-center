@@ -124,15 +124,9 @@ class Navbar extends React.Component {
 						</div>
 
 						<div className="navbar-button">
-							{
-								document.getElementById('petition') ?
-									<a className="button button-invert" href="#petition">
-										<span>Sign the Petition</span>
-									</a>
-									:	<Link className="button button-invert" to='/#petition'>
-											<span>Sign the Petition</span>
-										</Link>
-							}
+							<a className="button button-invert" href="#petition">
+								<span>Sign the Petition</span>
+							</a>
 						</div>
 
 					</div>
