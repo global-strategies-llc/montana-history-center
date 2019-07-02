@@ -44,7 +44,7 @@ export const NewsPageTemplate = ({
 		</section>
 		<section className="blogs section has-bg-white">
 			<div className="container">
-      	<BlogRoll />
+      	<BlogRoll count={3} />
     	</div>
 		</section>
 		<Signup action="#" />

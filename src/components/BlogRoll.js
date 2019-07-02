@@ -11,13 +11,12 @@ import './BlogRoll.scss'
 
 class BlogRoll extends React.Component {
 	render() {
-		const { data } = this.props
+		const { data, count } = this.props
 		const { edges: posts } = data.allMarkdownRemark
-
 		return (
 			<div className="columns is-multiline">
 				{posts &&
-					posts.map(({ node: post }) => (
+					posts.slice(0, count || Infinity).map(({ node: post }) => (
 						<div className="column is-10 is-offset-1" key={post.id}>
 							<article className="blog-list-item">
 								<div className="blog-item-image">
@@ -85,7 +84,7 @@ BlogRoll.propTypes = {
 	}),
 }
 
-export default () => (
+export default ({ count }) => (
 	<StaticQuery
 		query={graphql`
 			query BlogRollQuery {
@@ -119,6 +118,6 @@ export default () => (
 				}
 			}
 		`}
-		render={(data, count) => <BlogRoll data={data} count={count} />}
+		render={(data) => <BlogRoll data={data} count={count} />}
 	/>
 )
