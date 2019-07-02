@@ -2,36 +2,39 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import './all.scss'
+import vars from './variables.scss'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import useSiteMetadata from './SiteMetadata'
 
-const TemplateWrapper = ({ children }) => {
-	const { title, description, menuLinks } = useSiteMetadata()
+const TemplateWrapper = ({ title, description, keywords, children }) => {
+	const { title: defaultTitle, description: defaultDescription, menuLinks } = useSiteMetadata()
 	return (
 		<div>
 			<Helmet>
 				<html lang="en" />
-				<title>{title}</title>
-				<meta name="description" content={description} />
-
+				<title>{title || defaultTitle}</title>
+				<meta name="description" content={description || defaultDescription} />
+				{ keywords &&
+					<meta name="keywords" content={keywords} />
+				}
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
-					href="/img/apple-touch-icon.png"
+					href="/img/icons/apple-touch-icon-100.jpg"
 				/>
 				<link
 					rel="icon"
-					type="image/png"
-					href="/img/favicon-32x32.png"
+					type="image/jpeg"
+					href="/img/icons/favicon-2-100.jpg"
 					sizes="32x32"
 				/>
 				<link
 					rel="icon"
-					type="image/png"
-					href="/img/favicon-16x16.png"
+					type="image/jpeg"
+					href="/img/icons/favicon-1-100.jpg"
 					sizes="16x16"
 				/>
 
@@ -40,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
 					href="/img/safari-pinned-tab.svg"
 					color="#ff4400"
 				/>
-				<meta name="theme-color" content="#fff" />
+				<meta name="theme-color" content={vars.base} />
 
 				<meta property="og:type" content="business.business" />
 				<meta property="og:title" content={title} />

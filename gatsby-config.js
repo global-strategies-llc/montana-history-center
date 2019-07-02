@@ -9,47 +9,47 @@ module.exports = {
 			{
 				name:'Mall Site',
 				placement: ['navbar'],
-				url:'/why-the-mall-site'
+				url:'why-the-mall-site'
 			},
 			{
 				name: 'FAQ',
 				placement: ['navbar'],
-				url: '/faq'
+				url: 'faq'
 			},
 			{
 				name: 'Stories of Support',
 				placement: ['navbar'],
-				url: '/stories-of-support'
+				url: 'stories-of-support'
 			},
 			{
 				name: 'News and Opinion',
 				placement: ['navbar'],
-				url: '/news-and-opinions'
+				url: 'news-and-opinions'
 			},
 			{
 				name: 'About Us',
 				placement: ['footer'],
-				url: '/about'
+				url: 'about'
 			},
 			{
 				name: 'Contact Us',
 				placement: ['footer'],
-				url: '/contact'
+				url: 'contact'
 			},
 			{
 				name: 'Terms of Use',
 				placement: ['footer'],
-				url: '/terms'
+				url: 'terms'
 			},
 			{
 				name: 'Privacy',
 				placement: ['footer'],
-				url: '/privacy'
+				url: 'privacy'
 			},
 			{
 				name: 'Your Privacy Rights',
 				placement: ['footer'],
-				url: '/privacy#your-rights'
+				url: 'privacy#your-rights'
 			},
 		]
 	},
