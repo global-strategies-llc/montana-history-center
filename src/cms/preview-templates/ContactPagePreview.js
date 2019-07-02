@@ -11,7 +11,6 @@ const ContactPagePreview = ({ entry, widgetFor }) => {
 				title={data.title}
 				heading={data.heading}
 				image={data.image}
-				heading={data.heading}
 				content={widgetFor('body')}
 			/>
 		)

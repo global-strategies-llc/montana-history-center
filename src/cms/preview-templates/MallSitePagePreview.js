@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MallSiteTemplate } from '../../templates/mallsite-page'
 
-const MallSitePreview = ({ entry, widgetFor }) => {
+const MallSitePreview = ({ entry, getAsset }) => {
 	const data = entry.getIn(['data']).toJS()
 
 	if (data) {
@@ -27,7 +27,7 @@ MallSitePreview.propTypes = {
 	entry: PropTypes.shape({
 		getIn: PropTypes.func,
 	}),
-	widgetFor: PropTypes.func
+	getAsset: PropTypes.func,
 }
 
 export default MallSitePreview

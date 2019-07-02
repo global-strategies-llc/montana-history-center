@@ -30,7 +30,7 @@ ContentPageTemplate.propTypes = {
 	title: PropTypes.string.isRequired,
 	heading: PropTypes.string.isRequired,
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-	content: PropTypes.string,
+	content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	contentComponent: PropTypes.func,
 }
 

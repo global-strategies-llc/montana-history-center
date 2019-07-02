@@ -65,11 +65,12 @@ export const IndexPageTemplate = ({
 					<div className="pitch-heading">
 						{ mainpitch.why.image &&
 							<div className="pitch-icon">
-								<Img fixed={
+								{ mainpitch.why.image ?
 									mainpitch.why.image.childImageSharp ?
-										mainpitch.why.image.childImageSharp.fixed
-										: mainpitch.why.image
-								} />
+									 	<Img fixed={image.childImageSharp.fixed} />
+										: <img src={mainpitch.why.image} />
+									: null
+								}
 							</div>
 						}
 						<h4 className="is-size-2">{mainpitch.why.heading}</h4>
@@ -86,11 +87,12 @@ export const IndexPageTemplate = ({
 					<div className="pitch-heading">
 						{ mainpitch.whynot.image &&
 							<div className="pitch-icon">
-								<Img fixed={
+								{ mainpitch.whynot.image ?
 									mainpitch.whynot.image.childImageSharp ?
-										mainpitch.whynot.image.childImageSharp.fixed
-										: mainpitch.whynot.image
-								} />
+									 	<Img fixed={image.childImageSharp.fixed} />
+										: <img src={mainpitch.whynot.image} />
+									: null
+								}
 							</div>
 						}
 						<h4 className="is-size-2">{mainpitch.whynot.heading}</h4>
