@@ -26,7 +26,11 @@ const FeatureGrid = ({ cols, gridItems }) => (
 						<div className="has-text-centered">
 							{item.image &&
 								<div className="feature-image">
-									<PreviewCompatibleImage imageInfo={item.image} />
+									<PreviewCompatibleImage imageInfo={
+										'object' === item.image ?
+											item.image
+											: { image: item.image, alt: item.text }
+									} />
 								</div>
 							}
 						</div>

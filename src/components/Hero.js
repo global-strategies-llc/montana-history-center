@@ -43,12 +43,11 @@ const Hero = ({
 	return (
 		<div className="page-hero full-width-image margin-top-0">
 			<div className="hero-image">
-				{ image &&
-					<Img fluid={
-						image.childImageSharp ?
-							image.childImageSharp.fluid
-							: image
-					} />
+				{ image ?
+					image.childImageSharp ?
+					 	<Img fluid={image.childImageSharp.fluid} />
+						: <img src={image} />
+					: null
 				}
 			</div>
 			<div className="section">
@@ -78,7 +77,6 @@ const Hero = ({
 												</React.Fragment>
 											))
 											: <Heading text={subheading} level={4} />
-
 									}
 								</div>
 							</div>
