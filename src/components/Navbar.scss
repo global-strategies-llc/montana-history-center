@@ -37,14 +37,12 @@
 
 .navbar-brand {
 	margin-right: auto;
-	padding-left: 1em;
-	padding-right: 1em;
 	order: 0;
 
 	.navbar-item {
 		margin: 0 !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 	h4 {

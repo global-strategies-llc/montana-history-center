@@ -30,6 +30,7 @@ class Navbar extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+		window.dataLayer && window.dataLayer.push({'event': 'navbar-mounted'})
   }
 
   componentWillUnmount() {
@@ -89,7 +90,7 @@ class Navbar extends React.Component {
 				<div className="container">
 
 					<div className="navbar-brand">
-						<Link to="/" className="navbar-item" title="Logo">
+						<Link to="/" className="navbar-item" title="Home Page">
 							<h4><strong>Montana</strong> History Center</h4>
 							{/*<img src={logo} alt="Montana History Center" style={{ width: '88px' }} />*/}
 						</Link>
@@ -118,7 +119,7 @@ class Navbar extends React.Component {
 							))
 						}
 						<div className="navbar-button">
-							<a className="button custom-dbox-popup" href="https://donorbox.org/mall-site-petition">
+							<a className="button dbox-donation-button custom-dbox-popup" href="https://donorbox.org/mall-site-petition">
 								<span>Contribute</span>
 							</a>
 						</div>
