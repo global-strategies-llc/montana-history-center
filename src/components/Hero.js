@@ -94,7 +94,7 @@ Hero.propTypes = {
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	eyebrow: PropTypes.string,
 	heading: PropTypes.string,
-	subheading: PropTypes.object,
+	subheading: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	cta: PropTypes.object
 }
 
