@@ -63,7 +63,7 @@ const NewsPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
+		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
 			<NewsPageTemplate
 				title={post.frontmatter.title}
 				image={post.frontmatter.image}

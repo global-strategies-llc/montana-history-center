@@ -43,7 +43,7 @@ const FaqPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
+		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
 			<FaqPageTemplate
 				title={post.frontmatter.title}
 				image={post.frontmatter.image}
