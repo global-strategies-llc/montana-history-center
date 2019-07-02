@@ -70,12 +70,15 @@ const Hero = ({
 							<div className="subheading-wrap column is-two-fifths-desktop">
 								<div className="subheading-inner">
 									{
-										Object.keys(subheading).map( (key, i) => (
-											<React.Fragment key={i}>
-												<small className="eyebrow">{toTitleCase(key)}:</small>
-												{<Heading text={subheading[key]} level={3 + i} />}
-											</React.Fragment>
-										))
+										'object' === typeof subheading ?
+											Object.keys(subheading).map( (key, i) => (
+												<React.Fragment key={i}>
+													<small className="eyebrow">{toTitleCase(key)}:</small>
+													{<Heading text={subheading[key]} level={3 + i} />}
+												</React.Fragment>
+											))
+											: <Heading text={subheading} level={4} />
+
 									}
 								</div>
 							</div>
