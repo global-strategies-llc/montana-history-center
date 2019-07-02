@@ -1,5 +1,5 @@
 ---
-templateKey: content-page
+templateKey: contact-page
 title: Contact Us
 image: /img/site-sketch-hero.jpg
 heading: Contact Us
@@ -27,5 +27,3 @@ Helena, MT 59624
 [Twitter](https://twitter.com)
 
 [Facebook](https://facebook.com)
-
-###

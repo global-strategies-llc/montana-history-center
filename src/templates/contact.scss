@@ -1,0 +1,9 @@
+@import '../components/breakpoints';
+@import '../components/variables';
+
+.contact-us {
+
+	.content:not(:last-child) {
+		margin-bottom: 3em;
+	}
+}
