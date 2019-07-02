@@ -8,24 +8,28 @@ import Twitter from '../img/social/twitter.svg'
 
 const year = new Date().getFullYear();
 
-const Footer = ({ menuLinks, siteCopy }) => {
+const Footer = ({ menuLinks, socialLinks, siteCopy }) => {
 	return (
 		<footer className="footer has-bg-neutral">
 			<div className="container">
 				<div className="social">
-					<a title="facebook" href="https://facebook.com">
-						<Facebook />
-					</a>
-					<a title="twitter" href="https://twitter.com">
-						<Twitter />
-					</a>
+					{ socialLinks.facebook &&
+						<a title="facebook" href={socialLinks.facebook}>
+							<Facebook />
+						</a>
+					}
+					{ socialLinks.twitter &&
+						<a title="twitter" href={socialLinks.twitter}>
+							<Twitter />
+						</a>
+					}
 				</div>
 				<section className="menu">
 					<ul className="menu-list">
 						{
 							menuLinks.map(link => (
 								<li key={link.name}>
-									<Link className="menu-item" to={link.url}>
+									<Link className="menu-item" to={`/${link.url}`}>
 										{link.name}
 									</Link>
 								</li>

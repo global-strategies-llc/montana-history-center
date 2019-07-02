@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ title, description, keywords, children }) => {
-	const { title: defaultTitle, description: defaultDescription, menuLinks } = useSiteMetadata()
+	const { title: defaultTitle, description: defaultDescription, menuLinks, socialLinks } = useSiteMetadata()
 	return (
 		<div>
 			<Helmet>
@@ -54,6 +54,7 @@ const TemplateWrapper = ({ title, description, keywords, children }) => {
 			<main>{children}</main>
 			<Footer
 				siteCopy={title}
+				socialLinks={socialLinks}
 				menuLinks={menuLinks.filter( link => link.placement.includes('footer') )}
 			/>
 		</div>

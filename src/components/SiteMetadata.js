@@ -13,6 +13,10 @@ const useSiteMetadata = () => {
 							placement
 							url
 						}
+						socialLinks {
+							facebook
+							twitter
+						}
 					}
 				}
 			}
