@@ -1,15 +1,19 @@
 @import '../components/breakpoints';
 @import '../components/variables';
 
+.blogs,
 .blog-post {
-
-	.columns {
-		flex-direction: column;
-	}
 
 	.heading-wrap,
 	.subheading-wrap {
 	  margin-left: 8.333%;
+	}
+}
+
+.blog-post {
+
+	.columns {
+		flex-direction: column;
 	}
 
 	.subheading-inner {

@@ -12,16 +12,18 @@ const BlogIndexPage = () =>
 			const image = data.image;
 			return (
 				<Layout>
-					<Hero image={image} title="Latest Blogs" heading="Latest Stories" />
-					<section className="section">
-						<div className="container">
-							<div className="content">
-								<BlogRoll />
+					<div className="blogs has-bg-base">
+						<Hero image={image} title="Latest Blogs" heading="Latest Stories" />
+						<section className="section">
+							<div className="container">
+								<div className="content">
+									<BlogRoll />
+								</div>
 							</div>
-						</div>
-					</section>
-			</Layout>
-		)
+						</section>
+					</div>
+				</Layout>
+			)
 	}}
 />
 
