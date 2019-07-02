@@ -17,7 +17,18 @@
 	}
 
 	.blog-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 		color: tint($text, 40%);
+
+		.social {
+			display: flex;
+
+			a {
+				font-size: 2em;
+			}
+		}
 	}
 
 	.blog-date {
@@ -30,5 +41,9 @@
 		font-size: 0.8em;
 		font-style: italic;
 		text-align: center;
+	}
+
+	.taglist a {
+		color: $primary;
 	}
 }

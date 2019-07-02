@@ -7,6 +7,9 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Content, { HTMLContent } from '../components/Content'
 
+import Facebook from '../img/social/facebook.svg'
+import Twitter from '../img/social/twitter.svg'
+
 import './blog-post.scss'
 
 export const BlogPostTemplate = ({
@@ -15,6 +18,7 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  slug,
   date,
   author,
   featuredimage,
@@ -22,21 +26,48 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
+  const shareViaPlatform = (e) => {
+
+    const shareurl = window.location.href;
+
+    e.preventDefault()
+
+    switch(e.target.closest('[title]').title) {
+
+      case 'facebook':
+        return window.open('https://www.facebook.com/sharer/sharer.php?href='+shareurl, 'fb-share', 'height=300,width=400')
+
+      case 'twitter':
+        return window.open('https://twitter.com/share?url='+shareurl+'&via=MontanaHistoryCenter.org', 'twitter-share', 'height=550,width=420')
+
+    }
+
+  }
+
   return (
     <div className="blog-post has-bg-base">
       <Hero image={featuredimage} title={title} heading={title} subheading={description}/>
-      <p className="blog-description"></p>
       <section className="section">
         {helmet || ''}
         <div className="container content">
           <div className="columns">
             <div className="column is-10 is-offset-1 blog-post-body">
-              <p className="blog-meta">
-                <span className="blog-date">{date}</span>
-                { author &&
-                  <React.Fragment><br/><span className="blog-author">By {author}</span></React.Fragment>
-                }
-              </p>
+              <div className="blog-meta">
+                <p>
+                  <span className="blog-date">{date}</span>
+                  { author &&
+                    <React.Fragment><br/><span className="blog-author">By {author}</span></React.Fragment>
+                  }
+                </p>
+                <div className="social">
+                  <a title="facebook" onClick={shareViaPlatform} >
+                    <Facebook />
+                  </a>
+                  <a title="twitter" onClick={shareViaPlatform} >
+                    <Twitter />
+                  </a>
+                </div>
+              </div>
               <PostContent content={content} />
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
@@ -68,7 +99,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <Layout>
       <BlogPostTemplate
@@ -87,6 +117,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
         author={post.frontmatter.author}
         date={post.frontmatter.date}
       />
@@ -106,6 +137,9 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      fields {
+        slug
+      }
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
