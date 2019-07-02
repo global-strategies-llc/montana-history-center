@@ -108,6 +108,8 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: Keywords, name: keywords, widget: list}
           - label: Call to Action
             name: cta
             widget: object
@@ -146,6 +148,8 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
+          - {label: Description, name: description, widget: text}
+          - {label: Keywords, name: keywords, widget: list}
           - label: Questions
             name: questions
             label_singular: Question
@@ -161,6 +165,8 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
+          - {label: Description, name: description, widget: text}
+          - {label: Keywords, name: keywords, widget: list}
           - label: Call to Action
             name: cta
             widget: object
@@ -199,6 +205,8 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
+          - {label: Description, name: description, widget: text}
+          - {label: Keywords, name: keywords, widget: list}
           - label: Call to Action
             name: cta
             widget: object
@@ -231,6 +239,8 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
+          - {label: Description, name: description, widget: text}
+          - {label: Keywords, name: keywords, widget: list}
           - {label: Body, name: body, widget: markdown}
       - name: contact
         label: Contact
@@ -240,6 +250,8 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
+          - {label: Description, name: description, widget: text}
+          - {label: Keywords, name: keywords, widget: list}
           - {label: Body, name: body, widget: markdown}
       - name: terms
         label: Terms
@@ -274,6 +286,3 @@ collections:
       - {label: Featured Image, name: featuredimage, widget: image}
       - {label: Body, name: body, widget: markdown}
       - {label: Tags, name: tags, widget: list}
-    meta:
-      - {label: 'SEO Description', name: 'description', widget: 'text'}
-

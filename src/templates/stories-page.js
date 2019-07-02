@@ -58,7 +58,7 @@ StoriesPageTemplate.propTypes = {
 const StoriesPage = ({ data }) => {
 	const { frontmatter } = data.markdownRemark
 	return (
-		<Layout>
+		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
 			<StoriesPageTemplate
 				title={frontmatter.title}
 				image={frontmatter.image}
@@ -87,6 +87,8 @@ export const storiesPageQuery = graphql`
 			frontmatter {
 				title
 				heading
+				description
+				keywords
 				cta {
 					text
 					url

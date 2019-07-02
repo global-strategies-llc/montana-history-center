@@ -43,7 +43,7 @@ const FaqPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout>
+		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
 			<FaqPageTemplate
 				title={post.frontmatter.title}
 				image={post.frontmatter.image}
@@ -67,6 +67,8 @@ export const faqPageQuery = graphql`
 			frontmatter {
 				title
 				heading
+				description
+				keywords
 				questions {
 					question
 					answer

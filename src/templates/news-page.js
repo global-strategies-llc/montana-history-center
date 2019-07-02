@@ -63,7 +63,7 @@ const NewsPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout>
+		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
 			<NewsPageTemplate
 				title={post.frontmatter.title}
 				image={post.frontmatter.image}
@@ -88,6 +88,8 @@ export const newsPageQuery = graphql`
 			frontmatter {
 				title
 				heading
+				description
+				keywords
 				cta {
 					text
 					url

@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Build the Montana Heritage Center at the Mall Site.
 image: /img/site-sketch-hero.jpg
-eyebrow:
+eyebrow: ''
 heading: Build the Montana Heritage Center at the Mall Site.
 subheading:
   answer: >-

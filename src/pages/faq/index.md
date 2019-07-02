@@ -5,11 +5,23 @@ image: /img/site-sketch-hero.jpg
 heading: |
   What Is The Montana Heritage Center?
   The proposed name and location for the new Montana Historical Society museum.
+description: >-
+  The Department of Administration planned to build the new Montana Heritage Center at the
+  alternative site of Roberts and 6th it is not suitable.
+  It will fail in its mission to become a world-class museum since it is right in the middle
+  of all the government buildings where there is not enough room to build a large museum.
+  We won't be able to share our history and culture with Montana’s school children and the
+  thousands of visitors who come to Montana.
+  The mall site was the original proposed site and is the prime location.
+keywords:
+  - montana history
+  - heritage center
+  - history museum
 questions:
   - answer: >-
       Yes. In 2005, bonding authority authorized by the legislature and signed
       by the governor. Approximately 7.5 million dollars in bonding is
-      available. 
+      available.
     question: Is there money available to purchase the mall site?
   - answer: >-
       Approximately 4.9 million dollars. We have a bond of 7.5 million dollars
@@ -34,7 +46,7 @@ questions:
 
       The mall site is located between Prospect Avenue and 11th avenue and
       provides easy public access. It can accommodate parking spaces for school
-      buses, the Helena tour train, and RVs. 
+      buses, the Helena tour train, and RVs.
 
 
       The alternative location at Roberts and 6th would not be able to
@@ -43,7 +55,7 @@ questions:
 
       The mall site provides a lot more room for the new Montana Heritage Center
       and will offer a massive increase of historical artifacts to be seen on
-      display. 
+      display.
     question: >-
       Is the mall site large enough to accommodate the requirements of the
       Montana Heritage Center?

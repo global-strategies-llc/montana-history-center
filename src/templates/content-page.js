@@ -38,7 +38,7 @@ const ContentPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout>
+		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
 			<ContentPageTemplate
 				contentComponent={HTMLContent}
 				title={post.frontmatter.title}
@@ -63,6 +63,8 @@ export const contentPageQuery = graphql`
 			frontmatter {
 				title
 				heading
+				description
+				keywords
 				image {
 					childImageSharp {
 						fluid(maxWidth: 2048, quality: 100) {

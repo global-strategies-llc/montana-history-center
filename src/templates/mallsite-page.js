@@ -84,7 +84,7 @@ MallSiteTemplate.propTypes = {
 const MallSite = ({ data }) => {
 	const { frontmatter } = data.markdownRemark
 	return (
-		<Layout>
+		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
 			<MallSiteTemplate
 				image={frontmatter.image}
 				title={frontmatter.title}
@@ -115,6 +115,8 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				heading
+				description
+				keywords
 				midway
 				closer
 				image {
