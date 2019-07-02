@@ -30,7 +30,7 @@ const query = graphql`
 		image: file(relativePath: { eq: "site-sketch-hero.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 2048, quality: 100) {
-					...GatsbyImageSharpFluid
+					...GatsbyImageSharpFluid_tracedSVG
 				}
 			}
 		}
