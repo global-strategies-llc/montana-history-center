@@ -118,7 +118,7 @@ class Navbar extends React.Component {
 							))
 						}
 						<div className="navbar-button">
-							<a className="button" href="#donate">
+							<a className="button custom-dbox-popup" href="https://donorbox.org/mall-site-petition">
 								<span>Contribute</span>
 							</a>
 						</div>
