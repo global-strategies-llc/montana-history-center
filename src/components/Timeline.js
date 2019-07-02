@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 
 import './Timeline.scss'
 
-const TimelineEntry = function({ date, description, className }) {
+const TimelineEntry = function({ date, description, className, style }) {
 
 	const [ref, inView] = useInView({
 		/* Optional options */
@@ -14,7 +14,11 @@ const TimelineEntry = function({ date, description, className }) {
 	})
 
 	return (
-		<div className={ [ 'timeline-entry', inView ? 'timeline-show' : '', className ].join(' ') } ref={ref}>
+		<div
+			className={ [ 'timeline-entry', inView ? 'timeline-show' : '', className ].join(' ') }
+			ref={ref}
+			style={style}
+		>
 			<div className="timeline-date">
 				<h3 className="is-size-2">{date}</h3>
 			</div>
@@ -32,7 +36,14 @@ const Timeline = function( { entries, className } ) {
 		<div className={ [ className, 'timeline'].join(' ') }>
 			{
 				entries.map( (entry, i) =>
-					<TimelineEntry key={i} { ...entry } className={ i % 2 === 0 ? 'timeline-left' : 'timeline-right' }/>
+					<TimelineEntry
+						key={i}
+						{ ...entry }
+						className={ Math.ceil(Math.random() * 1.8) === 2 ? 'timeline-left' : 'timeline-right' }
+						style={{
+							marginTop: `${( parseInt(entry.date.slice(-4), 10) - parseInt(entries[Math.max(i - 1, 0)].date.slice(-4), 10) )}rem`
+						}}
+					/>
 			)}
 		</div>
 	)
