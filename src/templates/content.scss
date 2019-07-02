@@ -1,0 +1,15 @@
+@import '../components/breakpoints';
+@import '../components/variables';
+
+.privacy,
+.terms-of-use {
+
+	.full-width-image {
+		min-height: 0;
+	}
+
+	.heading-wrap,
+	.subheading-wrap {
+	  margin-left: 8.333%;
+	}
+}
