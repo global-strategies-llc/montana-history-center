@@ -67,7 +67,7 @@ export const IndexPageTemplate = ({
 							<div className="pitch-icon">
 								{ mainpitch.why.image ?
 									mainpitch.why.image.childImageSharp ?
-									 	<Img fixed={image.childImageSharp.fixed} />
+									 	<Img fixed={mainpitch.why.image.childImageSharp.fixed} />
 										: <img src={mainpitch.why.image} />
 									: null
 								}
@@ -89,7 +89,7 @@ export const IndexPageTemplate = ({
 							<div className="pitch-icon">
 								{ mainpitch.whynot.image ?
 									mainpitch.whynot.image.childImageSharp ?
-									 	<Img fixed={image.childImageSharp.fixed} />
+									 	<Img fixed={mainpitch.whynot.image.childImageSharp.fixed} />
 										: <img src={mainpitch.whynot.image} />
 									: null
 								}

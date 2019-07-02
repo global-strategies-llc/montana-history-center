@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
 import Banner from '../components/Banner'
+import Signup from '../components/Signup'
 
 import './stories.scss'
 
@@ -43,6 +44,7 @@ export const StoriesPageTemplate = ({
 					</div>
 				</div>
 			)}
+		<Signup action="#" />
 	</div>
 )
 
