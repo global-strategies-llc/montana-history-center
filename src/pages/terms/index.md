@@ -2,6 +2,7 @@
 templateKey: 'content-page'
 path: /terms-of-use
 title: Terms of Use
+heading: Terms of Use
 ---
 ### Shade-grown coffee
 

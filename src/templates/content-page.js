@@ -5,11 +5,14 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Hero from '../components/Hero'
 
+import './content.scss'
+
 export const ContentPageTemplate = ({ title, heading, image, cta, content, contentComponent }) => {
-	const PageContent = contentComponent || Content
+	const PageContent = contentComponent || Content,
+				safeTitle = title ? title.replace(/\s+/g, '-').toLowerCase() : '';
 
 	return (
-		<div className="has-bg-base">
+		<div className={`${safeTitle} has-bg-base`}>
 			<Hero image={image} title={title} heading={heading} cta={cta}/>
 			<section className="section">
 				<div className="container">

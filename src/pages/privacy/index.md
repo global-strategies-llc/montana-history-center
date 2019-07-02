@@ -2,6 +2,7 @@
 templateKey: 'content-page'
 path: /privacy
 title: Privacy
+heading: Your Privacy Matters
 ---
 
 ### Shade-grown coffee
