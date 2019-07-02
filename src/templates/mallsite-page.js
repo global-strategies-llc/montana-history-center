@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
 import Banner from '../components/Banner'
 import Timeline from '../components/Timeline'
+import BlogRoll from '../components/BlogRoll'
 import Signup from '../components/Signup'
 
 export const MallSiteTemplate = ({
@@ -42,7 +43,7 @@ export const MallSiteTemplate = ({
 						<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>
 					}
 				</h2>
-				<Timeline entries={mainpitch.timeline} />
+				<Timeline entries={mainpitch.timeline.slice(0, Math.floor(mainpitch.timeline.length / 2))} />
 			</div>
 		</section>
 		<section className="full-width-heading has-bg-neutral">
@@ -50,10 +51,20 @@ export const MallSiteTemplate = ({
 				{midway}
 			</h3>
 		</section>
+		<section className="mainpitch section">
+			<div className="container">
+				<Timeline entries={mainpitch.timeline.slice(Math.ceil(mainpitch.timeline.length / 2))} />
+			</div>
+		</section>
 		<section className="full-width-heading has-bg-neutral">
 			<h3 className="has-text-centered is-size-3">
 				{closer}
 			</h3>
+		</section>
+		<section className="blogs section has-bg-white">
+			<div className="container">
+      	<BlogRoll count={1}/>
+    	</div>
 		</section>
 		<Signup action="#" />
 	</div>
