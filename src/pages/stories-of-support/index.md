@@ -25,7 +25,7 @@ callout:
     Lewis and Clark County Commissioners
   cta:
     text: Download the letter
-    url: /support-letter-from-lewis-and-clark-county-commissioners.pdf
+    url: //montanahistorycenter.org/support-letter-from-lewis-and-clark-county-commissioners.pdf
 groups:
   - name: Montana Citizens
     image: /img/icons/stories.png
