@@ -2,21 +2,23 @@
 // Config vars
 
 $mhc-blue: 			#2E648D;  // MHC logo brand color
-$mhc-blue-lt: 	#B4D9F5;
+$mhc-blue-lt: 	    #B4D9F5;
 $mhc-brown: 		#482B12;
-$mhc-brown-dk: 	#402915;
+$mhc-brown-dk: 	    #402915;
 $mhc-grey: 			#585757;
-$mhc-grey-dk: 	#3F3F3F;
+$mhc-grey-lt:		#9B9B9B;
+$mhc-grey-dk: 	    #3F3F3F;
 $mhc-white: 		#FFF9F0;
 
 $warning: 			#ffa909;
-$error: 				#660909;
+$error: 			#660909;
 
 $primary: $mhc-blue;
 $secondary: $mhc-blue-lt;
 $neutral: $mhc-brown;
 $neutral-dark: $mhc-brown-dk;
 $text: $mhc-grey;
+$text-light: $mhc-grey-lt;
 $text-dark: $mhc-grey-dk;
 $base: $mhc-white;
 $primary-invert: $mhc-white;
@@ -83,52 +85,52 @@ $black: #2b2523;
 /* includes support for defining a color replacements map
 		of existing to replacement colors */
 @function svg-url($svg, $colormap: false) {
-    //  Add namespace if missing
-    @if not str-index($svg, xmlns) {
-        $svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
-    }
-    @if $colormap {
-    	@each $orig, $replace in $colormap {
-    		$svg: str-replace($svg, $orig, $replace);
-    	}
-    }
-    //  Chunk up string avoids "stack level too deep" error
-    $encoded:'';
-    $slice: 2000;
-    $index: 0;
-    $loops: ceil(str-length($svg)/$slice);
-    @for $i from 1 through $loops {
-        $chunk: str-slice($svg, $index, $index + $slice - 1);
-        //   Encode
-        $chunk: str-replace($chunk, '"', '\'');
-        $chunk: str-replace($chunk, '%', '%25');
-        $chunk: str-replace($chunk, '&', '%26');
-        $chunk: str-replace($chunk, '#', '%23');
-        $chunk: str-replace($chunk, '{', '%7B');
-        $chunk: str-replace($chunk, '}', '%7D');
-        $chunk: str-replace($chunk, '<', '%3C');
-        $chunk: str-replace($chunk, '>', '%3E');
+	//  Add namespace if missing
+	@if not str-index($svg, xmlns) {
+		$svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+	}
+	@if $colormap {
+		@each $orig, $replace in $colormap {
+			$svg: str-replace($svg, $orig, $replace);
+		}
+	}
+	//  Chunk up string avoids "stack level too deep" error
+	$encoded:'';
+	$slice: 2000;
+	$index: 0;
+	$loops: ceil(str-length($svg)/$slice);
+	@for $i from 1 through $loops {
+		$chunk: str-slice($svg, $index, $index + $slice - 1);
+		//   Encode
+		$chunk: str-replace($chunk, '"', '\'');
+		$chunk: str-replace($chunk, '%', '%25');
+		$chunk: str-replace($chunk, '&', '%26');
+		$chunk: str-replace($chunk, '#', '%23');
+		$chunk: str-replace($chunk, '{', '%7B');
+		$chunk: str-replace($chunk, '}', '%7D');
+		$chunk: str-replace($chunk, '<', '%3C');
+		$chunk: str-replace($chunk, '>', '%3E');
 
-        //    The maybe list
-        //
-        //    Keep size and compile time down
-        //    ... only add on documented fail
-        //
-        //  $chunk: str-replace($chunk, '|', '%7C');
-        //  $chunk: str-replace($chunk, '[', '%5B');
-        //  $chunk: str-replace($chunk, ']', '%5D');
-        //  $chunk: str-replace($chunk, '^', '%5E');
-        //  $chunk: str-replace($chunk, '`', '%60');
-        //  $chunk: str-replace($chunk, ';', '%3B');
-        //  $chunk: str-replace($chunk, '?', '%3F');
-        //  $chunk: str-replace($chunk, ':', '%3A');
-        //  $chunk: str-replace($chunk, '@', '%40');
-        //  $chunk: str-replace($chunk, '=', '%3D');
+		//    The maybe list
+		//
+		//    Keep size and compile time down
+		//    ... only add on documented fail
+		//
+		//  $chunk: str-replace($chunk, '|', '%7C');
+		//  $chunk: str-replace($chunk, '[', '%5B');
+		//  $chunk: str-replace($chunk, ']', '%5D');
+		//  $chunk: str-replace($chunk, '^', '%5E');
+		//  $chunk: str-replace($chunk, '`', '%60');
+		//  $chunk: str-replace($chunk, ';', '%3B');
+		//  $chunk: str-replace($chunk, '?', '%3F');
+		//  $chunk: str-replace($chunk, ':', '%3A');
+		//  $chunk: str-replace($chunk, '@', '%40');
+		//  $chunk: str-replace($chunk, '=', '%3D');
 
-        $encoded: #{$encoded}#{$chunk};
-        $index: $index + $slice;
-    }
-    @return url("data:image/svg+xml,#{$encoded}");
+		$encoded: #{$encoded}#{$chunk};
+		$index: $index + $slice;
+	}
+	@return url("data:image/svg+xml,#{$encoded}");
 }
 
 /* HELPER FUNCTION - STR-REPLACE */
@@ -136,7 +138,7 @@ $black: #2b2523;
   $index: str-index($string, $search);
 
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
   }
 
   @return $string;
