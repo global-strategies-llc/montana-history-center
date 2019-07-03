@@ -39,6 +39,8 @@ const TemplateWrapper = ({ title, description, keywords, children }) => {
 					sizes="16x16"
 				/>
 
+				<link rel="prefetch" href="https://donorbox.org/mall-site-petition?modal=true" />
+
 				{/*
 					<link
 						rel="mask-icon"
@@ -51,13 +53,14 @@ const TemplateWrapper = ({ title, description, keywords, children }) => {
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content={title} />
 				<meta property="og:url" content="/" />
+
 				{/*<meta property="og:image" content="/img/og-image.jpg" />*/}
 			</Helmet>
 			<Navbar menuLinks={menuLinks.filter( link => link.placement.includes('navbar') )} />
 			<main>{children}</main>
 			<Signup />
 			<Footer
-				siteCopy={title}
+				siteCopy={defaultTitle}
 				socialLinks={socialLinks}
 				menuLinks={menuLinks.filter( link => link.placement.includes('footer') )}
 			/>
