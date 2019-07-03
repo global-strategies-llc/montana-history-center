@@ -16,9 +16,13 @@
 		height: calc(100% - 4em);
 		top: 2em;
 		bottom: 2em;
-		left: 50%;
+		left: calc(33.333% + 1em);
 		background: rgba($text, 0.4);
 		transform: translateX(-50%);
+
+		@include tablet {
+			left: 50%;
+		}
 	}
 }
 
@@ -30,23 +34,50 @@
 	margin: 0;
 
 	&.timeline-left {
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
 	}
 
-	&.timeline-right {
-		flex-flow: row-reverse wrap;
+	@include tablet {
+		&.timeline-right {
+			flex-flow: row-reverse nowrap;
+		}
 	}
-
 
 	@include desktop {
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
 }
 
 .timeline-date,
 .timeline-content {
 	padding: 0.5em 1em;
-	flex: 0 1 48%;
+}
+
+.timeline-date {
+	flex: 0 1 33.333%;
+
+	h3 {
+		display: inline-block;
+		line-height: 1;
+		text-align: center;
+
+		@include tablet {
+			flex: 0 1 48%;
+		}
+
+	}
+
+	@include tablet {
+		flex: 0 1 48%;
+	}
+}
+
+.timeline-content {
+	flex: 1 0 0%;
+
+	@include tablet {
+		flex: 0 1 48%;
+	}
 }
 
 .timeline-marker {
@@ -89,28 +120,26 @@
 }
 
 .timeline-date {
+	text-align: right;
 
-	.timeline-left & {
-		text-align: right;
-	}
-
-	.timeline-right & {
-		text-align: left;
+	@include tablet {
+		.timeline-right & {
+			text-align: left;
+		}
 	}
 }
 
 .timeline-content {
 	opacity: 0;
 	transition: transform 300ms, opacity 150ms;
+	text-align: left;
+	transform: translateX(30px);
 
-	.timeline-left & {
-		text-align: left;
-		transform: translateX(30px);
-	}
-
-	.timeline-right & {
-		text-align: right;
-		transform: translateX(-30px);
+	@include tablet {
+		.timeline-right & {
+			text-align: right;
+			transform: translateX(-30px);
+		}
 	}
 
 	.timeline-show & {

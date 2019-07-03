@@ -36,7 +36,7 @@ export const MallSiteTemplate = ({
 		</div>
 		<section className="mainpitch section">
 			<div className="container">
-				<h2 className="title is-size-2 has-text-centered">
+				<h2 className="is-size-2 has-text-centered">
 					{mainpitch.title.split(/\n/)[0]}
 					{mainpitch.title.split(/\n/)[1] &&
 						<span className="pitch-closer">{mainpitch.title.split(/\n/)[1]}</span>

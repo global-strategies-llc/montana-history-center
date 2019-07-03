@@ -10,7 +10,7 @@ const TimelineEntry = function({ date, description, className, style }) {
 	const [ref, inView] = useInView({
 		/* Optional options */
 		threshold: 1,
-		rootMargin: '0% 0% -25%',
+		rootMargin: '10% 50% -25%',
 	})
 
 	return (
@@ -20,7 +20,7 @@ const TimelineEntry = function({ date, description, className, style }) {
 			style={style}
 		>
 			<div className="timeline-date">
-				<h3 className="is-size-2">{date}</h3>
+				<h3 className="is-size-3">{date}</h3>
 			</div>
 			<div className="timeline-marker"></div>
 			<div className="timeline-content">
@@ -31,7 +31,14 @@ const TimelineEntry = function({ date, description, className, style }) {
 }
 
 const Timeline = function( { entries, className } ) {
-
+	const positions = entries.map( (entry, i) => {
+		return {
+			leftRight: Math.ceil(Math.random() * 1.8) === 2 ? 'timeline-left' : 'timeline-right' ,
+			styles: {
+				marginTop: `${( parseInt(entry.date.slice(-4), 10) - parseInt(entries[Math.max(i - 1, 0)].date.slice(-4), 10) )}rem`
+			}
+		}
+})
 	return (
 		<div className={ [ className, 'timeline'].join(' ') }>
 			{
@@ -39,10 +46,8 @@ const Timeline = function( { entries, className } ) {
 					<TimelineEntry
 						key={i}
 						{ ...entry }
-						className={ Math.ceil(Math.random() * 1.8) === 2 ? 'timeline-left' : 'timeline-right' }
-						style={{
-							marginTop: `${( parseInt(entry.date.slice(-4), 10) - parseInt(entries[Math.max(i - 1, 0)].date.slice(-4), 10) )}rem`
-						}}
+						className={positions[i].leftRight}
+						style={positions[i].styles}
 					/>
 			)}
 		</div>
