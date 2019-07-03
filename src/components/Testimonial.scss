@@ -33,7 +33,7 @@
   }
 
 	.message-body {
-		@include serif;
+		// @include serif;
 		position: relative;
 		padding: 1em 2em 1em 0;
 		color: $neutral;
@@ -46,6 +46,7 @@
 		}
 
 		&:before {
+			@include serif;
 			content: '\201C';
 			display: block;
 			position: absolute;
@@ -64,7 +65,7 @@
 	}
 
 	.message-author {
-		@include sans;
+		// @include sans;
 		display: block;
 		color: $text-dark;
 		font-style: normal;
@@ -72,9 +73,9 @@
 	}
 
 	.author-role {
-		@include serif;
+		// @include serif;
 		display: block;
-		color: $primary;
+		color: $text-light;
 		font-size: 0.75em;
 	}
 }

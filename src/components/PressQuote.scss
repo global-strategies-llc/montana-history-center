@@ -33,7 +33,7 @@ $linkarrow: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 19"><path f
   }
 
 	.press-content {
-		@include serif;
+		// @include serif;
 		position: relative;
 		padding: 1em 2em 1em 0;
 		color: $neutral;
@@ -46,6 +46,7 @@ $linkarrow: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 19"><path f
 		}
 
 		&:before {
+			@include serif;
 			content: '\201C';
 			display: block;
 			position: absolute;
