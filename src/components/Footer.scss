@@ -2,33 +2,26 @@
 @import './breakpoints';
 
 //Menu overrides
-$menu-item-color: $primary-invert;
-$menu-item-hover-color: $primary-invert !important;
-$menu-item-hover-background-color: $neutral;
-$menu-item-active-color: $primary-invert;
-$menu-item-active-background-color: $neutral;
-$menu-list-border-left: 1px solid $primary-invert;
-$menu-label-color: $primary-invert;
+$menu-item-color: $text;
+$menu-item-hover-color: $text !important;
+$menu-item-hover-background-color: transparent;
+$menu-item-active-color: $text;
+$menu-item-active-background-color: transparent;
+$menu-list-border-left: none;
+$menu-label-color: $text;
 
 @import '../../node_modules/bulma/sass/utilities/initial-variables';
 
 footer.footer {
-	padding: 1.667em 0 2.222em;
+	padding: 0;
 }
 
 .footer .container {
 	display: flex;
 	height: auto;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
-
-	@include until($tablet) {
-		flex-direction: column;
-
-		> * {
-			margin: 1em 0;
-		}
-	}
 }
 
 .footer-logo {
@@ -44,20 +37,37 @@ footer.footer {
 .footer-copy {
 	color: $menu-item-color;
 	opacity: 0.6;
-	font-size: 0.625em;
-	padding: 0 2em;
-	margin-left: auto;
+	font-size: 0.8em;
 	text-align: center;
+
+	@include from($tablet) {
+		text-align: left;
+		font-size: 0.625em;
+
+		br {
+			display: none;
+		}
+	}
 
 	strong {
 		color: $menu-item-color;
 		display: inline-block;
-		margin-left: 0.5em;
+		margin: 0 0.5em;
 	}
 }
 
 .footer .menu {
 	font-size: initial;
+	padding-top: 1.2em;
+	padding-bottom: 1.5em;
+
+	.container {
+		flex-direction: row-reverse;
+
+		@include until($tablet) {
+			flex-direction: column;
+		}
+	}
 }
 
 .menu-list {
@@ -68,8 +78,13 @@ footer.footer {
 	list-style: none !important;
 	text-align: left;
 
-	@include mobile {
-		flex-flow: column;
+	@include until($tablet) {
+		flex-direction: column;
+		margin-bottom: 1em;
+	}
+
+	@include from($tablet) {
+		margin-right: -1.375em;
 	}
 }
 
@@ -78,8 +93,22 @@ footer.footer {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 2em;
+	margin: 0 auto;
 	font-size: 1.5em;
+
+	.container {
+		justify-content: center;
+		border-bottom: 1px solid rgba($text, 0.2);
+
+		@include until($tablet) {
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+		}
+	}
+
+	a:focus {
+		outline-offset: 4px;
+	}
 
 	svg {
 		fill: $secondary;
@@ -92,8 +121,8 @@ footer.footer {
 	opacity: 0.9;
 	white-space: nowrap;
 
-	@include desktop {
-		font-size: 0.9em;
+	@include from($tablet) {
+		font-size: 0.8em;
 	}
 
 	&:focus,

@@ -10,9 +10,9 @@ const year = new Date().getFullYear();
 
 const Footer = ({ menuLinks, socialLinks, siteCopy }) => {
 	return (
-		<footer className="footer has-bg-neutral">
-			<div className="container">
-				<div className="social">
+		<footer className="footer has-bg-base">
+			<section className="social">
+				<div className="container">
 					{ socialLinks.facebook &&
 						<a title="facebook" href={socialLinks.facebook}>
 							<Facebook />
@@ -24,7 +24,9 @@ const Footer = ({ menuLinks, socialLinks, siteCopy }) => {
 						</a>
 					}
 				</div>
-				<section className="menu">
+			</section>
+			<section className="menu section">
+				<div className="container">
 					<ul className="menu-list">
 						{
 							menuLinks.map(link => (
@@ -36,14 +38,14 @@ const Footer = ({ menuLinks, socialLinks, siteCopy }) => {
 							))
 						}
 					</ul>
-				</section>
-				<div className="footer-copy">
-					<p>Copyright &copy; {year}
-						<strong>{siteCopy}</strong>
-						<br/>All rights reserved.
-					</p>
+					<div className="footer-copy">
+						<p>Copyright &copy; {year}
+							<strong>{siteCopy}.</strong>
+							<br/>All rights reserved.
+						</p>
+					</div>
 				</div>
-			</div>
+			</section>
 		</footer>
 	)
 }
