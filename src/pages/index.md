@@ -8,7 +8,7 @@ subheading:
   answer: >-
     The proposed name and location for the new Montana Historical Society
     museum.
-  question: What is Montana Heritage Center?
+  question: What Is The Montana Heritage Center?
 description: >-
   The Department of Administration planned to build the new Montana Heritage
   Center at the alternative site of Roberts and 6th it is not suitable. It will
