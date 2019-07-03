@@ -59,7 +59,11 @@ const ContactPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
+		<Layout
+			title={post.frontmatter.title}
+			description={post.frontmatter.description}
+			keywords={post.frontmatter.keywords}
+		>
 			<ContactPageTemplate
 				contentComponent={HTMLContent}
 				title={post.frontmatter.title}

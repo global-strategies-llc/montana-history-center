@@ -58,7 +58,12 @@ StoriesPageTemplate.propTypes = {
 const StoriesPage = ({ data }) => {
 	const { frontmatter } = data.markdownRemark
 	return (
-		<Layout title={frontmatter.title} description={frontmatter.description} keywords={frontmatter.keywords} >
+		<Layout
+			title={frontmatter.title}
+			description={frontmatter.description}
+			keywords={frontmatter.keywords}
+			hasSignup={true}
+		>
 			<StoriesPageTemplate
 				title={frontmatter.title}
 				image={frontmatter.image}

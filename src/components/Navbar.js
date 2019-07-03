@@ -79,7 +79,7 @@ class Navbar extends React.Component {
 
 	render() {
 		const {
-			props: { menuLinks }
+			props: { menuLinks, signup = false }
 		} = this;
 		return (
 			<nav
@@ -125,9 +125,14 @@ class Navbar extends React.Component {
 						</div>
 
 						<div className="navbar-button">
-							<a className="button button-invert" href="#petition">
-								<span>Sign the Petition</span>
-							</a>
+							{ signup ?
+								<a className="button button-invert" href="#petition">
+									<span>Sign the Petition</span>
+								</a>
+								: <Link className="button button-invert" to="/#petition">
+										<span>Sign the Petition</span>
+									</Link>
+							}
 						</div>
 
 					</div>

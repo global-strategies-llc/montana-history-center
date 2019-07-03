@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 
 import useSiteMetadata from './SiteMetadata'
 
-const TemplateWrapper = ({ title, description, keywords, children }) => {
+const TemplateWrapper = ({ title, description, keywords, hasSignup = false, children }) => {
 	const { title: defaultTitle, description: defaultDescription, menuLinks, socialLinks } = useSiteMetadata()
 	return (
 		<div>
@@ -56,9 +56,11 @@ const TemplateWrapper = ({ title, description, keywords, children }) => {
 
 				{/*<meta property="og:image" content="/img/og-image.jpg" />*/}
 			</Helmet>
-			<Navbar menuLinks={menuLinks.filter( link => link.placement.includes('navbar') )} />
+			<Navbar menuLinks={menuLinks.filter( link => link.placement.includes('navbar') )} signup={hasSignup} />
 			<main>{children}</main>
-			<Signup />
+			{ hasSignup &&
+				<Signup />
+			}
 			<Footer
 				siteCopy={defaultTitle}
 				socialLinks={socialLinks}

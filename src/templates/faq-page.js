@@ -49,15 +49,20 @@ FaqPageTemplate.propTypes = {
 }
 
 const FaqPage = ({ data }) => {
-	const { markdownRemark: post } = data
+	const { frontmatter } = data.markdownRemark
 
 	return (
-		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
+		<Layout
+			title={frontmatter.title}
+			description={frontmatter.description}
+			keywords={frontmatter.keywords}
+			hasSignup={true}
+		>
 			<FaqPageTemplate
-				title={post.frontmatter.title}
-				image={post.frontmatter.image}
-				heading={post.frontmatter.heading}
-				main={post.frontmatter.main}
+				title={frontmatter.title}
+				image={frontmatter.image}
+				heading={frontmatter.heading}
+				main={frontmatter.main}
 			/>
 		</Layout>
 	)

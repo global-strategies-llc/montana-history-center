@@ -41,7 +41,11 @@ const ContentPage = ({ data }) => {
 	const { markdownRemark: post } = data
 
 	return (
-		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
+		<Layout
+			title={post.frontmatter.title}
+			description={post.frontmatter.description}
+			keywords={post.frontmatter.keywords}
+		>
 			<ContentPageTemplate
 				contentComponent={HTMLContent}
 				title={post.frontmatter.title}

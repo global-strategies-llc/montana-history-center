@@ -76,17 +76,22 @@ NewsPageTemplate.propTypes = {
 }
 
 const NewsPage = ({ data }) => {
-	const { markdownRemark: post } = data
+	const { frontmatter } = data.markdownRemark
 
 	return (
-		<Layout title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords} >
+		<Layout
+			title={frontmatter.title}
+			description={frontmatter.description}
+			keywords={frontmatter.keywords}
+			hasSignup={true}
+		>
 			<NewsPageTemplate
-				title={post.frontmatter.title}
-				image={post.frontmatter.image}
-				heading={post.frontmatter.heading}
-				cta={post.frontmatter.cta}
-				callout={post.frontmatter.callout}
-				main={post.frontmatter.main}
+				title={frontmatter.title}
+				image={frontmatter.image}
+				heading={frontmatter.heading}
+				cta={frontmatter.cta}
+				callout={frontmatter.callout}
+				main={frontmatter.main}
 			/>
 		</Layout>
 	)
