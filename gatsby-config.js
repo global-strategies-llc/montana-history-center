@@ -49,12 +49,7 @@ module.exports = {
 				name: 'Privacy',
 				placement: ['footer'],
 				url: 'privacy'
-			},
-			{
-				name: 'Your Privacy Rights',
-				placement: ['footer'],
-				url: 'privacy#your-rights'
-			},
+			}
 		]
 	},
 	plugins: [

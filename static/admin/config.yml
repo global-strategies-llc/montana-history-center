@@ -268,7 +268,7 @@ collections:
         label: Terms
         file: src/pages/terms/index.md
         fields:
-          - {default: terms-page, label: Template Key, name: templateKey, widget: hidden}
+          - {default: content-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: text}
           - {label: Body, name: body, widget: markdown}
@@ -276,7 +276,7 @@ collections:
         label: Privacy
         file: src/pages/privacy/index.md
         fields:
-          - {default: privacy-page, label: Template Key, name: templateKey, widget: hidden}
+          - {default: content-page, label: Template Key, name: templateKey, widget: hidden}
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: text}
           - {label: Body, name: body, widget: markdown}
