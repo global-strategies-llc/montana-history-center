@@ -12,6 +12,7 @@ const NewsPagePreview = ({ entry, widgetFor }) => {
 				image={data.image}
 				heading={data.heading}
 				cta={data.cta}
+				callout={data.callout}
 				main={data.main}
 			/>
 		)

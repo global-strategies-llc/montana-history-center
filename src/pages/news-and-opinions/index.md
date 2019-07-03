@@ -18,6 +18,13 @@ keywords:
   - montana history
   - heritage center
   - history museum
+callout:
+  text: |
+    Read the letter of support from the
+    Lewis and Clark County Commissioners
+  cta:
+    text: Download the letter
+    url: //montanahistorycenter.org/support-letter-from-lewis-and-clark-county-commissioners.pdf
 main:
   heading: In the News
   image: /img/icons/in-the-news.png

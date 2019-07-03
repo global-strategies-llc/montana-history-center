@@ -213,6 +213,17 @@ collections:
             fields:
               - {label: Text, name: text, widget: string}
               - {label: Link, name: url, widget: string}
+          - label: Callout Banner
+            name: callout
+            widget: object
+            fields:
+              - {label: Text, name: text, widget: string}
+              - label: CTA
+                name: cta
+                widget: object
+                fields:
+                  - {label: Text, name: text, widget: string}
+                  - {label: Link, name: url, widget: string}
           - label: Main Content
             name: main
             widget: object

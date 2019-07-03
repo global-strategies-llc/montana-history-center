@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PressQuote from '../components/PressQuote'
+import Banner from '../components/Banner'
 import BlogRoll from '../components/BlogRoll'
 
 let maxQuoteLength = null;
@@ -19,10 +20,12 @@ export const NewsPageTemplate = ({
 	title,
 	heading,
 	cta,
+	callout,
 	main
 }) => (
 	<div className="news has-bg-base">
 		<Hero image={image} title={title} heading={heading} cta={cta}/>
+		<Banner className="has-bg-neutral" text={callout.text} cta={callout.cta} />
 		<section className="press section">
 			{ main.image &&
 				<div className="news-image has-text-centered">
@@ -54,6 +57,7 @@ NewsPageTemplate.propTypes = {
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 	heading: PropTypes.string,
 	cta: PropTypes.object,
+	callout: PropTypes.object,
 	main: PropTypes.object
 }
 
@@ -67,6 +71,7 @@ const NewsPage = ({ data }) => {
 				image={post.frontmatter.image}
 				heading={post.frontmatter.heading}
 				cta={post.frontmatter.cta}
+				callout={post.frontmatter.callout}
 				main={post.frontmatter.main}
 			/>
 		</Layout>
@@ -91,6 +96,13 @@ export const newsPageQuery = graphql`
 				cta {
 					text
 					url
+				}
+				callout {
+					text
+					cta {
+						text
+						url
+					}
 				}
 				main {
 					heading
