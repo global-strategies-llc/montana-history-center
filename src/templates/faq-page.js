@@ -12,14 +12,15 @@ export const FaqPageTemplate = ({
 	image,
 	title,
 	heading,
-	questions
+	main,
 }) => (
-	<div className="has-bg-base">
+	<div className="faqs has-bg-base">
 		<Hero image={image} title={title} heading={heading}/>
 		<div className="questions section">
 			<div className="container">
+				<h2 className="faq-heading is-size-2">{main.heading}</h2>
 				<div className="">
-					{questions.map( (item, i) =>
+					{main.questions.map( (item, i) =>
 						<Faq
 							key={i}
 							className=""
@@ -36,7 +37,15 @@ FaqPageTemplate.propTypes = {
 	title: PropTypes.string.isRequired,
 	heading: PropTypes.string,
 	image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-	questions: PropTypes.array,
+	main: PropTypes.shape({
+		heading: PropTypes.string,
+		questions: PropTypes.arrayOf(
+			PropTypes.shape({
+				question: PropTypes.string,
+				answer: PropTypes.string
+			})
+		),
+	}),
 }
 
 const FaqPage = ({ data }) => {
@@ -48,7 +57,7 @@ const FaqPage = ({ data }) => {
 				title={post.frontmatter.title}
 				image={post.frontmatter.image}
 				heading={post.frontmatter.heading}
-				questions={post.frontmatter.questions}
+				main={post.frontmatter.main}
 			/>
 		</Layout>
 	)
@@ -69,9 +78,12 @@ export const faqPageQuery = graphql`
 				heading
 				description
 				keywords
-				questions {
-					question
-					answer
+				main {
+					heading
+					questions {
+						question
+						answer
+					}
 				}
 				image {
 					childImageSharp {

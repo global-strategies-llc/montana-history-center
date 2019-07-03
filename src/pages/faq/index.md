@@ -17,47 +17,46 @@ keywords:
   - montana history
   - heritage center
   - history museum
-questions:
-  - answer: >-
-      Yes. In 2005, bonding authority authorized by the legislature and signed
-      by the governor. Approximately 7.5 million dollars in bonding is
-      available.
-    question: Is there money available to purchase the mall site?
-  - answer: >-
-      Approximately 4.9 million dollars. We have a bond of 7.5 million dollars
-      available to buy the mall site.
-    question: How much will it cost to purchase the mall site?
-  - answer: The Department of Administration led by John Lewis.
-    question: What Montana State Department responsible for purchasing the mall site?
-  - answer: >-
-      Dick Anderson and a company from Salt Lake City currently own the
-      property. They have indicated their willingness to sell the property to
-      the State and help facilitate the sale.
-    question: >-
-      Who are the current owners of the mall site and are they willing to sell
-      the land?
-  - answer: >-
-      After Helena became the capital city of Montana, the historical collection
-      was moved from Virginia City to Helena in 1874.
-    question: Why will the Montana Heritage Center be built in Helena?
-  - answer: >-
-      Absolutely.
+main:
+  heading: Frequently Asked Questions
+  questions:
+    - answer: >-
+        Yes. In 2005, bonding authority authorized by the legislature and signed
+        by the governor. Approximately 7.5 million dollars in bonding is
+        available.
+      question: Is there money available to purchase the mall site?
+    - answer: >-
+        Approximately 4.9 million dollars. We have a bond of 7.5 million dollars
+        available to buy the mall site.
+      question: How much will it cost to purchase the mall site?
+    - answer: The Department of Administration led by John Lewis.
+      question: What Montana State Department responsible for purchasing the mall site?
+    - answer: >-
+        Dick Anderson and a company from Salt Lake City currently own the
+        property. They have indicated their willingness to sell the property to
+        the State and help facilitate the sale.
+      question: >-
+        Who are the current owners of the mall site and are they willing to sell
+        the land?
+    - answer: >-
+        After Helena became the capital city of Montana, the historical collection
+        was moved from Virginia City to Helena in 1874.
+      question: Why will the Montana Heritage Center be built in Helena?
+    - answer: |
+        Absolutely.
 
+        The mall site is located between Prospect Avenue and 11th avenue and
+        provides easy public access. It can accommodate parking spaces for school
+        buses, the Helena tour train, and RVs.
 
-      The mall site is located between Prospect Avenue and 11th avenue and
-      provides easy public access. It can accommodate parking spaces for school
-      buses, the Helena tour train, and RVs.
+        The alternative location at Roberts and 6th would not be able to
+        accommodate all visitors and their vehicles.
 
-
-      The alternative location at Roberts and 6th would not be able to
-      accommodate all visitors and their vehicles.
-
-
-      The mall site provides a lot more room for the new Montana Heritage Center
-      and will offer a massive increase of historical artifacts to be seen on
-      display.
-    question: >-
-      Is the mall site large enough to accommodate the requirements of the
-      Montana Heritage Center?
+        The mall site provides a lot more room for the new Montana Heritage Center
+        and will offer a massive increase of historical artifacts to be seen on
+        display.
+      question: >-
+        Is the mall site large enough to accommodate the requirements of the
+        Montana Heritage Center?
 ---
 
