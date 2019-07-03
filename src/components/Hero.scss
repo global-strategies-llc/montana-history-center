@@ -111,18 +111,25 @@ $gradient: mix($base, $secondary, 60%);
 	small {
 		font-weight: bold;
 		line-height: 2.5;
+
+		~ small {
+			margin-top: 2em;
+		}
 	}
 
+	h2,
 	h3,
 	h4 {
-		line-height: 1.55;
+		line-height: 1.2;
 	}
 
 	h3 {
-		@include serif;
+		// @include serif;
 		margin-bottom: 1em;
 	}
 
+
+	h3,
 	h4 {
 		color: $text;
 	}

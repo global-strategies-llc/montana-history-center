@@ -71,7 +71,7 @@ const Hero = ({
 											Object.keys(subheading).map( (key, i) => (
 												<React.Fragment key={i}>
 													<small className="eyebrow">{toTitleCase(key)}:</small>
-													{<Heading text={subheading[key]} level={3 + i} />}
+													<Heading text={subheading[key]} level={Math.min(2 + (i * 2), 6)} />
 												</React.Fragment>
 											))
 											: <Heading text={subheading} level={4} />
