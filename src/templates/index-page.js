@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
 			<div className="container">
 				<div className="content">
 					<div className="tile has-text-centered">
-						<h2 className="title is-size-1">
+						<h2 className="title is-size-2">
 							{mainpitch.title}
 						</h2>
 					</div>

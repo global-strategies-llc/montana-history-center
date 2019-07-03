@@ -11,9 +11,7 @@ const Heading = ({ text, eyebrow, level }) => {
 		<HeadingTag
 			text={text}
 			className={
-				`is-size-${level + 1}-mobile
-				 is-size-${level + 1}-tablet
-				 is-size-${level}-widescreen`
+				`is-size-${level}`
 			}>
 			{ eyebrow &&
 				<strong className="eyebrow">{eyebrow}</strong>
