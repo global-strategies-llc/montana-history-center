@@ -35,8 +35,11 @@ class SignupForm extends React.Component {
 		this.setState({ fields: newState });
 	}
 
-	handleFocus = e =>
-		e.target.closest('.field').classList.remove('required-error')
+	handleFocus = e => {
+		const field = e.target.closest('.field')
+		field.classList.remove('required-error')
+		field.classList.remove('mismatch-error')
+	}
 
 	resetState = () => {
 
@@ -61,8 +64,12 @@ class SignupForm extends React.Component {
 				if(!this.state.fields[input.name]) {
 					valid = false
 					field.classList.add('required-error')
+				} else if(!validateField(input)) {
+					valid = false
+					field.classList.add('mismatch-error')
 				} else {
 					field.classList.remove('required-error')
+					field.classList.remove('mismatch-error')
 				}
 			})
 
@@ -76,14 +83,39 @@ class SignupForm extends React.Component {
 		})
 
 		return promise
-	}
 
+		function validateField(input) {
+
+			let isValid = true;
+
+			switch(input.name) {
+
+				case 'email':
+					isValid = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(input.value)
+					break;
+
+				case 'FNAME':
+				case 'LNAME':
+					isValid = /^[\w\s-_]{2,}$/.test(input.value.trim())
+					break;
+
+				case 'ZIP':
+					isValid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(input.value.trim())
+					break;
+
+				default:
+					break;
+			}
+
+			return isValid
+		}
+	}
 
 	handleSubmit = e => {
 
 		e.preventDefault()
 
-		const form = e.target
+		const form = e.target.closest('form')
 
 		this.resetState()
 			.then( () => this.validateForm(form) )
@@ -95,7 +127,7 @@ class SignupForm extends React.Component {
 			})
 			.then( fields => addToMailchimp(fields.email, { ...fields }) )
 			.then(data => {
-				console.log(data)
+
 				switch(data.result) {
 
 					case 'success':
@@ -105,7 +137,6 @@ class SignupForm extends React.Component {
 							isSuccess: true,
 							successMessage: data.msg
 						})
-
 
 					case 'error':
 						return this.setState({
@@ -123,8 +154,6 @@ class SignupForm extends React.Component {
 							})
 						}, 10000)
 					break;
-				}
-				if(data.result === 'success') {
 				}
 			})
 			.catch( (err) => {
@@ -179,7 +208,9 @@ class SignupForm extends React.Component {
 										<input name="bot-field" onChange={this.handleChange} />
 									</label>
 								</div>
-								<div className="field field-required">
+								<div className="field field-required"
+									data-reqtxt={`First name is required`}
+									data-mismatch={`That doesn't look like a valid name`}>
 									<label className="label" htmlFor={'firstname'}>
 										First name
 									</label>
@@ -195,7 +226,9 @@ class SignupForm extends React.Component {
 										/>
 									</div>
 								</div>
-								<div className="field field-required">
+								<div className="field field-required"
+									data-reqtxt={`Last name is required`}
+									data-mismatch={`That doesn't look like a valid name`}>
 									<label className="label" htmlFor={'lastname'}>
 										Last name
 									</label>
@@ -211,7 +244,9 @@ class SignupForm extends React.Component {
 										/>
 									</div>
 								</div>
-								<div className="field field-required">
+								<div className="field field-required"
+									data-reqtxt={`An email address is required`}
+									data-mismatch={`That doesn't look like a valid email`}>
 									<label className="label" htmlFor={'email'}>
 										Email
 									</label>
@@ -227,7 +262,9 @@ class SignupForm extends React.Component {
 										/>
 									</div>
 								</div>
-								<div className="field">
+								<div className="field field-required"
+									data-reqtxt={`A zip code is required`}
+									data-mismatch={`That doesn't look like a valid zip code`}>
 									<label className="label" htmlFor={'zip'}>
 										Zip
 									</label>
@@ -237,12 +274,18 @@ class SignupForm extends React.Component {
 											type={'text'}
 											name={'ZIP'}
 											onChange={this.handleChange}
+											onFocus={this.handleFocus}
 											id={'zip'}
+											required={true}
 										/>
 									</div>
 								</div>
 								<div className="field">
-									<button className="button button-secondary is-block" type="submit">
+									<button
+										className="button button-secondary is-block"
+										type="submit"
+										onClick={this.handleSubmit}
+										>
 										Register my Petition
 									</button>
 								</div>

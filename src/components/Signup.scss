@@ -52,11 +52,12 @@
 
 		.label {
 			color: $base;
+			font-size: 0.8em;
 		}
 
 		.input {
 			position: relative;
-			font-size: 1.5em;
+			font-size: 1.8em;
 			border-radius: 2px;
 			z-index: 1;
 
@@ -72,27 +73,37 @@
 				display: block;
 				position: absolute;
 				line-height: 1;
-				top: 1.5em;
+				top: 2.5em;
 				right: 0.25em;
-				color: $base;
-			}
-
-			&:before {
-				@include serif;
-				content: '*';
-				color: $text;
-				z-index: 2;
-			}
-
-			&:after {
-				content: 'This is a required field';
-				top: 2em;
-				font-size: 0.625em;
+				font-size: 0.667em;
 				font-style: italic;
-				color: $base;
 				z-index: 0;
 				transform: translateY(0);
 				transition: 200ms transform;
+			}
+
+			&:before {
+				content: attr(data-mismatch);
+				color: $base;
+			}
+
+			&:after {
+				content: attr(data-reqtxt);
+				color: $base;
+			}
+
+			.label {
+				&:before {
+					@include serif;
+					content: '*';
+					display: block;
+					position: absolute;
+					line-height: 1;
+					top: 2.5em;
+					right: 0.25em;
+					color: $text;
+					z-index: 2;
+				}
 			}
 		}
 
@@ -104,11 +115,32 @@
 				border-width: 2px;
 			}
 
-			&:before {
-				color: $error;
+			.label {
+				&:before {
+					color: $error;
+				}
 			}
 
 			&:after {
+				transform: translateY(-175%);
+			}
+		}
+
+		&.mismatch-error {
+
+			.input {
+				color: $error;
+				border-color: $warning;
+				border-width: 2px;
+			}
+
+			.label {
+				&:before {
+					color: $error;
+				}
+			}
+
+			&:before {
 				transform: translateY(-175%);
 			}
 		}
