@@ -58,7 +58,21 @@ NewsPageTemplate.propTypes = {
 	heading: PropTypes.string,
 	cta: PropTypes.object,
 	callout: PropTypes.object,
-	main: PropTypes.object
+	main: PropTypes.shape({
+    heading: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    press: PropTypes.arrayOf(
+			PropTypes.shape({
+				name: PropTypes.string,
+				image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+				title: PropTypes.string,
+				url: PropTypes.string,
+				date: PropTypes.string,
+				author: PropTypes.string,
+				quote: PropTypes.string
+			})
+    )
+  }),
 }
 
 const NewsPage = ({ data }) => {
