@@ -37,10 +37,27 @@ html {
 	}
 }
 
+body,
+#___gatsby,
+#___gatsby > [role='group'],
+#___gatsby > [role='group'] > .page-wrap,
+main > div:first-child {
+	height: 100%;
+}
+
 body {
 	@include sans;
 	font-size: 1.6rem;
 	line-height: 1.55;
+}
+
+#___gatsby > [role='group'] > .page-wrap {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+main {
+	flex: 1;
 }
 
 * {

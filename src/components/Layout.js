@@ -13,7 +13,7 @@ import useSiteMetadata from './SiteMetadata'
 const TemplateWrapper = ({ title, description, keywords, hasSignup = false, children }) => {
 	const { title: defaultTitle, description: defaultDescription, menuLinks, socialLinks } = useSiteMetadata()
 	return (
-		<div>
+		<div className="page-wrap">
 			<Helmet>
 				<html lang="en" />
 				<title>{title || defaultTitle}</title>
