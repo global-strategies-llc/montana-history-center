@@ -35,7 +35,7 @@ const Signup = ({ action }) =>
 
 const query = graphql`
 	query {
-		image: file(relativePath: { eq: "mhc-petition-signup.jpg" }) {
+		image: file(relativePath: { eq: "mhc-petition-signup-wide.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 2048, quality: 100) {
 					...GatsbyImageSharpFluid
