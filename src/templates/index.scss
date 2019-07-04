@@ -44,6 +44,43 @@
 		}
 	}
 
+	.mainpitch-heading {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		margin: 0 auto;
+		max-width: 26em;
+		line-height: 1.4;
+
+		@include tablet {
+			flex-flow: row wrap;
+		}
+	}
+
+	.mainpitch-subheading {
+		position: relative;
+		margin: 0 1em;
+		white-space: nowrap;
+
+		@include tablet {
+
+			~ .mainpitch-subheading:not(:nth-child(3)) {
+
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: -1em;
+					width: 2px;
+					height: 75%;
+					transform: translateY(-50%);
+					background: $base;
+				}
+			}
+		}
+	}
+
 	.pitch-heading {
 		display: flex;
 		flex-flow: row nowrap;

@@ -40,8 +40,11 @@ collections:
             name: mainpitch
             widget: object
             fields:
-              - {label: Title, name: title, widget: text}
               - {label: Image, name: image, widget: image}
+              - label: Heading List
+                name: headinglist
+                widget: list
+                field: {label: Point, name: point, widget: string}
               - label: Why
                 name: why
                 widget: object

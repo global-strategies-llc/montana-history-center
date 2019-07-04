@@ -39,13 +39,11 @@ export const IndexPageTemplate = ({
 		</div>
 		<section className="mainpitch full-width-heading has-pre-line has-bg-neutral">
 			<div className="container">
-				<div className="content">
-					<div className="tile has-text-centered">
-						<h2 className="title is-size-2">
-							{mainpitch.title}
-						</h2>
-					</div>
-				</div>
+				<h2 className="mainpitch-heading is-size-2 has-text-centered">
+					{ mainpitch.headinglist &&
+						mainpitch.headinglist.map( (heading, i) => <span key={`mph-${i}`} className="mainpitch-subheading">{heading}</span> )
+					}
+				</h2>
 			</div>
 		</section>
 		<section className="columns mainpitch">
@@ -203,7 +201,7 @@ export const pageQuery = graphql`
 					quote
 				}
 				mainpitch {
-					title
+					headinglist
 					image {
 						childImageSharp {
 							fluid(maxWidth: 900, quality: 100) {

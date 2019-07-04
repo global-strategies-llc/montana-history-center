@@ -40,9 +40,12 @@ testimonials:
       most important to business success. Do not expand in the current Capitol
       area.
 mainpitch:
-  title: |
-    Central Location | Improved Parking
-    More Space | More Exhibits | More History
+  headinglist:
+    - Central Location
+    - Improved Parking
+    - More Space
+    - More Exhibits
+    - More History
   image: /img/mall-site-map.png
   why:
     image: /img/icons/checkmark.png
