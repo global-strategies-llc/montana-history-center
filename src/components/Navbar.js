@@ -124,7 +124,7 @@ class Navbar extends React.Component {
 							</a>
 						</div>
 
-						<div className="navbar-button">
+						<div className="navbar-button" onClick={() => this.toggleHamburger()}>
 							{ signup ?
 								<a className="button button-invert" href="#petition">
 									<span>Sign the Petition</span>

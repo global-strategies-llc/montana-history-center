@@ -84,9 +84,22 @@
 
 	@include until($desktop) {
 		position: absolute;
+		flex-flow: column nowrap;
+		align-items: center;
 		min-width: 50%;
 		top: 100%;
 		right: 0;
+		padding: 0 1em;
+
+		&.is-active {
+			display: flex;
+			padding-top: 2em;
+			padding-bottom: 2em;
+
+			.navbar-button {
+				margin-top: 2em;
+			}
+		}
 	}
 
 	@include mobile {
@@ -100,15 +113,6 @@
 	padding: 0 1em 0 3em;
 	text-align: right;
 	order: 1;
-
-	&.is-active {
-		padding-top: 2em;
-		padding-bottom: 2em;
-
-		.navbar-button {
-			margin-top: 2em;
-		}
-	}
 }
 
 a.navbar-item,
@@ -154,8 +158,11 @@ a.navbar-item.is-active,
   color: $primary;
 }
 
-.navbar-item:first-of-type,
-.navbar-button:first-of-type {
-	margin-left: auto;
+@include desktop {
+
+	.navbar-item:first-of-type,
+	.navbar-button:first-of-type {
+		margin-left: auto;
+	}
 }
 
