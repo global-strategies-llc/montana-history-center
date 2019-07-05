@@ -129,25 +129,27 @@
 	}
 }
 
-.timeline-content {
-	opacity: 0;
-	transition: transform 300ms, opacity 150ms;
-	text-align: left;
-	transform: translateX(30px);
+@include tablet {
 
-	@include tablet {
-		.timeline-right & {
-			text-align: right;
-			transform: translateX(-30px);
+	.timeline-content {
+		opacity: 0;
+		transition: transform 300ms, opacity 150ms;
+		text-align: left;
+		transform: translateX(30px);
+
+		@include tablet {
+			.timeline-right & {
+				text-align: right;
+				transform: translateX(-30px);
+			}
+		}
+
+		.timeline-show & {
+			opacity: 1;
+			transform: translateX(0);
+			transition-delay: 200ms, 150ms;
 		}
 	}
-
-	.timeline-show & {
-		opacity: 1;
-		transform: translateX(0);
-		transition-delay: 200ms, 150ms;
-	}
-
 }
 
 

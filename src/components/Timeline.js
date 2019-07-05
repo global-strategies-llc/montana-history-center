@@ -33,7 +33,7 @@ const TimelineEntry = function({ date, description, className, style }) {
 const Timeline = function( { entries, className } ) {
 	const positions = entries.map( (entry, i) => {
 		return {
-			leftRight: Math.ceil(Math.random() * 1.8) === 2 ? 'timeline-left' : 'timeline-right' ,
+			leftRight: i % 2 === 0 ? 'timeline-left' : 'timeline-right', // [or] Math.ceil(Math.random() * 1.8) === 2
 			styles: {
 				marginTop: `${( parseInt(entry.date.slice(-4), 10) - parseInt(entries[Math.max(i - 1, 0)].date.slice(-4), 10) )}rem`
 			}
