@@ -60,11 +60,7 @@ export const MallSiteTemplate = ({
 				{closer}
 			</h3>
 		</section>
-		<section className="blogs section has-bg-white">
-			<div className="container">
-      	<BlogRoll count={1}/>
-    	</div>
-		</section>
+  	<BlogRoll count={1} className="has-bg-white"/>
 	</div>
 )
 
