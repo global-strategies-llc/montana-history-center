@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import './Navbar.scss'
+import DonorBoxButton from './DonorBoxButton'
 
-// import logo from '../img/logo.svg'
+import './Navbar.scss'
 
 class Navbar extends React.Component {
 
@@ -28,14 +28,14 @@ class Navbar extends React.Component {
 		),
 	}
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+	componentDidMount() {
+		window.addEventListener('scroll', this.handleScroll)
 		window.dataLayer && window.dataLayer.push({'event': 'navbar-mounted'})
-  }
+	}
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
+	}
 
 	toggleHamburger = () => {
 		// toggle the active boolean in the state
@@ -118,11 +118,8 @@ class Navbar extends React.Component {
 								</Link>
 							))
 						}
-						<div className="navbar-button">
-							<a className="button dbox-donation-button custom-dbox-popup" href="https://donorbox.org/mall-site-petition">
-								<span>Contribute</span>
-							</a>
-						</div>
+
+						<DonorBoxButton label="Contribute" className="navbar-button" />
 
 						<div className="navbar-button" onClick={() => this.toggleHamburger()}>
 							{ signup ?

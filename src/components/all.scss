@@ -9,6 +9,7 @@
 html {
 	font-size: 62.5%;
 	height: 100%;
+	overflow: visible;
 
 	@include mobile {
 		font-size: 62.5%;
@@ -49,6 +50,8 @@ body {
 	@include sans;
 	font-size: 1.6rem;
 	line-height: 1.55;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 #___gatsby > [role='group'] > .page-wrap {
