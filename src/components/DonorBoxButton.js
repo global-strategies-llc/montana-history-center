@@ -1,33 +1,10 @@
 import React from 'react'
 
-const UTM_PARAMS = (function() {
-	const data = {},
-				queryString = window.location.href.split('?')[1];
-	if(queryString) {
-		const supportedUtmParams = ['utm_source', 'utm_campaign', 'utm_medium', 'utm_term', 'utm_content'],
-					params = queryString.split('&');
-
-		params.forEach( p => {
-			const splitted = p.split('='),
-						key = splitted[0],
-						value = splitted[1];
-			if(supportedUtmParams.indexOf(key) >= 0) {
-				data[key] = value;
-			}
-		});
-	}
-
-	return data;
-}())
-
 class DonorBoxButton extends React.Component {
 
 	constructor(props) {
 		super(props)
-		this.frameID = 'donorbox_widget_frame',
-		this.state = {
-			isActive: false,
-		}
+		this.frameID = 'donorbox_widget_frame'
 	}
 
 	componentDidMount() {
@@ -37,23 +14,40 @@ class DonorBoxButton extends React.Component {
 	componentWillUnmount() {
 	}
 
-	toggleScrolling(disable) {
-			document.body.style.overflow = disable ? 'hidden' : '';
-	}
+	toggleScrolling = (disable) =>
+		document.body.style.overflow = disable ? 'hidden' : '';
 
 	setupDonorBox = (w, d) => {
-
-		const frameID = this.frameID
 
 		if (w.DBOX_INSTALLED) return;
 
 		w.DBOX_INSTALLED = true;
 
+		this.UTM_PARAMS = (function() {
+			const data = {},
+						queryString = w.location.href.split('?')[1];
+			if(queryString) {
+				const supportedUtmParams = ['utm_source', 'utm_campaign', 'utm_medium', 'utm_term', 'utm_content'],
+							params = queryString.split('&');
+
+				params.forEach( p => {
+					const splitted = p.split('='),
+								key = splitted[0],
+								value = splitted[1];
+					if(supportedUtmParams.indexOf(key) >= 0) {
+						data[key] = value;
+					}
+				});
+			}
+
+			return data;
+		}())
+
 		w.addEventListener('message', function (e) {
 				typeof e.data == 'object' &&
 					e.data.from == 'dbox' &&
 					e.data.close === true &&
-					remove(d.getElementById(frameID)) &&
+					remove(d.getElementById(this.frameID)) &&
 					this.toggleScrolling()
 		}.bind(this));
 
@@ -102,9 +96,9 @@ class DonorBoxButton extends React.Component {
 		frame.focus();
 
 		// Send UTM Params to donorbox iframes
-		if(Object.keys(UTM_PARAMS).length > 0) {
+		if(Object.keys(this.UTM_PARAMS).length > 0) {
 			frame.onload = function(){
-				frame.contentWindow.postMessage({ action: 'setUtmParams', utmParams: UTM_PARAMS }, '*');
+				frame.contentWindow.postMessage({ action: 'setUtmParams', utmParams: this.UTM_PARAMS }, '*');
 			};
 		}
 
