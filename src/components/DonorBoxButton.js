@@ -5,27 +5,16 @@ class DonorBoxButton extends React.Component {
 	constructor(props) {
 		super(props)
 		this.frameID = 'donorbox_widget_frame'
+		this.UTM_PARAMS = {}
 	}
 
 	componentDidMount() {
-		this.setupDonorBox(window, document)
-	}
-
-	componentWillUnmount() {
-	}
-
-	toggleScrolling = (disable) =>
-		document.body.style.overflow = disable ? 'hidden' : '';
-
-	setupDonorBox = (w, d) => {
-
-		if (w.DBOX_INSTALLED) return;
-
-		w.DBOX_INSTALLED = true;
 
 		this.UTM_PARAMS = (function() {
+
 			const data = {},
-						queryString = w.location.href.split('?')[1];
+						queryString = window.location.href.split('?')[1];
+
 			if(queryString) {
 				const supportedUtmParams = ['utm_source', 'utm_campaign', 'utm_medium', 'utm_term', 'utm_content'],
 							params = queryString.split('&');
@@ -43,18 +32,29 @@ class DonorBoxButton extends React.Component {
 			return data;
 		}())
 
-		w.addEventListener('message', function (e) {
-				typeof e.data == 'object' &&
-					e.data.from == 'dbox' &&
-					e.data.close === true &&
-					remove(d.getElementById(this.frameID)) &&
-					this.toggleScrolling()
-		}.bind(this));
+		window.addEventListener('message', this.onPopupMessage);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('message', this.onPopupMessage);
+	}
+
+	toggleScrolling = (disable) =>
+		document.body.style.overflow = disable ? 'hidden' : '';
+
+	onPopupMessage = (e) => {
+		return typeof e.data == 'object' &&
+			e.data.from == 'dbox' &&
+			e.data.close === true &&
+			document.getElementById(this.frameID) &&
+			remove(document.getElementById(this.frameID)) &&
+			this.toggleScrolling()
 
 		function remove(el) {
-			return el.parentNode.removeChild(el);
+			return el && el.parentNode.removeChild(el);
 		}
 	}
+
 
 	openTheModal = (e) => {
 
