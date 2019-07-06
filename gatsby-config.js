@@ -6,8 +6,8 @@ module.exports = {
 		description:
 			'To provide awareness to the general public in Montana that there is money available to build a new MT historical society building, and that the best location is the former capital hill mall site. This location is better than the alternative/current location because we will be able to showcase all the historical artifacts and the location will drive more tourists because its more accessible.',
 		socialLinks: {
-			facebook: 'https://facebook.com/montanahistorycenter',
-			twitter: 'https://twitter.com/montanahistorycenter'
+			facebook: 'https://www.facebook.com/montanaheritagecentermallpetition',
+			twitter: 'https://twitter.com/MTHistoryCenter'
 		},
 		menuLinks: [
 			{
