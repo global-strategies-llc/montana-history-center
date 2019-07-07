@@ -32,7 +32,7 @@ main:
     - answer: >-
         Dick Anderson and a company from Salt Lake City currently own the
         property. They have indicated their willingness to sell the property to
-        the State and help facilitate the sale.
+        the state and help facilitate the sale.
       question: >-
         Who are the current owners of the mall site and are they willing to sell
         the land?
