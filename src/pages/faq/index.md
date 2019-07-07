@@ -45,24 +45,17 @@ main:
 
 
         The mall site is located between Prospect Avenue and 11th avenue and
-
         provides easy public access. It can accommodate parking spaces for
-        school
-
-        buses, the Helena tour train, and RVs.
+        school buses, the Helena tour train, and RVs.
 
 
         The alternative location at Roberts and 6th would not be able to
-
         accommodate all visitors and their vehicles.
 
 
         The mall site provides a lot more room for the new Montana Heritage
-        Center
-
-        and will offer a massive increase of historical artifacts to be seen on
-
-        display.
+        Center and will offer a massive increase of historical artifacts to be
+        seen on display.
       question: >-
         Is the mall site large enough to accommodate the requirements of the
         Montana Heritage Center?
