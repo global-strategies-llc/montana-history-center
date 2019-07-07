@@ -17,18 +17,20 @@ export const FaqPageTemplate = ({
 	<div className="faqs has-bg-base">
 		<Hero image={image} title={title} heading={heading}/>
 		<div className="questions section">
-			<div className="container">
-				<h2 className="faq-heading is-size-2">{main.heading}</h2>
-				<div className="">
-					{main.questions.map( (item, i) =>
-						<Faq
-							key={i}
-							className=""
-							question={item.question}
-							answer={item.answer} />
-					)}
+			{ main &&
+				<div className="container">
+					<h2 className="faq-heading is-size-2">{main.heading}</h2>
+					<div className="">
+						{main.questions.map( (item, i) =>
+							<Faq
+								key={i}
+								className=""
+								question={item.question}
+								answer={item.answer} />
+						)}
+					</div>
 				</div>
-			</div>
+			}
 		</div>
 	</div>
 )

@@ -6,14 +6,18 @@ const FaqPagePreview = ({ entry, widgetFor }) => {
 
 	const data = entry.getIn(['data']).toJS()
 
-	return (
-		<FaqPageTemplate
-			title={data.title}
-			image={data.image}
-			heading={data.heading}
-			main={data.main}
-		/>
-	)
+	if (data) {
+		return (
+			<FaqPageTemplate
+				title={data.title}
+				image={data.image}
+				heading={data.heading}
+				main={data.main}
+			/>
+		)
+	} else {
+		return <div>Loading...</div>
+	}
 }
 
 FaqPagePreview.propTypes = {

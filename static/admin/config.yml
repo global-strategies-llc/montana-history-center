@@ -153,13 +153,21 @@ collections:
           - {label: Heading, name: heading, widget: text}
           - {label: Description, name: description, widget: text}
           - {label: Keywords, name: keywords, widget: list}
-          - label: Questions
-            name: questions
-            label_singular: Question
-            widget: list
+          - label: Main
+            name: main
+            widget: object
             fields:
-              - {label: Question, name: question, widget: string}
-              - {label: Answer, name: answer, widget: text}
+              - label: Heading
+                name: heading
+                required: false
+                widget: string
+              - label: Questions
+                name: questions
+                label_singular: Question
+                widget: list
+                fields:
+                  - {label: Question, name: question, widget: string}
+                  - {label: Answer, name: answer, widget: text}
       - name: stories
         label: Stories of Support Page
         file: src/pages/stories-of-support/index.md
