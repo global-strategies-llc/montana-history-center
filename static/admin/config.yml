@@ -201,6 +201,7 @@ collections:
             widget: list
             fields:
               - {label: Group Name, name: name, widget: string}
+              - {label: Image, name: image, widget: image}
               - label: Testimonials
                 name: testimonials
                 label_singular: Testimonial
