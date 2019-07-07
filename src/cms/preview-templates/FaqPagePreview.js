@@ -11,7 +11,7 @@ const FaqPagePreview = ({ entry, widgetFor }) => {
 			title={data.title}
 			image={data.image}
 			heading={data.heading}
-			questions={data.questions || []}
+			main={data.main}
 		/>
 	)
 }
