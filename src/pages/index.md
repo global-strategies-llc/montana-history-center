@@ -26,7 +26,7 @@ cta:
   url: '#petition'
 testimonials:
   - author: |
-      Jim McCormick, Susan Geise, Any Hunthausen
+      Jim McCormick, Susan Good-Geise, Andy Hunthausen
       Lewis and Clark County, Board of Commissioners
     quote: >-
       We currently support locating the Montana Heritage Center at the former
