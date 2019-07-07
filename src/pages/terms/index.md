@@ -7,9 +7,9 @@ heading: Terms of Use
 
 These terms and conditions outline the rules and regulations for the use of Montana History Center's Website.
 
-**MONTANA HISTORY CENTER** is located at:  
+**MONTANA HISTORY CENTER** is located at:
 
-<address>  
+<address>
 PO Box 1585<br>
 Helena, MT 59624
 </address>
@@ -31,9 +31,9 @@ Unless otherwise stated, Montana History Center and/or it's licensors own the in
 
 You must not:
 
-1.  Republish material from https://montanahistorycenter.org
-2.  Sell, rent or sub-license material from https://montanahistorycenter.org
-3.  Reproduce, duplicate or copy material from https://montanahistorycenter.org
+1.  Republish material from https://www.montanahistorycenter.org
+2.  Sell, rent or sub-license material from https://www.montanahistorycenter.org
+3.  Reproduce, duplicate or copy material from https://www.montanahistorycenter.org
 
 Redistribute content from Montana History Center (unless content is specifically made for redistribution).
 
