@@ -7,6 +7,8 @@ const FaqPagePreview = ({ entry, widgetFor }) => {
 	const data = entry.getIn(['data']).toJS()
 
 	if (data) {
+		// hack to trigger height recalc on faqs
+		setTimeout(() => window.dispatchEvent(new Event('resize')), 2000)
 		return (
 			<FaqPageTemplate
 				title={data.title}

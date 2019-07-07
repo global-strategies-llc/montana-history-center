@@ -37,6 +37,11 @@
 
 	h6 {
 		font-size: 1.25em;
+		transition: 200ms color;
+
+		&:hover {
+			color: $primary;
+		}
 	}
 }
 
@@ -45,11 +50,11 @@
 	opacity: 0;
 	height: 0;
 	overflow: hidden;
+	white-space: pre-line;
 	transition: 300ms height ease-in-out, 200ms opacity;
 
-	.open > &,
 	&.show {
-		height: auto;
+		height: auto !important;
 	}
 
 	.open > & {
