@@ -26,7 +26,7 @@ cta:
   url: '#petition'
 testimonials:
   - author: |
-      Jim McCormick, Susan Geise, Any Hunthausen
+      Jim McCormick, Susan Good-Geise, Andy Hunthausen
       Lewis and Clark County, Board of Commissioners
     quote: >-
       We currently support locating the Montana Heritage Center at the former
@@ -76,7 +76,7 @@ supporters:
       text: Montana Contractors Association
     - image: /img/icons/support-2-city-of-helena-site.png
       text: City of Helena
-  heading: Groups Who Have Supported the New Montana Heritage Center At the Mall Site
+  heading: Groups Who Have Supported The New Montana Heritage Center At The Mall Site
 featuredLinks:
   heading: Learn Why The Mall Site Is The Obvious Choice
   links:
