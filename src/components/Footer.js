@@ -43,7 +43,7 @@ const Footer = ({ menuLinks, socialLinks, siteCopy, siteCreator }) => {
 							<strong>{siteCopy}.</strong>
 							<br/>All rights reserved.
 						</p>
-						<p>Website by <a href={siteCreator.url} target="_blank">{siteCreator.name}</a></p>
+						<p>Website by <a rel="noopener" href={siteCreator.url} target="_blank">{siteCreator.name}</a></p>
 					</div>
 				</div>
 			</section>
