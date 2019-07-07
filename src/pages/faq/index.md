@@ -6,13 +6,9 @@ heading: |
   What Is The Montana Heritage Center?
   The proposed name and location for the new Montana Historical Society museum.
 description: >-
-  The Department of Administration planned to build the new Montana Heritage Center at the
-  alternative site of Roberts and 6th it is not suitable.
-  It will fail in its mission to become a world-class museum since it is right in the middle
-  of all the government buildings where there is not enough room to build a large museum.
-  We won't be able to share our history and culture with Montana’s school children and the
-  thousands of visitors who come to Montana.
-  The mall site was the original proposed site and is the prime location.
+  The Montana Heritage Center is the proposed name for Montana's new state
+  history museum. It will be built at the former Capital Hill Mall site or the
+  Montana Historical Society parking lot in Helena.
 keywords:
   - montana history
   - heritage center
@@ -30,30 +26,42 @@ main:
         available to buy the mall site.
       question: How much will it cost to purchase the mall site?
     - answer: The Department of Administration led by John Lewis.
-      question: What Montana State Department responsible for purchasing the mall site?
+      question: >-
+        Which Montana State Department is responsible for purchasing the mall
+        site?
     - answer: >-
         Dick Anderson and a company from Salt Lake City currently own the
         property. They have indicated their willingness to sell the property to
-        the State and help facilitate the sale.
+        the state and help facilitate the sale.
       question: >-
         Who are the current owners of the mall site and are they willing to sell
         the land?
     - answer: >-
-        After Helena became the capital city of Montana, the historical collection
-        was moved from Virginia City to Helena in 1874.
+        After Helena became the capital city of Montana, the historical
+        collection was moved from Virginia City to Helena in 1874.
       question: Why will the Montana Heritage Center be built in Helena?
-    - answer: |
+    - answer: >
         Absolutely.
 
+
         The mall site is located between Prospect Avenue and 11th avenue and
-        provides easy public access. It can accommodate parking spaces for school
+
+        provides easy public access. It can accommodate parking spaces for
+        school
+
         buses, the Helena tour train, and RVs.
 
+
         The alternative location at Roberts and 6th would not be able to
+
         accommodate all visitors and their vehicles.
 
-        The mall site provides a lot more room for the new Montana Heritage Center
+
+        The mall site provides a lot more room for the new Montana Heritage
+        Center
+
         and will offer a massive increase of historical artifacts to be seen on
+
         display.
       question: >-
         Is the mall site large enough to accommodate the requirements of the

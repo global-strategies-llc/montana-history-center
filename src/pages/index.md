@@ -3,24 +3,22 @@ templateKey: index-page
 title: Build the Montana Heritage Center at the Mall Site
 image: /img/site-sketch-hero.jpg
 eyebrow: ''
-heading: Build The Montana Heritage Center At The Mall Site
+heading: Build The Montana Heritage Center At The Capital Hill Mall Site
 subheading:
   answer: >-
     The proposed name and location for the new Montana Historical Society
     museum.
   question: What Is The Montana Heritage Center?
 description: >-
-  The Department of Administration planned to build the new Montana Heritage
-  Center at the alternative site of Roberts and 6th it is not suitable. It will
-  fail in its mission to become a world-class museum since it is right in the
-  middle of all the government buildings where there is not enough room to build
-  a large museum. We won't be able to share our history and culture with
-  Montana’s school children and the thousands of visitors who come to Montana.
-  The mall site was the original proposed site and is the prime location.
+  Build the Montana Heritage Center at the former Capital Hill Mall site. Sign
+  our petition to ensure that the Department of Administration builds the new
+  state museum at the mall site and not the Montana Historical Society parking
+  lot.
 keywords:
   - montana history
   - heritage center
   - history museum
+  - cmall petition
 cta:
   text: Sign the petition
   url: '#petition'
@@ -30,15 +28,14 @@ testimonials:
       Lewis and Clark County, Board of Commissioners
     quote: >-
       We currently support locating the Montana Heritage Center at the former
-      Capitol Hill Mall site. It is centrally located, close to the Capitol, and
+      Capital Hill Mall site. It is centrally located, close to the Capitol, and
       has plenty of room for future expansions, parking, and outdoor exhibits.
   - author: |
-      Nancy Owens
-      Helena Resident
+      Wilmot Collins, Ed Noonan, Andres Haladay
+      Mayor of Helena, City of Helena Commissioners
     quote: >-
-      To me it’s as simple as "location, location, location" the three words
-      most important to business success. Do not expand in the current Capitol
-      area.
+      We currently support consideration of locating the Montana Heritage Center
+      at the former Capital Hill Mall Site.
 mainpitch:
   headinglist:
     - Central Location
