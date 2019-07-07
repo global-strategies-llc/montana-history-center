@@ -33,12 +33,11 @@ testimonials:
       Capitol Hill Mall site. It is centrally located, close to the Capitol, and
       has plenty of room for future expansions, parking, and outdoor exhibits.
   - author: |
-      Nancy Owens
-      Helena Resident
+      Wilmot Collins, Ed Noonan, Andres Haladay
+      Mayor of Helena, City of Helena Commissioners
     quote: >-
-      To me it’s as simple as "location, location, location" the three words
-      most important to business success. Do not expand in the current Capitol
-      area.
+      We currently support consideration of locating the Montana Heritage Center
+      at the former Capital Hill Mall Site.
 mainpitch:
   headinglist:
     - Central Location
