@@ -5,7 +5,7 @@ image: /img/site-sketch-hero.jpg
 heading: Local and State Support for the Montana Heritage Center Runs Deep
 description: >-
   Residents, businesses, former Montana governors, previous and current United
-  States senators, and congressman support the Montana Heritage Center. 
+  States senators, and congressman support the Montana Heritage Center.
 keywords:
   - montana history
   - heritage center
@@ -19,12 +19,13 @@ callout:
   cta:
     text: Download the letter
     url: >-
-      //montanahistorycenter.org/support-letter-from-lewis-and-clark-county-commissioners.pdf
+      //www.montanahistorycenter.org/support-letter-from-lewis-and-clark-county-commissioners.pdf
   text: |
     Read the letter of support from the
     Lewis and Clark County Commissioners
 groups:
   - name: Montana Citizens
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Nancy Nicholson
@@ -46,6 +47,7 @@ groups:
           Our new Heritage Center would be much more accessible to those who
           travel in RVs if it was placed at the Capital Hill Mall.
   - name: Montana Governors
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Tim Babcock
@@ -69,6 +71,7 @@ groups:
           the desire of the people of the Treasure State to our past - and our
           future.
   - name: United States Senators and Congressmen
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Max Baucus
@@ -97,6 +100,7 @@ groups:
           education that teaches an appreciation of the past, is a key to the
           preservation of our freedom and civilization.
   - name: Museum Association Of Montana
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Paul Shea
@@ -117,6 +121,7 @@ groups:
           helping making the state wide museums important to our citizens and
           visitors alike.
   - name: Teachers and Historians
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Rick Graetz
