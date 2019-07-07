@@ -24,7 +24,7 @@ callout:
     Helena City Commission
   cta:
     text: Download the letter
-    url: //montanahistorycenter.org/support-letter-from-helena-city-commission.pdf
+    url: //www.montanahistorycenter.org/support-letter-from-helena-city-commission.pdf
 main:
   heading: In the News
   image: /img/icons/in-the-news.png
