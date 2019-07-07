@@ -8,6 +8,10 @@ const useSiteMetadata = () => {
 					siteMetadata {
 						title
 						description
+						siteCreator {
+							name
+							url
+						}
 						menuLinks {
 							name
 							placement

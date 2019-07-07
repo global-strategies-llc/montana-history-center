@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ title, description, keywords, hasSignup = false, children }) => {
-	const { title: defaultTitle, description: defaultDescription, menuLinks, socialLinks } = useSiteMetadata()
+	const { title: defaultTitle, description: defaultDescription, menuLinks, socialLinks, siteCreator } = useSiteMetadata()
 	return (
 		<div className="page-wrap">
 			<Helmet>
@@ -65,6 +65,7 @@ const TemplateWrapper = ({ title, description, keywords, hasSignup = false, chil
 				siteCopy={defaultTitle}
 				socialLinks={socialLinks}
 				menuLinks={menuLinks.filter( link => link.placement.includes('footer') )}
+				siteCreator={siteCreator}
 			/>
 		</div>
 	)

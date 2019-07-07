@@ -8,7 +8,7 @@ import Twitter from '../img/social/twitter.svg'
 
 const year = new Date().getFullYear();
 
-const Footer = ({ menuLinks, socialLinks, siteCopy }) => {
+const Footer = ({ menuLinks, socialLinks, siteCopy, siteCreator }) => {
 	return (
 		<footer className="footer has-bg-base">
 			<section className="social">
@@ -43,6 +43,7 @@ const Footer = ({ menuLinks, socialLinks, siteCopy }) => {
 							<strong>{siteCopy}.</strong>
 							<br/>All rights reserved.
 						</p>
+						<p>Website by <a href={siteCreator.url} target="_blank">{siteCreator.name}</a></p>
 					</div>
 				</div>
 			</section>

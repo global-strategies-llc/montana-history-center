@@ -5,6 +5,10 @@ module.exports = {
 		title: 'Montana History Center',
 		description:
 			'To provide awareness to the general public in Montana that there is money available to build a new MT historical society building, and that the best location is the former capital hill mall site. This location is better than the alternative/current location because we will be able to showcase all the historical artifacts and the location will drive more tourists because its more accessible.',
+		siteCreator: {
+			name: 'Global Strategies, LLC',
+			url: 'https://www.linkedin.com/company/global-strategies-llc-mt/about/?viewAsMember=true'
+		},
 		socialLinks: {
 			facebook: 'https://www.facebook.com/montanaheritagecentermallpetition',
 			twitter: 'https://twitter.com/MTHistoryCenter'

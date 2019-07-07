@@ -54,6 +54,22 @@ footer.footer {
 		display: inline-block;
 		margin: 0 0.5em;
 	}
+
+	a {
+		color: $menu-item-color;
+
+		&:focus,
+		&:focus-within,
+		&:hover,
+		&.is-active {
+		  color: $menu-item-color;
+		  text-decoration: underline;
+		}
+	}
+
+	p:last-child {
+		margin-top: 0.5em;
+	}
 }
 
 .footer .menu {
