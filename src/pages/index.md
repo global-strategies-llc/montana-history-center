@@ -30,7 +30,7 @@ testimonials:
       Lewis and Clark County, Board of Commissioners
     quote: >-
       We currently support locating the Montana Heritage Center at the former
-      Capitol Hill Mall site. It is centrally located, close to the Capitol, and
+      Capital Hill Mall site. It is centrally located, close to the Capitol, and
       has plenty of room for future expansions, parking, and outdoor exhibits.
   - author: |
       Wilmot Collins, Ed Noonan, Andres Haladay
