@@ -3,7 +3,7 @@ templateKey: index-page
 title: Build the Montana Heritage Center at the Mall Site
 image: /img/site-sketch-hero.jpg
 eyebrow: ''
-heading: Build The Montana Heritage Center At The Mall Site
+heading: Build The Montana Heritage Center At The Capital Hill Mall Site
 subheading:
   answer: >-
     The proposed name and location for the new Montana Historical Society
