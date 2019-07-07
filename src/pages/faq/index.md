@@ -26,7 +26,9 @@ main:
         available to buy the mall site.
       question: How much will it cost to purchase the mall site?
     - answer: The Department of Administration led by John Lewis.
-      question: What Montana State Department responsible for purchasing the mall site?
+      question: >-
+        Which Montana State Department is responsible for purchasing the mall
+        site?
     - answer: >-
         Dick Anderson and a company from Salt Lake City currently own the
         property. They have indicated their willingness to sell the property to
