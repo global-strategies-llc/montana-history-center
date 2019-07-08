@@ -241,6 +241,7 @@ collections:
             widget: object
             fields:
               - {label: Heading, name: heading, widget: string}
+              - {label: Image, name: image, widget: image}
               - label: Press
                 name: press
                 label_singular: Press Item

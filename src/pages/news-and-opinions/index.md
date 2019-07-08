@@ -28,6 +28,7 @@ callout:
     Helena City Commission
 main:
   heading: In the News
+  image: /img/icons/in-the-news.png
   press:
     - author: Jane Hamman
       date: 'June 11, 2019'
