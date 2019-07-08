@@ -22,8 +22,8 @@ main:
         remains available.
       question: Is there money available to purchase the mall site?
     - answer: >-
-        Approximately 4.9 million dollars. We have about 6.7 million available
-        to buy the mall site and begin the project.
+        Approximately 4.9 million dollars. We have about 6.7 million dollars
+        available to buy the Capital Hill mall site and begin the project.
       question: How much will it cost to purchase the mall site?
     - answer: The Department of Administration led by John Lewis.
       question: >-
