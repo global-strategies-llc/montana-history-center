@@ -25,6 +25,7 @@ callout:
     Lewis and Clark County Commissioners
 groups:
   - name: Montana Citizens
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Nancy Nicholson
@@ -46,6 +47,7 @@ groups:
           Our new Heritage Center would be much more accessible to those who
           travel in RVs if it was placed at the Capital Hill Mall.
   - name: Montana Governors
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Tim Babcock
@@ -69,6 +71,7 @@ groups:
           well of the desire of the people of the Treasure State to our past -
           and our future.
   - name: United States Senators and Congressmen
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Max Baucus
@@ -97,6 +100,7 @@ groups:
           education that teaches an appreciation of the past, is a key to the
           preservation of our freedom and civilization.
   - name: Museums Association Of Montana
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Paul Shea
@@ -116,6 +120,7 @@ groups:
           will insure the continuation of the MHS lead in helping making the
           statewide museums important to our citizens and visitors alike.
   - name: Teachers and Historians
+    image: /img/icons/stories.png
     testimonials:
       - author: |
           Rick Graetz
