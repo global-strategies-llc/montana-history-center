@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import { v4 } from 'uuid'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Testimonial from '../components/Testimonial'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Banner from '../components/Banner'
 
 import './stories.scss'
@@ -29,7 +29,7 @@ export const StoriesPageTemplate = ({
 						<div className="testimonials-heading">
 							{ group.image &&
 								<div className="testimonial-image">
-									<Img fixed={group.image.childImageSharp.fixed} />
+									<PreviewCompatibleImage imageInfo={{ image: group.image, alt: group.name }}/>
 								</div>
 							}
 							<h3 className="is-size-2 has-text-centered">{group.name}</h3>

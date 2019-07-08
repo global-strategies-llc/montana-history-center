@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import PressQuote from '../components/PressQuote'
 import Banner from '../components/Banner'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import BlogRoll from '../components/BlogRoll'
 
 let maxQuoteLength = null;
@@ -29,7 +29,7 @@ export const NewsPageTemplate = ({
 		<section className="press section">
 			{ main.image &&
 				<div className="news-image has-text-centered">
-					<Img fixed={main.image.childImageSharp.fixed} />
+					<PreviewCompatibleImage imageInfo={{ image: main.image }} />
 				</div>
 			}
 			<h2 className="is-size-1 has-text-centered">{main.heading}</h2>

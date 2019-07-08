@@ -6,13 +6,15 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 	const { alt = '', childImageSharp, image, style } = imageInfo
 
 	if (!!image && !!image.childImageSharp) {
-		return (
-			<Img style={style} fluid={image.childImageSharp.fluid} alt={alt} />
-		)
+		return image.childImageSharp.fixed ?
+			<Img style={style} fixed={image.childImageSharp.fixed} alt={alt} />
+			: <Img style={style} fluid={image.childImageSharp.fluid} alt={alt} />
 	}
 
 	if (!!childImageSharp) {
-		return <Img style={style} fluid={childImageSharp.fluid} alt={alt} />
+		return childImageSharp.fixed ?
+			<Img style={style} fixed={childImageSharp.fixed} alt={alt} />
+			: <Img style={style} fluid={childImageSharp.fluid} alt={alt} />
 	}
 
 	if (!!image && typeof image === 'string')
@@ -22,12 +24,12 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 }
 
 PreviewCompatibleImage.propTypes = {
-	imageInfo: PropTypes.shape({
+	imageInfo: PropTypes.oneOfType([PropTypes.shape({
 		alt: PropTypes.string,
 		childImageSharp: PropTypes.object,
 		image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 		style: PropTypes.object,
-	}).isRequired,
+	}), PropTypes.string]).isRequired,
 }
 
 export default PreviewCompatibleImage
