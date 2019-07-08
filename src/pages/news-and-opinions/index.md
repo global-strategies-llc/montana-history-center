@@ -3,31 +3,31 @@ templateKey: news-page
 title: Latest News And Opinions
 image: /img/site-sketch-hero.jpg
 heading: Latest News And Opinions
-cta:
-  text: Sign the petition
-  url: '#petition'
 description: >-
-  The Department of Administration planned to build the new Montana Heritage Center at the
-  alternative site of Roberts and 6th it is not suitable.
-  It will fail in its mission to become a world-class museum since it is right in the middle
-  of all the government buildings where there is not enough room to build a large museum.
-  We won't be able to share our history and culture with Montana’s school children and the
-  thousands of visitors who come to Montana.
+  The Department of Administration planned to build the new Montana Heritage
+  Center at the alternative site of Roberts and 6th it is not suitable. It will
+  fail in its mission to become a world-class museum since it is right in the
+  middle of all the government buildings where there is not enough room to build
+  a large museum. We won't be able to share our history and culture with
+  Montana’s school children and the thousands of visitors who come to Montana.
   The mall site was the original proposed site and is the prime location.
 keywords:
   - montana history
   - heritage center
   - history museum
+cta:
+  text: Sign the petition
+  url: '#petition'
 callout:
+  cta:
+    text: Download the letter
+    url: >-
+      //www.montanahistorycenter.org/support-letter-from-helena-city-commission.pdf
   text: |
     Read the letter of support from the
     Helena City Commission
-  cta:
-    text: Download the letter
-    url: //www.montanahistorycenter.org/support-letter-from-helena-city-commission.pdf
 main:
   heading: In the News
-  image: /img/icons/in-the-news.png
   press:
     - author: Jane Hamman
       date: 'June 11, 2019'
@@ -60,11 +60,24 @@ main:
       quote: >-
         This is something that’s going to be good for our kids, our grandkids
         down the road
-      title: >-
-        Legislature passes a bill to build new Montana Heritage Center in
-        Helena
+      title: Legislature passes a bill to build new Montana Heritage Center in Helena
       url: >-
         https://helenair.com/news/state-and-regional/govt-and-politics/legislature-passes-bill-to-build-new-montana-heritage-center-in/article_5534a18e-bab5-5d8f-b175-4bbbdff5c478.html
+    - author: Phil Drake
+      date: 'April 24, 2019'
+      image: /img/great_falls_tribune_logo.png
+      name: Great Falls Tribune
+      quote: >-
+        On Wednesday it (Senate Bill 338) received the support of the Montana
+        Public Employees Association, the Montana Chamber of Commerce, the
+        Montana Preservation Alliance and the Montana Lodging and Hospitality
+        Association....Carey Hegreberg, chief executive officer of the Montana
+        chamber of Commerce, said having a heritage center and museums of
+        quality around the state will induce people to spend an extra day or two
+        to learn about Montana.
+      title: 'Museums bill moves out of committee as legislative clock ticks '
+      url: >-
+        https://www.greatfallstribune.com/story/news/2019/04/24/montana-historical-society-museum-bill-moves-out-committee/3564138002/
     - author: Holly K. Michaels
       date: 'April 18, 2019'
       image: /img/independent-record-logo.png
