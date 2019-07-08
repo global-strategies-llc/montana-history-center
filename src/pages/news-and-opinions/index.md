@@ -27,8 +27,8 @@ callout:
     Read the letter of support from the
     Helena City Commission
 main:
-  heading: In the News
   image: /img/icons/in-the-news.png
+  heading: In the News
   press:
     - author: Jane Hamman
       date: 'June 11, 2019'
@@ -72,10 +72,7 @@ main:
         On Wednesday it (Senate Bill 338) received the support of the Montana
         Public Employees Association, the Montana Chamber of Commerce, the
         Montana Preservation Alliance and the Montana Lodging and Hospitality
-        Association....Carey Hegreberg, chief executive officer of the Montana
-        chamber of Commerce, said having a heritage center and museums of
-        quality around the state will induce people to spend an extra day or two
-        to learn about Montana.
+        Association.
       title: 'Museums bill moves out of committee as legislative clock ticks '
       url: >-
         https://www.greatfallstribune.com/story/news/2019/04/24/montana-historical-society-museum-bill-moves-out-committee/3564138002/
