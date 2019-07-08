@@ -17,13 +17,13 @@ main:
   heading: Frequently Asked Questions
   questions:
     - answer: >-
-        Yes. In 2005, bonding authority authorized by the legislature and signed
-        by the governor. Approximately 7.5 million dollars in bonding is
-        available.
+        Yes. In 2005, bonding authority was authorized by the legislature and
+        signed by the governor. Approximately 6.7 million dollars in bonding
+        remains available.
       question: Is there money available to purchase the mall site?
     - answer: >-
-        Approximately 4.9 million dollars. We have a bond of 7.5 million dollars
-        available to buy the mall site.
+        Approximately 4.9 million dollars. We have about 6.7 million available
+        to buy the mall site and begin the project.
       question: How much will it cost to purchase the mall site?
     - answer: The Department of Administration led by John Lewis.
       question: >-
