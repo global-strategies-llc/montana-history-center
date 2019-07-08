@@ -25,7 +25,6 @@ callout:
     Lewis and Clark County Commissioners
 groups:
   - name: Montana Citizens
-    image: /img/icons/stories.png
     testimonials:
       - author: |
           Nancy Nicholson
@@ -47,7 +46,6 @@ groups:
           Our new Heritage Center would be much more accessible to those who
           travel in RVs if it was placed at the Capital Hill Mall.
   - name: Montana Governors
-    image: /img/icons/stories.png
     testimonials:
       - author: |
           Tim Babcock
@@ -67,11 +65,10 @@ groups:
           With an admitted bias that derives naturally from seven years of
           studying history in college, I enthusiastically support the effort to
           fund the expansion of the Montana Historical Society and museum. The
-          current society, museum and it’s publications and outreach as well of
-          the desire of the people of the Treasure State to our past - and our
-          future.
+          current society, museum and its (sic) publications and outreach as
+          well of the desire of the people of the Treasure State to our past -
+          and our future.
   - name: United States Senators and Congressmen
-    image: /img/icons/stories.png
     testimonials:
       - author: |
           Max Baucus
@@ -87,9 +84,9 @@ groups:
           Former Senator
         quote: >-
           The development of a new Montana History Center would be the most
-          extra ordinary and significant gift  Montana and its citizens and will
-          create a lasting legacy for future generations. I hope you share in
-          the knowledge what a precious value our history has in our rich
+          extraordinary and significant gift for Montana and its citizens and
+          will create a lasting legacy for future generations. I hope you share
+          in the knowledge what a precious value our history has in our rich
           Montana heritage, and support the effort of this statewide campaign.
       - author: |
           Denney Rehberg
@@ -99,29 +96,26 @@ groups:
           ago and gives our lives deeper meaning. Education, especially
           education that teaches an appreciation of the past, is a key to the
           preservation of our freedom and civilization.
-  - name: Museum Association Of Montana
-    image: /img/icons/stories.png
+  - name: Museums Association Of Montana
     testimonials:
       - author: |
           Paul Shea
-          Former President of the Museum Association of Montana
+          Former President of the Museums Association of Montana
         quote: >-
           We are writing to let you know that the Museums Association of Montana
           is in favor of the state bonding proposal for the Montana Heritage
-          Center. We urge you to support this this worthwhile endavour. Your
-          support through this bond will enable the Montana History Foundation
-          to better leverage support from the public help with this project. The
-          Montana Historical Society has been invaluable in setting standards
-          that all Montana Museums look to in their operations. The Museums
-          association of Montana works closely with the MHS to convey
-          professionalism to all musuems in the state. In showing the commitment
-          to provide for the expansion of the needed space and the ability to
-          provide the proper care of the states magnifcent collection of
-          history, this project will insure the continuation of the MHS lead in
-          helping making the state wide museums important to our citizens and
-          visitors alike.
+          Center. We urge you to support this worthwhile endeavor. Your support
+          through this bond will enable the Montana History Foundation to better
+          leverage support from the public help with this project. The Montana
+          Historical Society has been invaluable in setting standards that all
+          Montana Museums look to in their operations. The Museums Association
+          of Montana works closely with the MHS to convey professionalism to all
+          museums in the state. In showing the commitment to provide for the
+          expansion of the needed space and the ability to provide the proper
+          care of the state's magnificent collection of history, this project
+          will insure the continuation of the MHS lead in helping making the
+          statewide museums important to our citizens and visitors alike.
   - name: Teachers and Historians
-    image: /img/icons/stories.png
     testimonials:
       - author: |
           Rick Graetz
