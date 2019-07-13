@@ -93,10 +93,7 @@
 		"eqnull": 0,
 		"evil": 0,
 		"expr": 0,
-		"indent":  ["warn", "tab", {
-			"VariableDeclarator": { "var": 2, "let": 2, "const": 3 },
-			"SwitchCase": 1
-		}],
+		"indent":  0,
 		"funcscope": 0,
 		"globalstrict": 0,
 		"iterator": 0,
