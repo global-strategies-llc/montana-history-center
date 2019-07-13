@@ -25,7 +25,7 @@ const TemplateWrapper = ({
       siteCreator
     } = useSiteMetadata(),
     link = menuLinks
-      .filter(link => window.location.href.indexOf(link.url) > -1)
+      .filter(link => window && window.location.href.indexOf(link.url) > -1)
       .pop();
   return (
     <div className="page-wrap">
