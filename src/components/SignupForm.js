@@ -216,7 +216,6 @@ class SignupForm extends React.Component {
 							<form
 								name="signup"
 								method="post"
-								action={action}
 								data-netlify="true"
 								data-netlify-honeypot="bot-field"
 								onSubmit={this.handleSubmit}
