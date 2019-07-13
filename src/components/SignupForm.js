@@ -1,13 +1,9 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
 
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-function encode(data) {
-	return Object.keys(data)
-		.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-		.join('&')
-}
+import Facebook from '../img/social/facebook.svg'
+import Twitter from '../img/social/twitter.svg'
 
 class SignupForm extends React.Component {
 
@@ -153,7 +149,6 @@ class SignupForm extends React.Component {
 								errorMessage: `We couldn't connect to the petition... please try again later!`
 							})
 						}, 10000)
-					break;
 				}
 			})
 			.catch( (err) => {
@@ -161,8 +156,24 @@ class SignupForm extends React.Component {
 			})
 	}
 
+	shareViaPlatform = (e) => {
+
+		switch (e.target.closest('[title]').title) {
+			case 'facebook':
+				return window.open(`https://www.facebook.com/sharer/sharer.php
+				?u=https%3A%2F%2Fwww.montanaheritagecenter.org%2F`,
+					'fb-share', 'height=300,width=400')
+
+			case 'twitter':
+				return window.open(`https://twitter.com/intent/tweet
+				?url=https%3A%2F%2Fwww.montanaheritagecenter.org%2F
+				&text=Sign%20our%20petition%20to%20Build%20the%20Montana%20Heritage%20Center%20at%20the%20former%20Capital%20Hill%20Mall%20site.`,
+					'twitter-share',
+					'height=550,width=420')
+		}
+	}
+
 	render() {
-		const { action } = this.props;
 		return (
 			<div className="signup-form content">
 				{
@@ -186,6 +197,17 @@ class SignupForm extends React.Component {
 							<p dangerouslySetInnerHTML={this.renderMessage(this.state.successMessage ||
 									`We really appreciate you signing up!`
 								)} />
+							<em>Please help us spread the word!</em>
+							<ul className="share-links">
+								<li title="facebook" onClick={this.shareViaPlatform}>
+									<Facebook />
+									Post to Facebook
+								</li>
+								<li title="twitter" onClick={this.shareViaPlatform}>
+									<Twitter />
+									Post to Twitter
+								</li>
+							</ul>
 						</div>
 
 					: <React.Fragment>

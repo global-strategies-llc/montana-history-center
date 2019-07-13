@@ -153,4 +153,21 @@
 		margin-top: 2em;
 		font-weight: bold;
 	}
+
+	.share-links {
+
+		li {
+			display: flex;
+			align-items: center;
+			margin-top: 2em;
+			cursor: pointer;
+		}
+
+		svg {
+			width: 2em;
+			height: 2em;
+			margin-right: 1em;
+			fill: $secondary;
+		}
+	}
 }
