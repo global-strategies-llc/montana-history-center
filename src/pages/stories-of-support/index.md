@@ -24,8 +24,8 @@ callout:
     Read the letter of support from the
     Lewis and Clark County Commissioners
 groups:
-  - name: Montana Citizens
-    image: /img/icons/stories.png
+  - image: /img/icons/stories.png
+    name: Montana Citizens
     testimonials:
       - author: |
           Nancy Nicholson
@@ -46,8 +46,8 @@ groups:
         quote: >-
           Our new Heritage Center would be much more accessible to those who
           travel in RVs if it was placed at the Capital Hill Mall.
-  - name: Montana Governors
-    image: /img/icons/stories.png
+  - image: /img/icons/stories.png
+    name: Montana Governors
     testimonials:
       - author: |
           Tim Babcock
@@ -60,18 +60,8 @@ groups:
           be placed near the front entrance so the tourists and all who come
           here will see it first thing. I urge your support and my best wishes
           for success with this project.
-      - author: |
-          Ted Schwinden
-          Former Governor
-        quote: >-
-          With an admitted bias that derives naturally from seven years of
-          studying history in college, I enthusiastically support the effort to
-          fund the expansion of the Montana Historical Society and museum. The
-          current society, museum and its (sic) publications and outreach as
-          well of the desire of the people of the Treasure State to our past -
-          and our future.
-  - name: United States Senators and Congressmen
-    image: /img/icons/stories.png
+  - image: /img/icons/stories.png
+    name: United States Senators and Congressmen
     testimonials:
       - author: |
           Max Baucus
@@ -99,8 +89,8 @@ groups:
           ago and gives our lives deeper meaning. Education, especially
           education that teaches an appreciation of the past, is a key to the
           preservation of our freedom and civilization.
-  - name: Museums Association Of Montana
-    image: /img/icons/stories.png
+  - image: /img/icons/stories.png
+    name: Museums Association Of Montana
     testimonials:
       - author: |
           Paul Shea
@@ -119,8 +109,8 @@ groups:
           care of the state's magnificent collection of history, this project
           will insure the continuation of the MHS lead in helping making the
           statewide museums important to our citizens and visitors alike.
-  - name: Teachers and Historians
-    image: /img/icons/stories.png
+  - image: /img/icons/stories.png
+    name: Teachers and Historians
     testimonials:
       - author: |
           Rick Graetz
