@@ -30,6 +30,18 @@ main:
   image: /img/icons/in-the-news.png
   heading: In the News
   press:
+    - author: >-
+        Lorna Kuney, Shirley Herrin, Jane Hamman, Norma Jean Kelly, and Ralph
+        Kuney and Rosana Skelton.
+      date: 'August 22, 2019'
+      image: /img/independent-record-logo.png
+      name: Independent Record
+      quote: >-
+        Locating the Montana Heritage Center at the mall site would create
+        exciting synergy with the new upscale hotel and restaurant planned there
+      title: Why the Montana Heritage Center should be at old mall site
+      url: >-
+        https://helenair.com/opinion/columnists/why-the-montana-heritage-center-should-be-at-old-mall/article_3be3e1f4-2b2a-5ff7-8b34-49f31da882b6.html
     - author: Jane Hamman
       date: 'June 11, 2019'
       image: /img/independent-record-logo.png
@@ -98,17 +110,5 @@ main:
       title: 'Senate gives initial approval to Heritage Center tax hike '
       url: >-
         https://helenair.com/news/state-and-regional/govt-and-politics/senate-gives-initial-approval-to-heritage-center-tax-hike/article_b4bdf4a0-4ced-5350-8bf5-b0a9e1f47c14.html
-    - author: >-
-        Lorna Kuney, Shirley Herrin, Jane Hamman, Norma Jean Kelly, and Ralph
-        Kuney and Rosana Skelton.
-      date: 'August 22, 2019'
-      image: /img/independent-record-logo.png
-      name: Independent Record
-      quote: >-
-        Locating the Montana Heritage Center at the mall site would create
-        exciting synergy with the new upscale hotel and restaurant planned there
-      title: Why the Montana Heritage Center should be at old mall site
-      url: >-
-        https://helenair.com/opinion/columnists/why-the-montana-heritage-center-should-be-at-old-mall/article_3be3e1f4-2b2a-5ff7-8b34-49f31da882b6.html
 ---
 
