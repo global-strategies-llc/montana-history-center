@@ -12,7 +12,7 @@ import BlogRoll from '../components/BlogRoll'
 let maxQuoteLength = null;
 const getMaxQuoteLength = (arr) => {
 	return maxQuoteLength ||
-		arr.reduce( (max, curr) => curr.quote.length > max ? curr.quote.length : max, 0 )
+		(maxQuoteLength = arr.reduce((max, curr) => curr.quote && curr.quote.length > max ? curr.quote.length : max, 0 ))
 }
 
 export const NewsPageTemplate = ({
@@ -37,6 +37,9 @@ export const NewsPageTemplate = ({
 				<div className="columns is-multiline">
 					{
 						main.press.map( (press, i) => {
+							if(!press.quote) {
+								return null
+							}
 							const cols = Math.ceil(press.quote.length / getMaxQuoteLength(main.press) * 12)
 							return <PressQuote key={i} { ...press } className={`column is-${cols}`} />
 						})
